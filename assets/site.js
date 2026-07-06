@@ -10,21 +10,25 @@ const SCORE_MODES = {
     label: "Draft Adj",
     shortLabel: "Hit",
     column: "draft_adjusted_hit_prob",
+    note: "Best default after the draft: starts with draft slot, then lets college data raise the score without dropping below the market baseline.",
   },
   pff: {
     label: "PFF Pre",
     shortLabel: "PFF",
     column: "model_hit_prob",
+    note: "Pre-draft college lens with PFF charting included; useful for seeing what the data said before NFL teams picked.",
   },
   noPff: {
     label: "No-PFF",
     shortLabel: "No-PFF",
     column: "model_hit_prob_no_pff",
+    note: "Same college model with PFF removed; this shows whether charting is doing real work for a player.",
   },
   market: {
     label: "Market",
     shortLabel: "Market",
     column: "model_hit_prob_pick_only",
+    note: "Draft slot only: what history says about a QB picked in this range before looking at college details.",
   },
 };
 
@@ -137,6 +141,36 @@ function splitIndicators(value) {
     .filter(Boolean);
 }
 
+function plainOutcome(value) {
+  const number = toNumber(value);
+  if (number === null) return "not enough information";
+  if (number >= 0.6) return "a strong starter bet";
+  if (number >= 0.35) return "a serious upside bet";
+  if (number >= 0.15) return "a risky but live bet";
+  if (number >= 0.07) return "a developmental long shot";
+  return "a deep long shot";
+}
+
+function pffRead(row) {
+  const delta = toNumber(row.pff_model_delta);
+  if (delta === null) return "PFF is not available enough to change the read.";
+  if (delta >= 0.05) return `PFF lifted the profile by ${pct(Math.abs(delta))}.`;
+  if (delta <= -0.05) return `PFF lowered the profile by ${pct(Math.abs(delta))}.`;
+  return "PFF mostly agrees with the no-PFF college model.";
+}
+
+function draftRead(row) {
+  const round = cleanNumber(row.round);
+  const pick = cleanNumber(row.pick);
+  const market = toNumber(row.model_hit_prob_pick_only);
+  if (!round) return "There is no draft slot, so the score leans on college and testing data.";
+  return `The draft slot, R${round}${pick ? ` / ${pick}` : ""}, gives a market baseline of ${pct(market)}.`;
+}
+
+function plainRead(row) {
+  return `${row.canonical_name} grades as ${plainOutcome(hitProb(row))}. ${draftRead(row)} ${pffRead(row)}`;
+}
+
 function escapeHtml(value) {
   return String(value ?? "")
     .replaceAll("&", "&amp;")
@@ -230,6 +264,7 @@ function renderYearFilters() {
 
 function renderScoreModes() {
   const host = $("#scoreModes");
+  const note = $("#scoreNote");
   host.innerHTML = Object.entries(SCORE_MODES)
     .map(([key, config]) => `
       <button type="button" data-score="${key}" aria-pressed="${state.scoreMode === key}">
@@ -246,6 +281,8 @@ function renderScoreModes() {
       renderAll();
     });
   });
+
+  if (note) note.textContent = scoreMode().note;
 }
 
 function renderBoardSummary(rows) {
@@ -376,6 +413,10 @@ function renderDetail(row) {
     <div class="detail-kicker">${escapeHtml(row.draft_season)} class / ${escapeHtml(label)}</div>
     <h2>${escapeHtml(row.canonical_name)}</h2>
     <p class="detail-school">${escapeHtml(row.college || "Unknown school")} / ${escapeHtml(draftText)}</p>
+    <div class="plain-read">
+      <span>Plain read</span>
+      <p>${escapeHtml(plainRead(row))}</p>
+    </div>
 
     <div class="score-stack">
       ${scoreRows.map(([name, value]) => {
@@ -424,10 +465,10 @@ function renderMetrics() {
   const metrics = state.metrics || {};
   const cards = [
     ["Draft Adj AUC", metrics.draft_adjusted_market_guarded?.auc, "Market-guarded hit score"],
-    ["Post-draft AUC", metrics.post_draft?.auc, "College plus draft capital"],
-    ["Pick-only AUC", metrics.pick_only?.auc, "The market baseline"],
-    ["PFF Pre AUC", metrics.pre_draft?.auc, "Pre-draft college model"],
-    ["PFF Lift", metrics.pff_lift_over_no_pff, "AUC over no-PFF pre-draft"],
+    ["Post-draft AUC", metrics.post_draft?.auc, "College plus draft slot"],
+    ["Pick-only AUC", metrics.pick_only?.auc, "Draft slot alone"],
+    ["PFF Pre AUC", metrics.pre_draft?.auc, "College charting lens"],
+    ["PFF Lift", metrics.pff_lift_over_no_pff, "Gain over no-PFF college model"],
   ];
 
   $("#metricGrid").innerHTML = cards

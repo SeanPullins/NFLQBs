@@ -36,6 +36,10 @@
             <div class="section-heading">
               <p class="eyebrow">Projection board</p>
               <h1>NFL QB Projection Board</h1>
+              <p class="intro-copy">
+                The headline score estimates how likely each quarterback is to become a real long-term NFL starter.
+                Draft position sets the baseline; college production, athletic testing, and PFF charting explain the push or pull.
+              </p>
             </div>
 
             <div class="toolbar" aria-label="Projection controls">
@@ -46,6 +50,7 @@
               <div class="filter-group score-filter">
                 <span class="control-label">Score</span>
                 <div class="segmented" id="scoreModes" aria-label="Score mode"></div>
+                <p class="score-note" id="scoreNote"></p>
               </div>
               <label class="search">
                 <span>Search</span>
@@ -101,7 +106,28 @@
             <p class="eyebrow">Model validation</p>
             <h2>College data nearly matches the draft market. Together, they beat it.</h2>
           </div>
+          <div class="model-primer" aria-label="Plain English model guide">
+            <article>
+              <span>Headline Score</span>
+              <strong>Chance of becoming a quality NFL starter</strong>
+              <p>Think of 70% as a strong bet, 30% as real but risky, and below 10% as a long-shot developmental profile.</p>
+            </article>
+            <article>
+              <span>Market</span>
+              <strong>What the draft slot says by itself</strong>
+              <p>Round 1 quarterbacks start higher because NFL teams have already spent premium draft capital on them.</p>
+            </article>
+            <article>
+              <span>PFF Delta</span>
+              <strong>How charting changes the college view</strong>
+              <p>Positive means PFF helped the college-only case; negative means PFF made the profile look riskier.</p>
+            </article>
+          </div>
           <div class="metric-grid" id="metricGrid"></div>
+          <p class="metric-note">
+            AUC is a ranking test: 0.50 is coin flip, 1.00 is perfect. The draft-adjusted score is the headline because it
+            tests best while still showing the college/PFF case separately.
+          </p>
           <div class="figure-grid">
             <figure>
               <img src="analysis/figures/model_auc.png" alt="Model AUC comparison chart">
