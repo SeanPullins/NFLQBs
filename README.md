@@ -1,5 +1,7 @@
 # NFLQBs — College-to-Pro QB Projection
 
+Live site: https://seanpullins.github.io/NFLQBs/
+
 Model + website that projects incoming NFL QBs (recent draft classes) from
 their college production, PFF charting data, and athletic testing — trained on
 what actually separated NFL hits from busts in the 2015–2023 draft classes.
