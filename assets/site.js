@@ -12,7 +12,7 @@ const state = {
   metrics: null,
   year: "all",
   query: "",
-  sortKey: "model_hit_prob",
+  sortKey: "draft_adjusted_hit_prob",
   sortDir: "desc",
   selectedName: "",
 };
@@ -80,6 +80,10 @@ function signedRank(value) {
   if (number === null) return "--";
   const sign = number > 0 ? "+" : "";
   return `${sign}${number}`;
+}
+
+function hitProb(row) {
+  return toNumber(row.draft_adjusted_hit_prob) ?? toNumber(row.model_hit_prob);
 }
 
 function oneDecimal(value) {
@@ -151,6 +155,10 @@ function filteredRows() {
       const numericKeys = [
         "model_hit_prob",
         "model_hit_prob_no_pff",
+        "model_hit_prob_pick_only",
+        "model_hit_prob_post_draft",
+        "model_hit_prob_post_draft_pff",
+        "draft_adjusted_hit_prob",
         "pff_model_delta",
         "_rankMove",
         "expected_tier",
@@ -199,7 +207,7 @@ function renderTable() {
   tbody.innerHTML = rows
     .map((row, index) => {
       const selected = row.canonical_name === state.selectedName ? " selected" : "";
-      const prob = Math.max(0, Math.min(100, (toNumber(row.model_hit_prob) ?? 0) * 100));
+      const prob = Math.max(0, Math.min(100, (hitProb(row) ?? 0) * 100));
       const indicators = splitIndicators(row.top_positive_indicators).slice(0, 2);
       const pick = cleanNumber(row.pick);
       const round = cleanNumber(row.round);
@@ -227,7 +235,7 @@ function renderTable() {
               <div class="prob-track" aria-hidden="true">
                 <span class="prob-fill" style="--w: ${prob}%"></span>
               </div>
-              <strong>${pct(row.model_hit_prob)}</strong>
+              <strong>${pct(hitProb(row))}</strong>
             </div>
           </td>
           <td><span class="delta ${deltaClass}">${signedPct(row.pff_model_delta)}</span></td>
@@ -280,8 +288,10 @@ function renderDetail(row) {
     <p class="detail-school">${escapeHtml(row.college || "Unknown school")} / ${escapeHtml(draftText)}</p>
 
     <div class="detail-stats">
-      <div class="detail-stat"><span>Hit Prob</span><strong>${pct(row.model_hit_prob)}</strong></div>
-      <div class="detail-stat"><span>No-PFF Prob</span><strong>${pct(row.model_hit_prob_no_pff)}</strong></div>
+      <div class="detail-stat"><span>Hit Prob</span><strong>${pct(hitProb(row))}</strong></div>
+      <div class="detail-stat"><span>PFF Pre</span><strong>${pct(row.model_hit_prob)}</strong></div>
+      <div class="detail-stat"><span>No-PFF Pre</span><strong>${pct(row.model_hit_prob_no_pff)}</strong></div>
+      <div class="detail-stat"><span>Market</span><strong>${pct(row.model_hit_prob_pick_only)}</strong></div>
       <div class="detail-stat"><span>PFF Delta</span><strong>${signedPct(row.pff_model_delta)}</strong></div>
       <div class="detail-stat"><span>Rank Delta</span><strong>${signedRank(row._rankMove)}</strong></div>
       <div class="detail-stat"><span>Expected Tier</span><strong>${oneDecimal(row.expected_tier)}</strong></div>
@@ -311,11 +321,11 @@ function renderDetail(row) {
 function renderMetrics() {
   const metrics = state.metrics || {};
   const cards = [
-    ["PFF Pre-draft AUC", metrics.pre_draft?.auc, "Forward by draft year"],
-    ["No-PFF AUC", metrics.pre_draft_no_pff?.auc, "Old feature family"],
-    ["PFF Lift", metrics.pff_lift_over_no_pff, "AUC over old pre-draft"],
-    ["Post-draft AUC", metrics.post_draft?.auc, "No-PFF plus draft capital"],
+    ["Draft Adj AUC", metrics.draft_adjusted_market_guarded?.auc, "Market-guarded hit score"],
+    ["Post-draft AUC", metrics.post_draft?.auc, "College plus draft capital"],
     ["Pick-only AUC", metrics.pick_only?.auc, "The market baseline"],
+    ["PFF Pre AUC", metrics.pre_draft?.auc, "Pre-draft college model"],
+    ["PFF Lift", metrics.pff_lift_over_no_pff, "AUC over no-PFF pre-draft"],
   ];
 
   $("#metricGrid").innerHTML = cards
@@ -424,6 +434,6 @@ loadData()
   .then(renderAll)
   .catch((error) => {
     console.error(error);
-    $("#projectionRows").innerHTML = `<tr><td colspan="7" class="loading">Could not load projection data.</td></tr>`;
+    $("#projectionRows").innerHTML = `<tr><td colspan="8" class="loading">Could not load projection data.</td></tr>`;
     $("#playerDetail").innerHTML = `<div class="detail-empty">Could not load model artifacts.</div>`;
   });

@@ -74,7 +74,7 @@ CANDIDATES: list[Feat] = [
     # --- PFF charting -----------------------------------------------------
     # Prefer concept/pressure family features for modeling: 2025's
     # passing-grades export is empty, but concept/pressure exist and cover the
-    # 2026 watchlist. The original top-level grades_* features are retained
+    # 2026 drafted/prospect class. The original top-level grades_* features are retained
     # for indicator analysis and backwards comparison.
     Feat("final_concept_no_screen_grades_pass", "PFF passing grade, no screens (final yr)", "pff", +1),
     Feat("final_concept_no_screen_accuracy_percent", "PFF accuracy %, no screens (final yr)", "pff", +1),

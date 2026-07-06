@@ -155,9 +155,16 @@ def build_outputs():
     has_pick = hs["pick"].notna()
     hs["model_hit_prob_post_draft"] = np.nan
     hs["model_hit_prob_post_draft_pff"] = np.nan
+    hs["model_hit_prob_pick_only"] = np.nan
+    hs["draft_adjusted_hit_prob"] = hs["model_hit_prob_pre_draft"]
     if has_pick.any():
         hs.loc[has_pick, "model_hit_prob_post_draft"] = score(hs[has_pick], "post_draft")
         hs.loc[has_pick, "model_hit_prob_post_draft_pff"] = score(hs[has_pick], "post_draft_pff")
+        hs.loc[has_pick, "model_hit_prob_pick_only"] = score(hs[has_pick], "pick_only")
+        hs.loc[has_pick, "draft_adjusted_hit_prob"] = np.maximum(
+            hs.loc[has_pick, "model_hit_prob_post_draft"],
+            hs.loc[has_pick, "model_hit_prob_pick_only"],
+        )
     hs["model_expected_tier"] = expected_tier(hs)
     hs["percentile_vs_history"] = _percentiles(hist_prob, hist_prob)
     ind = per_player_indicators(hs, "pre_draft")
@@ -166,9 +173,9 @@ def build_outputs():
     hs["data_coverage"] = hs.apply(coverage_note, axis=1)
     hist_cols = ["canonical_name", "college", "draft_year", "round", "pick",
                  "label_status", "success_tier", "hit", "seasons_primary_starter",
-                 "model_hit_prob_pre_draft", "model_hit_prob_post_draft",
+                 "draft_adjusted_hit_prob", "model_hit_prob_pre_draft", "model_hit_prob_post_draft",
                  "model_hit_prob_pre_draft_no_pff", "model_hit_prob_post_draft_pff",
-                 "pff_model_delta", "model_expected_tier", "percentile_vs_history",
+                 "model_hit_prob_pick_only", "pff_model_delta", "model_expected_tier", "percentile_vs_history",
                  "top_positive_indicators", "top_negative_indicators",
                  "data_coverage", "notes"]
     hs = hs.rename(columns={"colleges": "college_prof"})
@@ -177,15 +184,19 @@ def build_outputs():
         .to_csv(os.path.join(REPO, "model", "historical_scored.csv"), index=False)
 
     # -------- projections.csv --------
-    # Use the labeled draft universe for 2023-2025, then append a compact
-    # 2026 combine/watchlist slice. Do not publish every PFF-only college QB
-    # whose final observed season happens to imply a 2026 draft season.
+    # Use the labeled draft universe for 2023-2026. If a future run lacks real
+    # 2026 draft labels, append a compact combine/watchlist slice rather than
+    # every PFF-only college QB whose final observed season implies 2026.
     proj = joined[joined["label_status"].isin(["provisional", "projection_target"])].copy()
     # Label-backed rows should display their real draft year/slot even when
     # their best feature profile is a PFF-only proxy season.
     proj["draft_season"] = proj["draft_year"]
 
-    watch_2026 = profiles[(profiles["draft_season"].eq(2026)) & (profiles["in_combine"])].copy()
+    has_2026_draft_labels = proj["draft_year"].eq(2026).any()
+    if has_2026_draft_labels:
+        watch_2026 = profiles.iloc[0:0].copy()
+    else:
+        watch_2026 = profiles[(profiles["draft_season"].eq(2026)) & (profiles["in_combine"])].copy()
     if not watch_2026.empty:
         watch_2026 = watch_2026[~watch_2026["normalized_name"].isin(proj["normalized_name"])].copy()
         watch_2026["draft_year"] = watch_2026["draft_season"]
@@ -199,8 +210,22 @@ def build_outputs():
     proj["model_hit_prob"] = score(proj, "pre_draft")
     proj["model_hit_prob_no_pff"] = score(proj, "pre_draft_no_pff")
     proj["pff_model_delta"] = proj["model_hit_prob"] - proj["model_hit_prob_no_pff"]
+    proj["model_hit_prob_pick_only"] = np.nan
+    proj["model_hit_prob_post_draft"] = np.nan
+    proj["model_hit_prob_post_draft_pff"] = np.nan
+    proj["draft_adjusted_hit_prob"] = proj["model_hit_prob"]
+    proj_has_pick = proj["pick"].notna()
+    if proj_has_pick.any():
+        proj.loc[proj_has_pick, "model_hit_prob_pick_only"] = score(proj[proj_has_pick], "pick_only")
+        proj.loc[proj_has_pick, "model_hit_prob_post_draft"] = score(proj[proj_has_pick], "post_draft")
+        proj.loc[proj_has_pick, "model_hit_prob_post_draft_pff"] = score(proj[proj_has_pick], "post_draft_pff")
+        proj.loc[proj_has_pick, "draft_adjusted_hit_prob"] = np.maximum(
+            proj.loc[proj_has_pick, "model_hit_prob_post_draft"],
+            proj.loc[proj_has_pick, "model_hit_prob_pick_only"],
+        )
     proj["expected_tier"] = expected_tier(proj)
-    proj["percentile_vs_history"] = _percentiles(proj["model_hit_prob"].values, hist_prob)
+    draft_adjusted_ref = hs["draft_adjusted_hit_prob"].dropna().values
+    proj["percentile_vs_history"] = _percentiles(proj["draft_adjusted_hit_prob"].values, draft_adjusted_ref)
     pind = per_player_indicators(proj, "pre_draft")
     proj["top_positive_indicators"] = [d["top_positive_indicators"] for d in pind]
     proj["top_negative_indicators"] = [d["top_negative_indicators"] for d in pind]
@@ -217,12 +242,14 @@ def build_outputs():
 
     proj = proj.rename(columns={"success_tier": "actual_tier_or_projection", "notes": "scout_note"})
     proj_cols = ["canonical_name", "college", "draft_season", "round", "pick",
-                 "model_hit_prob", "model_hit_prob_no_pff", "pff_model_delta",
+                 "draft_adjusted_hit_prob", "model_hit_prob", "model_hit_prob_no_pff",
+                 "model_hit_prob_pick_only", "model_hit_prob_post_draft",
+                 "model_hit_prob_post_draft_pff", "pff_model_delta",
                  "expected_tier", "percentile_vs_history",
                  "actual_tier_or_projection", "label_status",
                  "top_positive_indicators", "top_negative_indicators",
                  "data_coverage", "scout_note"]
-    proj[proj_cols].sort_values(["draft_season", "model_hit_prob"],
+    proj[proj_cols].sort_values(["draft_season", "draft_adjusted_hit_prob"],
                                 ascending=[True, False])\
         .to_csv(os.path.join(REPO, "model", "projections.csv"), index=False)
 

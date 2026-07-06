@@ -30,10 +30,11 @@ check file sizes before uploading next time. If the source keeps failing, tell
 me what tool/site you're exporting from and I'll suggest a fix. QBR is
 nice-to-have (opponent-adjusted efficiency), not blocking.
 
-## 3. 2026 draft results (MEDIUM)
-The 2026 NFL draft happened after my knowledge cutoff (Jan 2026). To put draft
-capital next to 2026-class projections, upload a small CSV:
-`player, college, round, pick, team` for 2026 drafted QBs.
+## 3. 2026 draft results (DONE — drafted QBs added)
+The 2026 drafted QB class is now in `data/labels/nfl_qb_outcomes.csv` as
+`projection_target` rows with real round/pick/team data and blank NFL outcome
+fields. The board uses a draft-adjusted display score for these rows:
+`max(post_draft_model, pick_only_market_baseline)`.
 
 ## 4. NFL outcome verification data (LOW — have curated substitute)
 `data/labels/nfl_qb_outcomes.csv` is hand-curated from knowledge. To verify /

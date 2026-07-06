@@ -231,9 +231,10 @@ similar spots.** Three findings:
   Sam Howell) and a physical marvel it under-rated pre-draft (Josh Allen). A
   production model structurally under-weights the boom-bust "tools" prospect.
 - **2024–26 outcomes are unknown.** The projections in `model/projections.csv` are
-  genuine forecasts. The 2026 "class" is pre-declaration and speculative (whichever
-  QBs the combine/CFBD data tags for 2026), has **no PFF and no draft capital**, and
-  is scored with the pre-draft model only — treat it as the most tentative board.
+  genuine forecasts. The 2026 class now uses actual drafted-QB round/pick/team
+  rows, but the NFL outcome fields are still blank. The website's headline hit
+  probability is draft-adjusted for drafted QBs and keeps the PFF pre-draft score
+  as an audit column.
 
 ---
 

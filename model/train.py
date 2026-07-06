@@ -274,6 +274,20 @@ def main():
     results["college_lift_over_pick"] = round(float(delta), 4)
     results["pff_lift_over_no_pff"] = round(float(pff_delta), 4)
 
+    y_pick, p_pick, pick_years = forward_oof(train, PICK_ONLY_FEATS, FIXED_C["pick_only"])
+    y_post, p_post, post_years = forward_oof(train, POST_DRAFT_FEATS, FIXED_C["post_draft"])
+    if np.array_equal(y_pick, y_post) and pick_years == post_years:
+        p_guarded = np.maximum(p_post, p_pick)
+        guarded_metrics = metrics(y_post, p_guarded)
+        guarded_metrics.update({
+            "validation": "forward_by_draft_year",
+            "forward_years": sorted(set(post_years)),
+            "rule": "max(post_draft, pick_only)",
+            "note": "Drafted-QB display score; never lets college/combine model fall below the market baseline.",
+        })
+        results["draft_adjusted_market_guarded"] = guarded_metrics
+        print(f"[draft_adjusted_market_guarded] {guarded_metrics}")
+
     # --- secondary ordinal model: expected success tier (0-4) --------------
     t_true, t_pred = loco_tier(train, PRE_DRAFT_FEATS)
     tier_metrics = {
@@ -310,8 +324,10 @@ def main():
         "notes": "pre_draft is PPA+combine+context+selected PFF concept/pressure features. "
                  "pre_draft_no_pff preserves the old no-PFF baseline. post_draft intentionally "
                  "uses the no-PFF feature set because PFF hurt forward validation once draft "
-                 "capital was known; post_draft_pff is retained for audit only. Production fits "
-                 "use final(1.0)+provisional(0.5); validation uses final only.",
+                 "capital was known; post_draft_pff is retained for audit only. The projection "
+                 "board's draft_adjusted_hit_prob uses max(post_draft, pick_only) for drafted "
+                 "QBs to preserve the market baseline. Production fits use final(1.0)+"
+                 "provisional(0.5); validation uses final only.",
     }
     with open(os.path.join(ART, "features_used.json"), "w") as fh:
         json.dump(features_used, fh, indent=2)

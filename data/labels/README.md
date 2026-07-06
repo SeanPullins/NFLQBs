@@ -1,13 +1,14 @@
 # NFL QB Outcome Labels
 
-`nfl_qb_outcomes.csv` — one row per QB drafted 2015–2025, hand-curated as the
+`nfl_qb_outcomes.csv` — one row per QB drafted 2015–2026, hand-curated as the
 ground-truth "success" labels for the projection model.
 
 ## Provenance & caveats
 
-These labels were **curated from model knowledge (knowledge cutoff: January
-2026)**, not pulled from a live data source, because this environment's network
-policy blocks sports data APIs. They cover well-documented public facts (draft
+Most outcome labels were **curated from model knowledge (knowledge cutoff:
+January 2026)**. The 2026 drafted-QB rows were added from ESPN's draft position
+tracker and NFL.com's prospect tracker on 2026-07-06, and intentionally leave NFL
+outcome fields blank. These labels cover well-documented public facts (draft
 slot, starting tenure, awards, contracts) and should be highly reliable for
 famous players, but:
 
@@ -15,8 +16,8 @@ famous players, but:
   be added to the repo. Pick numbers for late-round picks are the most likely
   place for small errors.
 - `seasons_primary_starter` = approximate count of seasons with ~8+ starts.
-- The **2026 draft class is absent** — it happened after the knowledge cutoff.
-  Upload 2026 draft results (player, round, pick, team, college) to add them.
+- The **2026 draft class has draft facts only**. Do not use it for training
+  until NFL outcome fields are mature enough to label.
 
 ## Columns
 
@@ -25,7 +26,7 @@ famous players, but:
 | `success_tier` | 0–4 career-value judgment (see below) |
 | `hit` | 1 if tier ≥ 3 (became at least a quality long-term starter). Empty for projection targets |
 | `seasons_primary_starter` | seasons with roughly 8+ starts (approx.) |
-| `label_status` | `final` (2015–22, 3+ yrs observed), `provisional` (2023), `projection_target` (2024–25, too early to grade — **exclude from training**) |
+| `label_status` | `final` (2015–22, 3+ yrs observed), `provisional` (2023), `projection_target` (2024–26, too early to grade — **exclude from training**) |
 | `label_confidence` | curator's confidence in the specific facts for the row |
 
 ## Success tiers

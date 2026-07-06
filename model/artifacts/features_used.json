@@ -71,5 +71,5 @@
   },
   "imputation": "median (no missing-indicators; power5=0 for FCS/missing)",
   "validation": "headline metrics are forward-by-draft-year on final labels only; LOCO stored as secondary",
-  "notes": "pre_draft is PPA+combine+context+selected PFF concept/pressure features. pre_draft_no_pff preserves the old no-PFF baseline. post_draft intentionally uses the no-PFF feature set because PFF hurt forward validation once draft capital was known; post_draft_pff is retained for audit only. Production fits use final(1.0)+provisional(0.5); validation uses final only."
+  "notes": "pre_draft is PPA+combine+context+selected PFF concept/pressure features. pre_draft_no_pff preserves the old no-PFF baseline. post_draft intentionally uses the no-PFF feature set because PFF hurt forward validation once draft capital was known; post_draft_pff is retained for audit only. The projection board's draft_adjusted_hit_prob uses max(post_draft, pick_only) for drafted QBs to preserve the market baseline. Production fits use final(1.0)+provisional(0.5); validation uses final only."
 }

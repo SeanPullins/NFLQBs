@@ -201,6 +201,25 @@
   },
   "college_lift_over_pick": 0.0344,
   "pff_lift_over_no_pff": 0.0068,
+  "draft_adjusted_market_guarded": {
+    "auc": 0.8764,
+    "log_loss": 0.3653,
+    "brier": 0.116,
+    "n": 66,
+    "n_hit": 14,
+    "base_rate": 0.2121,
+    "validation": "forward_by_draft_year",
+    "forward_years": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "rule": "max(post_draft, pick_only)",
+    "note": "Drafted-QB display score; never lets college/combine model fall below the market baseline."
+  },
   "tier_pre_draft": {
     "spearman_rho": 0.4329,
     "mae": 0.9217,

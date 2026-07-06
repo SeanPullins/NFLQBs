@@ -210,20 +210,20 @@ def fig_projections_board():
     fig, axes = plt.subplots(1, 3, figsize=(14.5, 5.2))
     class_color = {2024: BLUE, 2025: AQUA, 2026: VIOLET}
     for ax, yr in zip(axes, [2024, 2025, 2026]):
-        s = p[p["draft_season"] == yr].sort_values("model_hit_prob").tail(8)
+        s = p[p["draft_season"] == yr].sort_values("draft_adjusted_hit_prob").tail(8)
         y = np.arange(len(s))
-        ax.barh(y, s["model_hit_prob"], color=class_color[yr], height=0.68,
+        ax.barh(y, s["draft_adjusted_hit_prob"], color=class_color[yr], height=0.68,
                 edgecolor=SURF, linewidth=1.2, zorder=3)
-        for yi, v in zip(y, s["model_hit_prob"]):
+        for yi, v in zip(y, s["draft_adjusted_hit_prob"]):
             ax.text(v + 0.008, yi, f"{v*100:.0f}%", va="center", fontsize=9, color=INK2)
         ax.set_yticks(y); ax.set_yticklabels(s["canonical_name"], fontsize=9.5)
-        ax.set_xlim(0, max(0.8, s["model_hit_prob"].max() + 0.12))
+        ax.set_xlim(0, max(0.8, s["draft_adjusted_hit_prob"].max() + 0.12))
         ax.set_title(f"{yr} class", fontweight="bold", fontsize=12)
         ax.grid(axis="y", visible=False)
-        ax.set_xlabel("Pre-draft hit probability")
-    fig.suptitle("Projection board: top-8 QBs by PFF-enabled pre-draft model",
+        ax.set_xlabel("Draft-adjusted hit probability")
+    fig.suptitle("Projection board: top QBs by draft-adjusted hit probability",
                  fontweight="bold", x=0.5, y=0.99, fontsize=13.5)
-    fig.text(0.5, 0.93, "No draft slot used. PFF-enabled probabilities are shown with the no-PFF baseline in model/projections.csv.",
+    fig.text(0.5, 0.93, "Drafted QBs use max(post-draft model, pick-only market baseline); PFF pre-draft deltas remain in model/projections.csv.",
              ha="center", fontsize=9, color=MUTED)
     fig.tight_layout(rect=(0, 0, 1, 0.9))
     fig.savefig(os.path.join(FIGDIR, "projections_board.png"), dpi=150)

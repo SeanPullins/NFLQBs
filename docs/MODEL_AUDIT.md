@@ -6,8 +6,9 @@ Updated 2026-07-06 after importing `QB_2014.zip` through `QB_2025.zip`.
 
 Claude's first model was materially stale because it was built around the old
 assumption that PFF QB data only covered 2014-2015 source seasons. After the full
-PFF import, the raw PFF table grew from 1,204 to 7,599 player-seasons, and all
-126 labeled drafted QBs now join to a profile.
+PFF import, the raw PFF table grew from 1,204 to 7,599 player-seasons. After
+adding the 2026 drafted QBs, all 136 label/projection rows now join to a
+profile.
 
 The surprise: PFF helps, but only a little pre-draft, and it should not be used
 in the default post-draft model once draft capital is known.
@@ -24,6 +25,7 @@ leave-one-class-out issue where future draft classes helped predict the past.
 | Pre-draft, no PFF | 0.7734 | 0.4334 | 0.1396 | old feature family |
 | Pre-draft, PFF-enabled | 0.7802 | 0.4443 | 0.1447 | small AUC lift, worse calibration |
 | Post-draft, no PFF | 0.8709 | 0.3668 | 0.1172 | selected post-draft model |
+| Draft-adjusted display | 0.8764 | 0.3653 | 0.1160 | max(post-draft, pick-only) |
 | Post-draft, PFF-enabled | 0.8297 | 0.3834 | 0.1220 | audit only |
 
 ## What Changed Most
@@ -35,10 +37,11 @@ Biggest PFF bumps on the projection board:
 | Kyle McCord | 2025 | +19.8 pts |
 | Michael Penix Jr. | 2024 | +10.7 pts |
 | Devin Leary | 2024 | +10.3 pts |
-| Jalon Daniels | 2026 watchlist | +8.9 pts |
 | Cam Ward | 2025 | +8.1 pts |
 | Stetson Bennett | 2023 | +7.4 pts |
 | Clayton Tune | 2023 | +7.0 pts |
+| Max Duggan | 2023 | +6.4 pts |
+| Ty Simpson | 2026 | +5.8 pts |
 
 Biggest PFF downgrades:
 
@@ -47,9 +50,9 @@ Biggest PFF downgrades:
 | Dillon Gabriel | 2025 | -28.8 pts |
 | Cam Miller | 2025 | -21.6 pts |
 | Bo Nix | 2024 | -16.7 pts |
-| Carson Beck | 2026 watchlist | -9.6 pts |
+| Carson Beck | 2026 | -9.6 pts |
 | Jaxson Dart | 2025 | -9.4 pts |
-| Cole Payton | 2026 watchlist | -8.9 pts |
+| Cole Payton | 2026 | -8.9 pts |
 | C.J. Stroud | 2023 | -8.5 pts |
 | Jayden Daniels | 2024 | -7.9 pts |
 
@@ -63,5 +66,5 @@ Biggest PFF downgrades:
 - PFF improves the pre-draft AUC only slightly and worsens post-draft validation.
   Treat the PFF delta as a useful audit signal, not as proof that the PFF model
   is automatically better for every player.
-- 2026 rows are still a watchlist because the repo does not have a verified 2026
-  drafted-QB label file yet.
+- 2026 is now a drafted-QB projection class, not a watchlist. Outcome fields are
+  still blank because no NFL career outcomes are known yet.
