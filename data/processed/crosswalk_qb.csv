@@ -1,0 +1,1049 @@
+canonical_id,canonical_name,normalized_name,pff_player_id,cfbd_id,combine_normalized_player,combine_cfb_player_id,combine_pfr_player_id,combine_gsis_id,colleges,college_seasons,college_seasons_count,draft_season,in_pff,in_combine,in_cfbd
+jameis-winston-florida-state-2014,Jameis Winston,jameis winston,9434.0,530308,,,,,Florida State,Florida State:2014,1,2015,True,False,True
+marcus-mariota-oregon-2014,Marcus Mariota,marcus mariota,9435.0,511459,,,,,Oregon,Oregon:2014,1,2015,True,False,True
+todd-gurley-ii-georgia-2014,Todd Gurley II,todd gurley,9443.0,,,,,,Georgia,Georgia:2014,1,2015,True,False,False
+ameer-abdullah-nebraska-2014,Ameer Abdullah,ameer abdullah,9487.0,,,,,,Nebraska,Nebraska:2014,1,2015,True,False,False
+garrett-grayson-colorado-state-2014,Garrett Grayson,garrett grayson,9508.0,515528,,,,,Colorado State,Colorado State:2014,1,2015,True,False,True
+sean-mannion-oregon-state-2014,Sean Mannion,sean mannion,9522.0,504786,,,,,Oregon State,Oregon State:2014,1,2015,True,False,True
+bryce-petty-baylor-2014,Bryce Petty,bryce petty,9536.0,480746,,,,,Baylor,Baylor:2014,1,2015,True,False,True
+jamison-crowder-duke-2014,Jamison Crowder,jamison crowder,9538.0,,,,,,Duke,Duke:2014,1,2015,True,False,False
+david-cobb-minnesota-2014,David Cobb,david cobb,9571.0,,,,,,Minnesota,Minnesota:2014,1,2015,True,False,False
+brett-hundley-ucla-2014,Brett Hundley,brett hundley,9580.0,511982,,,,,UCLA,UCLA:2014,1,2015,True,False,True
+c-j-uzomah-auburn-2014,C.J. Uzomah,cj uzomah,9590.0,,,,,,Auburn,Auburn:2014,1,2015,True,False,False
+evan-spencer-ohio-state-2014,Evan Spencer,evan spencer,9620.0,,,,,,Ohio State,Ohio State:2014,1,2015,True,False,False
+joey-iosefa-hawaii-2014,Joey Iosefa,joseph iosefa,9664.0,,,,,,Hawaii,Hawaii:2014,1,2015,True,False,False
+trevor-siemian-northwestern-2014,Trevor Siemian,trevor siemian,9683.0,500419,,,,,Northwestern,Northwestern:2014,1,2015,True,False,True
+dylan-thompson-south-carolina-2014,Dylan Thompson,dylan thompson,9696.0,504295,,,,,South Carolina,South Carolina:2014,1,2015,True,False,True
+bryan-bennett-se-louisiana-2014,Bryan Bennett,bryan bennett,9699.0,504745,,,,,SE Louisiana,SE Louisiana:2014,1,2015,True,False,True
+connor-halliday-washington-state-2014,Connor Halliday,connor halliday,9724.0,504823,,,,,Washington State,Washington State:2014,1,2015,True,False,True
+anthony-boone-duke-2014,Anthony Boone,anthony boone,9751.0,501046,,,,,Duke,Duke:2014,1,2015,True,False,True
+matthew-miller-boise-state-2014,Matthew Miller,matthew miller,9788.0,,,,,,Boise State,Boise State:2014,1,2015,True,False,False
+nick-marshall-auburn-2014,Nick Marshall,nicholas marshall,9829.0,550021,,,,,Auburn,Auburn:2014,1,2015,True,False,True
+jake-waters-kansas-state-2014,Jake Waters,jacob waters,9833.0,550158,,,,,Kansas State,Kansas State:2014,1,2015,True,False,True
+akeem-hunt-purdue-2014,Akeem Hunt,akeem hunt,9839.0,,,,,,Purdue,Purdue:2014,1,2015,True,False,False
+jameill-showers-utep-2014,Jameill Showers,jameill showers,9851.0,500571,,,,,UTEP,UTEP:2014,1,2015,True,False,True
+taylor-heinicke-old-dominion-2014,Taylor Heinicke,taylor heinicke,9896.0,513949,,,,,Old Dominion,Old Dominion:2014,1,2015,True,False,True
+tyler-murphy-boston-college-2014,Tyler Murphy,tyler murphy,9912.0,503970,,,,,Boston College,Boston College:2014,1,2015,True,False,True
+devin-gardner-michigan-2014,Devin Gardner,devin gardner,9949.0,501543,,,,,Michigan,Michigan:2014,1,2015,True,False,True
+cody-fajardo-nevada-2014,Cody Fajardo,cody fajardo,9976.0,501241,,,,,Nevada,Nevada:2014,1,2015,True,False,True
+shane-carden-east-carolina-2014,Shane Carden,shane carden,10001.0,500938,,,,,East Carolina,East Carolina:2014,1,2015,True,False,True
+darius-jennings-virginia-2014,Darius Jennings,darius jennings,10038.0,,,,,,Virginia,Virginia:2014,1,2015,True,False,False
+jake-heaps-miami-2014,Jake Heaps,jacob heaps,10085.0,501563,,,,,Miami,Miami:2014,1,2015,True,False,True
+cole-stoudt-clemson-2014,Cole Stoudt,cole stoudt,10142.0,512052,,,,,Clemson,Clemson:2014,1,2015,True,False,True
+david-porter-jr-tcu-2014,David Porter Jr.,david porter,10149.0,,,,,,TCU,TCU:2014,1,2015,True,False,False
+deshon-foxx-connecticut-2014,Deshon Foxx,deshon foxx,10160.0,,,,,,Connecticut,Connecticut:2014,1,2015,True,False,False
+hutson-mason-georgia-2014,Hutson Mason,hutson mason,10168.0,504004,,,,,Georgia,Georgia:2014,1,2015,True,False,True
+zach-d-orazio-akron-2014,Zach D'Orazio,zachary dorazio,10180.0,,,,,,Akron,Akron:2014,1,2015,True,False,False
+jarrod-west-syracuse-2014,Jarrod West,jarrod west,10309.0,,,,,,Syracuse,Syracuse:2014,1,2015,True,False,False
+ryan-williams-miami-2014,Ryan Williams,ryan williams,10343.0,509992,,,,,Miami,Miami:2014,1,2015,True,False,True
+jared-goff-california-2015,Jared Goff,jared goff,10635.0,547401,jaredgoff,jared-goff-1,GoffJa00,00-0033106,California,California:2014;California:2015,2,2016,True,True,True
+carson-wentz-north-dakota-state-2015,Carson Wentz,carson wentz,10636.0,515607,carsonwentz,,WentCa00,00-0032950,North Dakota State,North Dakota State:2014;North Dakota State:2015,2,2016,True,True,True
+laquon-treadwell-ole-miss-2015,Laquon Treadwell,laquon treadwell,10657.0,,,,,,Ole Miss,Ole Miss:2015,1,2016,True,False,False
+paxton-lynch-memphis-2015,Paxton Lynch,paxton lynch,10660.0,534849,paxtonlynch,paxton-lynch-1,LyncPa00,00-0033108,Memphis,Memphis:2014;Memphis:2015,2,2016,True,True,True
+christian-hackenberg-penn-state-2015,Christian Hackenberg,christian hackenberg,10685.0,552329,christianhackenberg,christian-hackenberg-1,HackCh01,00-0032953,Penn State,Penn State:2014;Penn State:2015,2,2016,True,True,True
+tyler-boyd-pittsburgh-2015,Tyler Boyd,tyler boyd,10689.0,,,,,,Pittsburgh,Pittsburgh:2014;Pittsburgh:2015,2,2016,True,False,False
+braxton-miller-ohio-state-2015,Braxton Miller,braxton miller,10719.0,512838,,,,,Ohio State,Ohio State:2015,1,2016,True,False,True
+nick-vigil-utah-state-2014,Nick Vigil,nicholas vigil,10721.0,,,,,,Utah State,Utah State:2014,1,2015,True,False,False
+jacoby-brissett-nc-state-2015,Jacoby Brissett,jacoby brissett,10725.0,512191,jacobybrissett,jacoby-brissett-2,BrisJa00,00-0033119,NC State,NC State:2014;NC State:2015,2,2016,True,True,True
+cody-kessler-usc-2015,Cody Kessler,cody kessler,10727.0,513329,codykessler,cody-kessler-1,KessCo00,00-0033104,USC,USC:2014;USC:2015,2,2016,True,True,True
+connor-cook-michigan-state-2015,Connor Cook,connor cook,10734.0,512705,connorcook,connor-cook-1,CookCo00,00-0032893,Michigan State,Michigan State:2014;Michigan State:2015,2,2016,True,True,True
+pharoh-cooper-south-carolina-2015,Pharoh Cooper,pharoh cooper,10751.0,,,,,,South Carolina,South Carolina:2014;South Carolina:2015,2,2016,True,False,False
+demarcus-robinson-florida-2015,Demarcus Robinson,demarcus robinson,10760.0,,,,,,Florida,Florida:2015,1,2016,True,False,False
+dak-prescott-mississippi-state-2015,Dak Prescott,dak prescott,10769.0,512030,dakprescott,dak-prescott-1,PresDa01,00-0033077,Mississippi State,Mississippi State:2014;Mississippi State:2015,2,2016,True,True,True
+cardale-jones-ohio-state-2015,Cardale Jones,cardale jones,10773.0,534294,cardalejones,cardale-jones-1,JoneCa01,00-0033098,Ohio State,Ohio State:2014;Ohio State:2015,2,2016,True,True,True
+jordan-howard-uab-2014,Jordan Howard,jordan howard,10784.0,,,,,,UAB,UAB:2014,1,2015,True,False,False
+jonathan-williams-arkansas-2014,Jonathan Williams,jonathan williams,10790.0,,,,,,Arkansas,Arkansas:2014,1,2015,True,False,False
+kevin-hogan-stanford-2015,Kevin Hogan,kevin hogan,10796.0,516357,kevinhogan,kevin-hogan-2,HogaKe00,00-0032784,Stanford,Stanford:2014;Stanford:2015,2,2016,True,True,True
+tyreek-hill-oklahoma-state-2014,Tyreek Hill,tyreek hill,10799.0,,,,,,Oklahoma State,Oklahoma State:2014,1,2015,True,False,False
+keenan-reynolds-navy-2015,Keenan Reynolds,keenan reynolds,10816.0,530568,,,,,Navy,Navy:2014;Navy:2015,2,2016,True,False,True
+jakeem-grant-sr-texas-tech-2015,Jakeem Grant Sr.,jakeem grant,10820.0,,,,,,Texas Tech,Texas Tech:2015,1,2016,True,False,False
+nate-sudfeld-indiana-2015,Nate Sudfeld,nathan sudfeld,10821.0,535825,natesudfeld,nate-sudfeld-1,SudfNa00,00-0032792,Indiana,Indiana:2014;Indiana:2015,2,2016,True,True,True
+jake-rudock-michigan-2015,Jake Rudock,jacob rudock,10825.0,518380,,,,,Iowa;Michigan,Iowa:2014;Michigan:2015,2,2016,True,False,True
+brandon-allen-arkansas-2015,Brandon Allen,brandon allen,10835.0,515915,brandonallen,brandon-allen-2,AlleBr00,00-0032434,Arkansas,Arkansas:2014;Arkansas:2015,2,2016,True,True,True
+jeff-driskel-louisiana-tech-2015,Jeff Driskel,jeff driskel,10841.0,511889,jeffdriskel,jeff-driskel-1,DrisJe00,00-0032436,Florida;Louisiana Tech,Florida:2014;Louisiana Tech:2015,2,2016,True,True,True
+brandon-doughty-western-kentucky-2015,Brandon Doughty,brandon doughty,10857.0,504866,brandondoughty,brandon-doughty-1,DougBr00,00-0032446,Western Kentucky,Western Kentucky:2014;Western Kentucky:2015,2,2016,True,True,True
+devin-lucien-arizona-state-2015,Devin Lucien,devin lucien,10859.0,,,,,,Arizona State,Arizona State:2015,1,2016,True,False,False
+de-marcus-ayers-houston-2015,De'Marcus Ayers,demarcus ayers,10863.0,,,,,,Houston,Houston:2015,1,2016,True,False,False
+daniel-braverman-western-michigan-2014,Daniel Braverman,daniel braverman,10864.0,,,,,,Western Michigan,Western Michigan:2014,1,2015,True,False,False
+devin-fuller-ucla-2014,Devin Fuller,devin fuller,10872.0,,,,,,UCLA,UCLA:2014,1,2015,True,False,False
+josh-ferguson-illinois-2014,Josh Ferguson,josh ferguson,10907.0,,,,,,Illinois,Illinois:2014,1,2015,True,False,False
+darion-griswold-arkansas-state-2015,Darion Griswold,darion griswold,10908.0,,,,,,Arkansas State,Arkansas State:2015,1,2016,True,False,False
+alan-cross-memphis-2015,Alan Cross,alan cross,10931.0,,,,,,Memphis,Memphis:2015,1,2016,True,False,False
+jake-coker-alabama-2015,Jake Coker,jacob coker,10951.0,514124,,,,,Alabama,Alabama:2014;Alabama:2015,2,2016,True,False,True
+glenn-gronkowski-kansas-state-2015,Glenn Gronkowski,glenn gronkowski,10966.0,,,,,,Kansas State,Kansas State:2014;Kansas State:2015,2,2016,True,False,False
+marken-michel-massachusetts-2014,Marken Michel,marken michel,10980.0,,,,,,Massachusetts,Massachusetts:2014,1,2015,True,False,False
+joel-stave-wisconsin-2015,Joel Stave,joel stave,10985.0,514230,joelstave,joel-stave-1,StavJo01,00-0032614,Wisconsin,Wisconsin:2014;Wisconsin:2015,2,2016,True,True,True
+mike-bercovici-arizona-state-2015,Mike Bercovici,michael bercovici,10986.0,517393,,,,,Arizona State,Arizona State:2014;Arizona State:2015,2,2016,True,False,True
+kenneth-farrow-houston-2014,Kenneth Farrow,kenneth farrow,10988.0,,,,,,Houston,Houston:2014,1,2015,True,False,False
+bralon-addison-oregon-2015,Bralon Addison,bralon addison,11013.0,,,,,,Oregon,Oregon:2015,1,2016,True,False,False
+durron-neal-oklahoma-2014,Durron Neal,durron neal,11023.0,,,,,,Oklahoma,Oklahoma:2014,1,2015,True,False,False
+j-d-mckissic-arkansas-state-2015,J.D. McKissic,jd mckissic,11047.0,,,,,,Arkansas State,Arkansas State:2015,1,2016,True,False,False
+cayleb-jones-arizona-2015,Cayleb Jones,cayleb jones,11075.0,,,,,,Arizona,Arizona:2015,1,2016,True,False,False
+tra-carson-texas-a-m-2015,Tra Carson,tra carson,11104.0,,,,,,Texas A&M,Texas A&M:2014;Texas A&M:2015,2,2016,True,False,False
+matt-johnson-bowling-green-2015,Matt Johnson,matthew johnson,11111.0,,,,,,Bowling Green,Bowling Green:2014;Bowling Green:2015,2,2016,True,False,False
+quinshad-davis-north-carolina-2015,Quinshad Davis,quinshad davis,11131.0,,,,,,North Carolina,North Carolina:2014;North Carolina:2015,2,2016,True,False,False
+paul-mcroberts-southeast-missouri-state-2014,Paul McRoberts,paul mcroberts,11192.0,,,,,,Southeast Missouri State,Southeast Missouri State:2014,1,2015,True,False,False
+nelson-spruce-colorado-2015,Nelson Spruce,nelson spruce,11199.0,,,,,,Colorado,Colorado:2014;Colorado:2015,2,2016,True,False,False
+d-j-foster-arizona-state-2014,D.J. Foster,dj foster,11214.0,,,,,,Arizona State,Arizona State:2014,1,2015,True,False,False
+k-j-maye-minnesota-2015,K.J. Maye,kj maye,11248.0,,,,,,Minnesota,Minnesota:2014;Minnesota:2015,2,2016,True,False,False
+josh-woodrum-liberty-2015,Josh Woodrum,josh woodrum,11253.0,514651,joshwoodrum,,WoodJo01,00-0032658,Liberty,Liberty:2014;Liberty:2015,2,2016,True,True,True
+jalin-marshall-ohio-state-2014,Jalin Marshall,jalin marshall,11259.0,,,,,,Ohio State,Ohio State:2014,1,2015,True,False,False
+trevone-boykin-tcu-2015,Trevone Boykin,trevone boykin,11279.0,517127,trevoneboykin,trevone-boykin-1,BoykTr00,00-0032462,TCU,TCU:2014;TCU:2015,2,2016,True,True,True
+tanner-mcevoy-wisconsin-2014,Tanner McEvoy,tanner mcevoy,11288.0,,,,,,Wisconsin,Wisconsin:2014,1,2015,True,False,False
+darrin-peterson-liberty-2014,Darrin Peterson,darrin peterson,11301.0,,,,,,Liberty,Liberty:2014,1,2015,True,False,False
+tre-roberson-illinois-state-2015,Tre Roberson,tre roberson,11310.0,513034,,,,,Illinois State,Illinois State:2015,1,2016,True,False,True
+k-j-brent-wake-forest-2015,K.J. Brent,kj brent,11349.0,,,,,,Wake Forest,Wake Forest:2015,1,2016,True,False,False
+jaydon-mickens-washington-2014,Jaydon Mickens,jaydon mickens,11371.0,,,,,,Washington,Washington:2014,1,2015,True,False,False
+joe-licata-buffalo-2015,Joe Licata,joseph licata,11390.0,513614,,,,,Buffalo,Buffalo:2014;Buffalo:2015,2,2016,True,False,True
+max-wittek-hawaii-2015,Max Wittek,max wittek,11401.0,513330,,,,,Hawaii,Hawaii:2015,1,2016,True,False,True
+j-j-worton-ucf-2014,J.J. Worton,jj worton,11404.0,,,,,,UCF,UCF:2014,1,2015,True,False,False
+marquise-williams-north-carolina-2015,Marquise Williams,marquise williams,11419.0,516347,,,,,North Carolina,North Carolina:2014;North Carolina:2015,2,2016,True,False,True
+david-watford-virginia-2014,David Watford,david watford,11441.0,511361,,,,,Virginia,Virginia:2014,1,2015,True,False,True
+kendal-thompson-utah-2015,Kendal Thompson,kendal thompson,11451.0,514737,,,,,Utah,Utah:2014;Utah:2015,2,2016,True,False,True
+jacob-huesman-chattanooga-2015,Jacob Huesman,jacob huesman,11514.0,512913,,,,,Chattanooga,Chattanooga:2014;Chattanooga:2015,2,2016,True,False,True
+blake-sims-alabama-2014,Blake Sims,blake sims,11515.0,504052,,,,,Alabama,Alabama:2014,1,2015,True,False,True
+mitch-trubisky-north-carolina-2015,Mitch Trubisky,mitchell trubisky,11757.0,545238,mitchelltrubisky,mitch-trubisky-1,TrubMi00,00-0033869,North Carolina,North Carolina:2014;North Carolina:2015,2,2017,True,True,True
+leonard-fournette-lsu-2015,Leonard Fournette,leonard fournette,11759.0,,,,,,LSU,LSU:2015,1,2016,True,False,False
+corey-davis-western-michigan-2015,Corey Davis,corey davis,11760.0,,,,,,Western Michigan,Western Michigan:2014;Western Michigan:2015,2,2016,True,False,False
+christian-mccaffrey-stanford-2015,Christian McCaffrey,christian mccaffrey,11763.0,,,,,,Stanford,Stanford:2015,1,2016,True,False,False
+patrick-mahomes-texas-tech-2015,Patrick Mahomes,patrick mahomes,11765.0,3139477,patrickmahomes,patrick-mahomes-1,MahoPa00,00-0033873,Texas Tech,Texas Tech:2014;Texas Tech:2015,2,2017,True,True,True
+deshaun-watson-clemson-2015,Deshaun Watson,deshaun watson,11767.0,3122840,deshaunwatson,deshaun-watson-1,WatsDe00,00-0033537,Clemson,Clemson:2014;Clemson:2015,2,2017,True,True,True
+jabrill-peppers-michigan-2015,Jabrill Peppers,jabrill peppers,11780.0,,,,,,Michigan,Michigan:2015,1,2016,True,False,False
+zay-jones-east-carolina-2015,Zay Jones,zay jones,11792.0,,,,,,East Carolina,East Carolina:2014;East Carolina:2015,2,2016,True,False,False
+gerald-everett-south-alabama-2015,Gerald Everett,gerald everett,11799.0,,,,,,South Alabama,South Alabama:2015,1,2016,True,False,False
+deshone-kizer-notre-dame-2015,DeShone Kizer,deshone kizer,11807.0,3129302,deshonekizer,deshone-kizer-1,KizeDe00,00-0033899,Notre Dame,Notre Dame:2015,1,2017,True,True,True
+ardarius-stewart-alabama-2015,ArDarius Stewart,ardarius stewart,11834.0,,,,,,Alabama,Alabama:2015,1,2016,True,False,False
+davis-webb-texas-tech-2015,Davis Webb,davis webb,11842.0,550386,daviswebb,davis-webb-1,WebbDa00,00-0033550,California;Texas Tech,Texas Tech:2014;Texas Tech:2015,2,2017,True,True,True
+c-j-beathard-iowa-2015,C.J. Beathard,cj beathard,11859.0,535844,cjbeathard,cj-beathard-1,BeatC.00,00-0033936,Iowa,Iowa:2014;Iowa:2015,2,2017,True,True,True
+dede-westbrook-oklahoma-2015,Dede Westbrook,dede westbrook,11865.0,,,,,,Oklahoma,Oklahoma:2015,1,2016,True,False,False
+donnel-pumphrey-san-diego-state-2014,Donnel Pumphrey,donnel pumphrey,11887.0,,,,,,San Diego State,San Diego State:2014,1,2015,True,False,False
+ryan-switzer-north-carolina-2015,Ryan Switzer,ryan switzer,11888.0,,,,,,North Carolina,North Carolina:2015,1,2016,True,False,False
+joshua-dobbs-tennessee-2015,Joshua Dobbs,joshua dobbs,11890.0,546540,joshuadobbs,joshua-dobbs-1,DobbJo00,00-0033949,Tennessee,Tennessee:2014;Tennessee:2015,2,2017,True,True,True
+brian-hill-wyoming-2014,Brian Hill,brian hill,11911.0,,,,,,Wyoming,Wyoming:2014,1,2015,True,False,False
+rodney-adams-south-florida-2015,Rodney Adams,rodney adams,11925.0,,,,,,South Florida,South Florida:2015,1,2016,True,False,False
+nathan-peterman-pittsburgh-2015,Nathan Peterman,nathan peterman,11926.0,532065,nathanpeterman,nathan-peterman-1,PeteNa00,00-0033958,Pittsburgh;Tennessee,Tennessee:2014;Pittsburgh:2015,2,2017,True,True,True
+trent-taylor-louisiana-tech-2015,Trent Taylor,trent taylor,11932.0,,,,,,Louisiana Tech,Louisiana Tech:2015,1,2016,True,False,False
+elijah-mcguire-louisiana-2015,Elijah McGuire,elijah mcguire,11943.0,,,,,,Louisiana,Louisiana:2014;Louisiana:2015,2,2016,True,False,False
+temuchin-hodges-virginia-tech-2015,Temuchin Hodges,temuchin hodges,11956.0,,,,,,Virginia Tech,Virginia Tech:2015,1,2016,True,False,False
+sam-rogers-virginia-tech-2015,Sam Rogers,samuel rogers,11961.0,,,,,,Virginia Tech,Virginia Tech:2014;Virginia Tech:2015,2,2016,True,False,False
+brad-kaaya-miami-2015,Brad Kaaya,brad kaaya,11970.0,3123048,bradkaaya,brad-kaaya-1,KaayBr00,00-0033585,Miami,Miami:2014;Miami:2015,2,2017,True,True,True
+isaiah-ford-virginia-tech-2015,Isaiah Ford,isaiah ford,11991.0,,,,,,Virginia Tech,Virginia Tech:2014;Virginia Tech:2015,2,2016,True,False,False
+chris-carson-oklahoma-state-2015,Chris Carson,christopher carson,12004.0,,,,,,Oklahoma State,Oklahoma State:2015,1,2016,True,False,False
+chad-kelly-ole-miss-2015,Chad Kelly,chad kelly,12008.0,534580,,,,,Ole Miss,Ole Miss:2015,1,2016,True,False,True
+trevor-knight-oklahoma-2015,Trevor Knight,trevor knight,12009.0,534449,trevorknight,trevor-knight-1,KnigTr00,00-0033607,Oklahoma;Texas A&M,Oklahoma:2014;Oklahoma:2015,2,2017,True,True,True
+ricky-seals-jones-texas-a-m-2015,Ricky Seals-Jones,ricky seals jones,12020.0,,,,,,Texas A&M,Texas A&M:2015,1,2016,True,False,False
+james-summers-east-carolina-2015,James Summers,james summers,12022.0,,,,,,East Carolina,East Carolina:2015,1,2016,True,False,False
+josh-magee-south-alabama-2015,Josh Magee,josh magee,12030.0,,,,,,South Alabama,South Alabama:2015,1,2016,True,False,False
+eli-jenkins-jacksonville-state-2015,Eli Jenkins,eli jenkins,12041.0,537200,,,,,Jacksonville State,Jacksonville State:2014;Jacksonville State:2015,2,2016,True,False,True
+artavis-scott-clemson-2015,Artavis Scott,artavis scott,12044.0,,,,,,Clemson,Clemson:2015,1,2016,True,False,False
+wes-lunt-illinois-2015,Wes Lunt,wes lunt,12050.0,534652,,,,,Illinois,Illinois:2014;Illinois:2015,2,2016,True,False,True
+nick-schuessler-clemson-2015,Nick Schuessler,nicholas schuessler,12061.0,537012,,,,,Clemson,Clemson:2014;Clemson:2015,2,2016,True,False,True
+sefo-liufau-colorado-2015,Sefo Liufau,sefo liufau,12064.0,550278,sefoliufau,sefo-liufau-1,LiufSe00,,Colorado,Colorado:2014;Colorado:2015,2,2017,True,True,True
+travis-wilson-utah-2015,Travis Wilson,travis wilson,12079.0,531051,,,,,Utah,Utah:2014;Utah:2015,2,2016,True,False,True
+zach-terrell-western-michigan-2015,Zach Terrell,zachary terrell,12086.0,532645,,,,,Western Michigan,Western Michigan:2014;Western Michigan:2015,2,2016,True,False,True
+taysom-hill-byu-2015,Taysom Hill,taysom hill,12112.0,482594,,,,,BYU,BYU:2014;BYU:2015,2,2016,True,False,True
+p-j-walker-temple-2015,P.J. Walker,pj walker,12134.0,549759,,,,,Temple,Temple:2014;Temple:2015,2,2016,True,False,True
+marcus-kemp-hawaii-2014,Marcus Kemp,marcus kemp,12137.0,,,,,,Hawaii,Hawaii:2014,1,2015,True,False,False
+jordan-johnson-buffalo-2014,Jordan Johnson,jordan johnson,12146.0,,,,,,Buffalo,Buffalo:2014,1,2015,True,False,False
+gehrig-dieter-bowling-green-2015,Gehrig Dieter,gehrig dieter,12163.0,,,,,,Bowling Green,Bowling Green:2015,1,2016,True,False,False
+tion-green-cincinnati-2015,Tion Green,tion green,12185.0,,,,,,Cincinnati,Cincinnati:2015,1,2016,True,False,False
+jason-thompson-utah-2014,Jason Thompson,jason thompson,12216.0,534238,,,,,Utah,Utah:2014,1,2015,True,False,True
+greg-ward-houston-2015,Greg Ward,gregory ward,12258.0,545552,,,,,Houston,Houston:2014;Houston:2015,2,2016,True,False,True
+skyler-howard-west-virginia-2015,Skyler Howard,skyler howard,12262.0,3116460,,,,,West Virginia,West Virginia:2014;West Virginia:2015,2,2016,True,False,True
+jeremy-liggins-ole-miss-2014,Jeremy Liggins,jeremy liggins,12263.0,,,,,,Ole Miss,Ole Miss:2014,1,2015,True,False,False
+tyrone-swoopes-texas-2015,Tyrone Swoopes,tyrone swoopes,12267.0,547338,,,,,Texas,Texas:2014;Texas:2015,2,2016,True,False,True
+victor-bolden-jr-oregon-state-2015,Victor Bolden Jr.,victor bolden,12269.0,,,,,,Oregon State,Oregon State:2015,1,2016,True,False,False
+nick-mullens-southern-miss-2015,Nick Mullens,nicholas mullens,12282.0,552880,,,,,Southern Miss,Southern Miss:2014;Southern Miss:2015,2,2016,True,False,True
+zach-pascal-old-dominion-2015,Zach Pascal,zachary pascal,12303.0,,,,,,Old Dominion,Old Dominion:2015,1,2016,True,False,False
+austin-appleby-purdue-2015,Austin Appleby,austin appleby,12316.0,534770,,,,,Purdue,Purdue:2014;Purdue:2015,2,2016,True,False,True
+cooper-rush-central-michigan-2015,Cooper Rush,cooper rush,12324.0,531455,cooperrush,cooper-rush-1,RushCo00,00-0033662,Central Michigan,Central Michigan:2014;Central Michigan:2015,2,2017,True,True,True
+dare-ogunbowale-wisconsin-2015,Dare Ogunbowale,dare ogunbowale,12329.0,,,,,,Wisconsin,Wisconsin:2015,1,2016,True,False,False
+mitchell-paige-indiana-2015,Mitchell Paige,mitchell paige,12337.0,,,,,,Indiana,Indiana:2015,1,2016,True,False,False
+justin-thomas-georgia-tech-2015,Justin Thomas,justin thomas,12344.0,531104,,,,,Georgia Tech,Georgia Tech:2014;Georgia Tech:2015,2,2016,True,False,True
+bart-houston-wisconsin-2015,Bart Houston,bart houston,12349.0,534813,,,,,Wisconsin,Wisconsin:2014;Wisconsin:2015,2,2016,True,False,True
+lynquez-blair-georgia-state-2014,Lynquez Blair,lynquez blair,12383.0,,,,,,Georgia State,Georgia State:2014,1,2015,True,False,False
+greg-mcghee-howard-2014,Greg McGhee,gregory mcghee,12419.0,519005,,,,,Howard,Howard:2014,1,2015,True,False,True
+tim-digiorgio-temple-2014,Tim DiGiorgio,tim digiorgio,12486.0,552353,,,,,Temple,Temple:2014,1,2015,True,False,True
+kenzee-jackson-ul-monroe-2014,Kenzee Jackson,kenzee jackson,12586.0,,,,,,UL Monroe,UL Monroe:2014,1,2015,True,False,False
+pete-thomas-ul-monroe-2014,Pete Thomas,pete thomas,12587.0,501565,,,,,UL Monroe,UL Monroe:2014,1,2015,True,False,True
+michael-scarnecchia-south-carolina-2015,Michael Scarnecchia,michael scarnecchia,12599.0,3126487,,,,,South Carolina,South Carolina:2015,1,2016,True,False,True
+justin-arias-idaho-state-2014,Justin Arias,justin arias,12614.0,519384,,,,,Idaho State,Idaho State:2014,1,2015,True,False,True
+connor-reilly-temple-2014,Connor Reilly,connor reilly,12633.0,500975,,,,,Temple,Temple:2014,1,2015,True,False,True
+connor-christiansen-elon-2015,Connor Christiansen,connor christiansen,12716.0,,,,,,Elon,Elon:2015,1,2016,True,False,False
+grant-hedrick-boise-state-2014,Grant Hedrick,grant hedrick,12753.0,504908,,,,,Boise State,Boise State:2014,1,2015,True,False,True
+bo-wallace-ole-miss-2014,Bo Wallace,bo wallace,12806.0,500990,,,,,Ole Miss,Ole Miss:2014,1,2015,True,False,True
+taylor-alie-oregon-2015,Taylor Alie,taylor alie,12829.0,551351,,,,,Oregon,Oregon:2015,1,2016,True,False,True
+nick-montana-tulane-2014,Nick Montana,nicholas montana,12855.0,499807,,,,,Tulane,Tulane:2014,1,2015,True,False,True
+gary-nova-rutgers-2014,Gary Nova,gary nova,12894.0,518344,,,,,Rutgers,Rutgers:2014,1,2015,True,False,True
+taylor-kelly-arizona-state-2014,Taylor Kelly,taylor kelly,12900.0,504700,,,,,Arizona State,Arizona State:2014,1,2015,True,False,True
+cody-thomas-oklahoma-2015,Cody Thomas,cody thomas,12913.0,550504,,,,,Oklahoma,Oklahoma:2014;Oklahoma:2015,2,2016,True,False,True
+blake-jurich-san-jose-state-2014,Blake Jurich,blake jurich,12937.0,499830,,,,,San Jose State,San Jose State:2014,1,2015,True,False,True
+charles-lovett-colorado-state-2014,Charles Lovett,charles lovett,12990.0,,,,,,Colorado State,Colorado State:2014,1,2015,True,False,False
+foster-sawyer-tcu-2015,Foster Sawyer,foster sawyer,13010.0,3116417,,,,,TCU,TCU:2015,1,2016,True,False,True
+kam-jones-utsa-2014,Kam Jones,kam jones,13080.0,,,,,,UTSA,UTSA:2014,1,2015,True,False,False
+christian-stewart-byu-2014,Christian Stewart,christian stewart,13086.0,381494,,,,,BYU,BYU:2014,1,2015,True,False,True
+tucker-carter-utsa-2014,Tucker Carter,tucker carter,13140.0,535979,,,,,UTSA,UTSA:2014,1,2015,True,False,True
+dallas-davis-south-alabama-2015,Dallas Davis,dallas davis,13241.0,3125259,,,,,South Alabama,South Alabama:2015,1,2016,True,False,True
+chandler-whitmer-connecticut-2014,Chandler Whitmer,chandler whitmer,13323.0,,,,,,Connecticut,Connecticut:2014,1,2015,True,False,False
+billy-cosh-houston-2014,Billy Cosh,william cosh,13345.0,501268,,,,,Houston,Houston:2014,1,2015,True,False,True
+bill-belton-penn-state-2014,Bill Belton,william belton,13371.0,,,,,,Penn State,Penn State:2014,1,2015,True,False,False
+david-olson-clemson-2014,David Olson,david olson,13486.0,505313,,,,,Clemson,Clemson:2014,1,2015,True,False,True
+b-j-bostic-georgia-tech-2014,B.J. Bostic,bj bostic,13587.0,,,,,,Georgia Tech,Georgia Tech:2014,1,2015,True,False,False
+evan-crower-stanford-2014,Evan Crower,evan crower,13629.0,516354,,,,,Stanford,Stanford:2014,1,2015,True,False,True
+brandon-connette-fresno-state-2014,Brandon Connette,brandon connette,13640.0,501052,,,,,Fresno State,Fresno State:2014,1,2015,True,False,True
+demry-croft-minnesota-2015,Demry Croft,demry croft,13644.0,3728285,,,,,Minnesota,Minnesota:2015,1,2016,True,False,True
+arien-beasley-eastern-kentucky-2015,Arien Beasley,arien beasley,13702.0,,,,,,Eastern Kentucky,Eastern Kentucky:2015,1,2016,True,False,False
+jarrett-stidham-baylor-2015,Jarrett Stidham,jarrett stidham,13725.0,3892775,jarrettstidham,jarrett-stidham-1,StidJa00,00-0035264,Auburn;Baylor,Baylor:2015,1,2019,True,True,True
+london-lacy-uc-davis-2014,London Lacy,london lacy,13737.0,505882,,,,,UC Davis,UC Davis:2014,1,2015,True,False,True
+chris-willson-san-diego-2015,Chris Willson,christopher willson,13759.0,,,,,,San Diego,San Diego:2015,1,2016,True,False,False
+kale-pearson-air-force-2014,Kale Pearson,kale pearson,13849.0,535972,,,,,Air Force,Air Force:2014,1,2015,True,False,True
+colton-huntsman-air-force-2014,Colton Huntsman,colton huntsman,13850.0,,,,,,Air Force,Air Force:2014,1,2015,True,False,False
+logan-hallock-app-state-2014,Logan Hallock,logan hallock,13857.0,506309,,,,,App State,App State:2014,1,2015,True,False,True
+garrett-brown-western-carolina-2014,Garrett Brown,garrett brown,13883.0,,,,,,Western Carolina,Western Carolina:2014,1,2015,True,False,False
+taylor-duncan-eastern-illinois-2014,Taylor Duncan,taylor duncan,14046.0,,,,,,Eastern Illinois,Eastern Illinois:2014,1,2015,True,False,False
+quentin-williams-bethune-cookman-2015,Quentin Williams,quentin williams,14116.0,521060,,,,,Bethune-Cookman,Bethune-Cookman:2014;Bethune-Cookman:2015,2,2016,True,False,True
+josh-bordner-boston-college-2014,Josh Bordner,josh bordner,14153.0,,,,,,Boston College,Boston College:2014,1,2015,True,False,False
+ryan-howard-central-arkansas-2014,Ryan Howard,ryan howard,14170.0,504417,,,,,Central Arkansas,Central Arkansas:2014,1,2015,True,False,True
+andrew-manley-eastern-illinois-2014,Andrew Manley,andrew manley,14181.0,500846,,,,,Eastern Illinois,Eastern Illinois:2014,1,2015,True,False,True
+austin-hinder-california-2014,Austin Hinder,austin hinder,14193.0,504731,,,,,California,California:2014,1,2015,True,False,True
+trent-hurley-delaware-2014,Trent Hurley,trent hurley,14255.0,,,,,,Delaware,Delaware:2014,1,2015,True,False,False
+justin-burns-delaware-2014,Justin Burns,justin burns,14256.0,,,,,,Delaware,Delaware:2014,1,2015,True,False,False
+rob-bolden-eastern-michigan-2014,Rob Bolden,robert bolden,14307.0,501541,,,,,Eastern Michigan,Eastern Michigan:2014,1,2015,True,False,True
+jarvis-west-iowa-state-2014,Jarvis West,jarvis west,14353.0,,,,,,Iowa State,Iowa State:2014,1,2015,True,False,False
+chris-o-leary-indiana-state-2014,Chris O'Leary,christopher oleary,14397.0,,,,,,Indiana State,Indiana State:2014,1,2015,True,False,False
+mike-perish-indiana-state-2014,Mike Perish,michael perish,14400.0,500445,,,,,Indiana State,Indiana State:2014,1,2015,True,False,True
+taylor-graham-hawaii-2014,Taylor Graham,taylor graham,14412.0,532975,,,,,Hawaii,Hawaii:2014,1,2015,True,False,True
+reilly-o-toole-illinois-2014,Reilly O'Toole,reilly otoole,14421.0,515454,,,,,Illinois,Illinois:2014,1,2015,True,False,True
+taylor-burch-louisiana-tech-2014,Taylor Burch,taylor burch,14531.0,505012,,,,,Louisiana Tech,Louisiana Tech:2014,1,2015,True,False,True
+cody-sokol-louisiana-tech-2014,Cody Sokol,cody sokol,14536.0,530696,,,,,Louisiana Tech,Louisiana Tech:2014,1,2015,True,False,True
+c-j-brown-maryland-2014,C.J. Brown,cj brown,14571.0,480846,,,,,Maryland,Maryland:2014,1,2015,True,False,True
+rakeem-cato-marshall-2014,Rakeem Cato,rakeem cato,14642.0,518267,,,,,Marshall,Marshall:2014,1,2015,True,False,True
+jordan-johnson-montana-2014,Jordan Johnson,jordan johnson,14691.0,506820,,,,,Montana,Montana:2014,1,2015,True,False,True
+keiwone-malone-memphis-2014,Keiwone Malone,keiwone malone,14696.0,,,,,,Memphis,Memphis:2014,1,2015,True,False,False
+andrew-hendrix-miami-oh-2014,Andrew Hendrix,andrew hendrix,14711.0,500913,,,,,Miami (OH),Miami (OH):2014,1,2015,True,False,True
+jameon-lewis-mississippi-state-2014,Jameon Lewis,jameon lewis,14749.0,,,,,,Mississippi State,Mississippi State:2014,1,2015,True,False,False
+clayton-mitchem-new-mexico-2014,Clayton Mitchem,clayton mitchem,14784.0,546483,,,,,New Mexico,New Mexico:2014,1,2015,True,False,True
+kalen-henderson-nicholls-2014,Kalen Henderson,kalen henderson,14819.0,500514,,,,,Nicholls,Nicholls:2014,1,2015,True,False,True
+jalen-whitlow-eastern-illinois-2015,Jalen Whitlow,jalen whitlow,14821.0,530943,,,,,Eastern Illinois,Eastern Illinois:2014;Eastern Illinois:2015,2,2016,True,False,True
+noah-copeland-navy-2014,Noah Copeland,noah copeland,14877.0,,,,,,Navy,Navy:2014,1,2015,True,False,False
+beaux-hebert-nicholls-2014,Beaux Hebert,beaux hebert,14885.0,505475,,,,,Nicholls,Nicholls:2014,1,2015,True,False,True
+landon-smith-ohio-2014,Landon Smith,landon smith,15003.0,,,,,,Ohio,Ohio:2014,1,2015,True,False,False
+cole-weeks-southern-miss-2014,Cole Weeks,cole weeks,15145.0,532089,,,,,Southern Miss,Southern Miss:2014,1,2015,True,False,True
+justin-worley-tennessee-2014,Justin Worley,justin worley,15203.0,512424,,,,,Tennessee,Tennessee:2014,1,2015,True,False,True
+matt-joeckel-tcu-2014,Matt Joeckel,matthew joeckel,15217.0,501033,,,,,TCU,TCU:2014,1,2015,True,False,True
+aaron-cantu-southern-utah-2014,Aaron Cantu,aaron cantu,15222.0,547096,,,,,Southern Utah,Southern Utah:2014,1,2015,True,False,True
+austin-sumner-south-dakota-state-2014,Austin Sumner,austin sumner,15239.0,506664,,,,,South Dakota State,South Dakota State:2014,1,2015,True,False,True
+terrance-broadway-louisiana-2014,Terrance Broadway,terrance broadway,15286.0,503922,,,,,Louisiana,Louisiana:2014,1,2015,True,False,True
+ronald-butler-utah-state-2014,Ronald Butler,ronald butler,15360.0,,,,,,Utah State,Utah State:2014,1,2015,True,False,False
+brion-carnes-northern-iowa-2014,Brion Carnes,brion carnes,15362.0,501843,,,,,Northern Iowa,Northern Iowa:2014,1,2015,True,False,True
+dwight-macon-toledo-2014,Dwight Macon,dwight macon,15369.0,,,,,,Toledo,Toledo:2014,1,2015,True,False,False
+dylan-favre-ut-martin-2014,Dylan Favre,dylan favre,15409.0,504238,,,,,UT Martin,UT Martin:2014,1,2015,True,False,True
+william-tanner-ut-martin-2015,William Tanner,william tanner,15412.0,,,,,,UT Martin,UT Martin:2015,1,2016,True,False,False
+andy-vailas-new-hampshire-2014,Andy Vailas,andrew vailas,15432.0,498533,,,,,New Hampshire,New Hampshire:2014,1,2015,True,False,True
+craig-harrison-utah-state-2014,Craig Harrison,craig harrison,15442.0,531196,,,,,Utah State,Utah State:2014,1,2015,True,False,True
+miles-gooch-virginia-2014,Miles Gooch,miles gooch,15506.0,,,,,,Virginia,Virginia:2014,1,2015,True,False,False
+mark-leal-virginia-tech-2014,Mark Leal,mark leal,15515.0,501222,,,,,Virginia Tech,Virginia Tech:2014,1,2015,True,False,True
+clint-trickett-west-virginia-2014,Clint Trickett,clint trickett,15673.0,501098,,,,,West Virginia,West Virginia:2014,1,2015,True,False,True
+colby-kirkegaard-wyoming-2014,Colby Kirkegaard,colby kirkegaard,15685.0,520520,,,,,Wyoming,Wyoming:2014,1,2015,True,False,True
+sam-stratton-wyoming-2014,Sam Stratton,samuel stratton,15686.0,503091,,,,,Wyoming,Wyoming:2014,1,2015,True,False,True
+angel-santiago-army-2014,Angel Santiago,angel santiago,15696.0,515360,,,,,Army,Army:2014,1,2015,True,False,True
+zerick-rollins-jr-alcorn-state-2014,Zerick Rollins Jr.,zerick rollins,15706.0,,,,,,Alcorn State,Alcorn State:2014,1,2015,True,False,False
+dakota-wolf-campbell-2014,Dakota Wolf,dakota wolf,15718.0,499533,,,,,Campbell,Campbell:2014,1,2015,True,False,True
+michael-rocco-richmond-2014,Michael Rocco,michael rocco,15736.0,501176,,,,,Richmond,Richmond:2014,1,2015,True,False,True
+jared-mcclain-eastern-kentucky-2014,Jared McClain,jared mcclain,15769.0,519443,,,,,Eastern Kentucky,Eastern Kentucky:2014,1,2015,True,False,True
+aaron-miller-the-citadel-2014,Aaron Miller,aaron miller,15779.0,,,,,,The Citadel,The Citadel:2014,1,2015,True,False,False
+caleb-berry-lamar-2014,Caleb Berry,caleb berry,15781.0,499979,,,,,Lamar,Lamar:2014,1,2015,True,False,True
+michael-strauss-richmond-2014,Michael Strauss,michael strauss,15793.0,501175,,,,,Richmond,Richmond:2014,1,2015,True,False,True
+cj-bennett-murray-state-2014,CJ Bennett,cj bennett,15815.0,508164,,,,,Murray State,Murray State:2014,1,2015,True,False,True
+zach-adkins-northwestern-state-2014,Zach Adkins,zachary adkins,15824.0,549719,,,,,Northwestern State,Northwestern State:2014,1,2015,True,False,True
+lucas-beatty-gardner-webb-2014,Lucas Beatty,lucas beatty,15844.0,502467,,,,,Gardner-Webb,Gardner-Webb:2014,1,2015,True,False,True
+mike-quinn-elon-2014,Mike Quinn,michael quinn,15889.0,499869,,,,,Elon,Elon:2014,1,2015,True,False,True
+julian-burton-missouri-state-2014,Julian Burton,julian burton,15896.0,,,,,,Missouri State,Missouri State:2014,1,2015,True,False,False
+kyle-snyder-southeast-missouri-state-2014,Kyle Snyder,kyle snyder,15936.0,534028,,,,,Southeast Missouri State,Southeast Missouri State:2014,1,2015,True,False,True
+shavarez-smith-south-alabama-2014,Shavarez Smith,shavarez smith,15951.0,,,,,,South Alabama,South Alabama:2014,1,2015,True,False,False
+jake-howton-south-alabama-2014,Jake Howton,jacob howton,15953.0,,,,,,South Alabama,South Alabama:2014,1,2015,True,False,False
+john-kinder-stony-brook-2014,John Kinder,john kinder,15958.0,503793,,,,,Stony Brook,Stony Brook:2014,1,2015,True,False,True
+joe-brennan-towson-2014,Joe Brennan,joseph brennan,15984.0,503389,,,,,Towson,Towson:2014,1,2015,True,False,True
+michael-colosimo-cincinnati-2014,Michael Colosimo,michael colosimo,16046.0,552214,,,,,Cincinnati,Cincinnati:2014,1,2015,True,False,True
+munchie-legaux-cincinnati-2014,Munchie Legaux,munchie legaux,16048.0,502335,,,,,Cincinnati,Cincinnati:2014,1,2015,True,False,True
+damien-fleming-florida-a-m-2014,Damien Fleming,damien fleming,16059.0,519942,,,,,Florida A&M,Florida A&M:2014,1,2015,True,False,True
+brandon-bridge-south-alabama-2014,Brandon Bridge,brandon bridge,16073.0,507211,,,,,South Alabama,South Alabama:2014,1,2015,True,False,True
+jaymason-lee-alabama-a-m-2014,Jaymason Lee,jaymason lee,16262.0,555166,,,,,Alabama A&M,Alabama A&M:2014,1,2015,True,False,True
+ronnie-bell-georgia-state-2014,Ronnie Bell,ronnie bell,16275.0,513425,,,,,Georgia State,Georgia State:2014,1,2015,True,False,True
+nick-arbuckle-georgia-state-2015,Nick Arbuckle,nicholas arbuckle,16351.0,3124848,,,,,Georgia State,Georgia State:2014;Georgia State:2015,2,2016,True,False,True
+ben-mclane-georgia-state-2014,Ben McLane,benjamin mclane,16355.0,513860,,,,,Georgia State,Georgia State:2014,1,2015,True,False,True
+mike-nebrich-fordham-2014,Mike Nebrich,michael nebrich,16366.0,512108,,,,,Fordham,Fordham:2014,1,2015,True,False,True
+josh-grady-florida-2015,Josh Grady,josh grady,16418.0,,,,,,Florida;Vanderbilt,Vanderbilt:2014;Florida:2015,2,2016,True,False,False
+kaleb-griffin-presbyterian-2014,Kaleb Griffin,kaleb griffin,16445.0,514079,,,,,Presbyterian,Presbyterian:2014,1,2015,True,False,True
+kyle-pohl-akron-2015,Kyle Pohl,kyle pohl,16451.0,514617,,,,,Akron,Akron:2014;Akron:2015,2,2016,True,False,True
+kevin-sousa-wake-forest-2014,Kevin Sousa,kevin sousa,16463.0,515580,,,,,Wake Forest,Wake Forest:2014,1,2015,True,False,True
+earnest-carrington-ul-monroe-2015,Earnest Carrington,earnest carrington,16568.0,512347,,,,,UL Monroe,UL Monroe:2015,1,2016,True,False,True
+devontae-mcneal-ul-monroe-2015,DeVontae McNeal,devontae mcneal,16570.0,,,,,,UL Monroe,UL Monroe:2015,1,2016,True,False,False
+matt-mcintosh-northern-illinois-2014,Matt McIntosh,matthew mcintosh,16584.0,511607,,,,,Northern Illinois,Northern Illinois:2014,1,2015,True,False,True
+tamyn-garrick-presbyterian-2015,Tamyn Garrick,tamyn garrick,16587.0,514078,,,,,Presbyterian,Presbyterian:2015,1,2016,True,False,True
+stephen-rivers-northwestern-state-2015,Stephen Rivers,steven rivers,16594.0,517211,,,,,Northwestern State;Vanderbilt,Vanderbilt:2014;Northwestern State:2015,2,2016,True,False,True
+tyrell-goodman-akron-2015,Tyrell Goodman,tyrell goodman,16596.0,,,,,,Akron,Akron:2015,1,2016,True,False,False
+john-christopher-temple-2015,John Christopher,john christopher,16629.0,,,,,,Temple,Temple:2015,1,2016,True,False,False
+kris-kentera-vanderbilt-2014,Kris Kentera,kris kentera,16632.0,,,,,,Vanderbilt,Vanderbilt:2014,1,2015,True,False,False
+brayle-brown-ul-monroe-2015,Brayle Brown,brayle brown,16644.0,512345,,,,,UL Monroe,UL Monroe:2014;UL Monroe:2015,2,2016,True,False,True
+josh-rounds-tulane-2015,Josh Rounds,josh rounds,16675.0,,,,,,Tulane,Tulane:2015,1,2016,True,False,False
+terrell-johnson-boise-state-2014,Terrell Johnson,terrell johnson,16703.0,,,,,,Boise State,Boise State:2014,1,2015,True,False,False
+chris-kearney-san-jose-state-2014,Chris Kearney,christopher kearney,16728.0,,,,,,San Jose State,San Jose State:2014,1,2015,True,False,False
+joe-gray-san-jose-state-2015,Joe Gray,joseph gray,16729.0,512675,,,,,San Jose State,San Jose State:2014;San Jose State:2015,2,2016,True,False,True
+chris-brown-cal-poly-2015,Chris Brown,christopher brown,16756.0,515084,,,,,Cal Poly,Cal Poly:2014;Cal Poly:2015,2,2016,True,False,True
+d-j-williams-grambling-2014,D.J. Williams,dj williams,16894.0,518420,,,,,Grambling,Grambling:2014,1,2015,True,False,True
+blake-decker-unlv-2015,Blake Decker,blake decker,16932.0,3125318,,,,,UNLV,UNLV:2014;UNLV:2015,2,2016,True,False,True
+nick-sherry-unlv-2014,Nick Sherry,nicholas sherry,16938.0,517186,,,,,UNLV,UNLV:2014,1,2015,True,False,True
+anthony-williams-unlv-2015,Anthony Williams,anthony williams,16941.0,,,,,,UNLV,UNLV:2015,1,2016,True,False,False
+jordy-joseph-tulane-2015,Jordy Joseph,jordy joseph,16946.0,518132,,,,,Tulane,Tulane:2015,1,2016,True,False,True
+malik-watson-san-jose-state-2015,Malik Watson,malik watson,16953.0,3125304,,,,,San Jose State,San Jose State:2015,1,2016,True,False,True
+joseph-calcagni-tulsa-2014,Joseph Calcagni,joseph calcagni,16964.0,514152,,,,,Tulsa,Tulsa:2014,1,2015,True,False,True
+ryan-burbrink-bowling-green-2015,Ryan Burbrink,ryan burbrink,17092.0,,,,,,Bowling Green,Bowling Green:2014;Bowling Green:2015,2,2016,True,False,False
+nelson-fishback-western-kentucky-2015,Nelson Fishback,nelson fishback,17115.0,511722,,,,,Western Kentucky,Western Kentucky:2015,1,2016,True,False,True
+john-robertson-villanova-2015,John Robertson,john robertson,17131.0,513877,,,,,Villanova,Villanova:2014;Villanova:2015,2,2016,True,False,True
+jerrard-randall-arizona-2015,Jerrard Randall,jerrard randall,17137.0,517210,,,,,Arizona,Arizona:2014;Arizona:2015,2,2016,True,False,True
+troy-jones-western-kentucky-2014,Troy Jones,troy jones,17174.0,3124781,,,,,Western Kentucky,Western Kentucky:2014,1,2015,True,False,True
+terrel-hunt-syracuse-2015,Terrel Hunt,terrel hunt,17224.0,514440,,,,,Syracuse,Syracuse:2014;Syracuse:2015,2,2016,True,False,True
+myles-mckee-uab-2014,Myles McKee,myles mckee,17254.0,506444,,,,,UAB,UAB:2014,1,2015,True,False,True
+kyren-poe-northern-arizona-2015,Kyren Poe,kyren poe,17278.0,515301,,,,,Northern Arizona,Northern Arizona:2014;Northern Arizona:2015,2,2016,True,False,True
+jake-luton-idaho-2015,Jake Luton,jacob luton,17287.0,3124900,jakeluton,jake-luton-1,LutoJa00,00-0036312,Idaho;Oregon State,Idaho:2015,1,2020,True,True,True
+cody-clements-south-alabama-2015,Cody Clements,cody clements,17292.0,3129249;3918634,,,,,South Alabama;UAB,UAB:2014;South Alabama:2015,2,2016,True,False,True
+teddy-ruben-troy-2015,Teddy Ruben,teddy ruben,17295.0,,,,,,Troy,Troy:2015,1,2016,True,False,False
+tim-byerly-georgia-tech-2015,Tim Byerly,tim byerly,17313.0,512366,,,,,Georgia Tech,Georgia Tech:2014;Georgia Tech:2015,2,2016,True,False,True
+darius-powell-uab-2014,Darius Powell,darius powell,17329.0,,,,,,UAB,UAB:2014,1,2015,True,False,False
+brian-burrell-fresno-state-2014,Brian Burrell,brian burrell,17419.0,546271,,,,,Fresno State,Fresno State:2014,1,2015,True,False,True
+dontreal-pruitt-troy-2015,Dontreal Pruitt,dontreal pruitt,17469.0,3125460,,,,,Troy,Troy:2014;Troy:2015,2,2016,True,False,True
+d-j-vinson-south-alabama-2015,D.J. Vinson,dj vinson,17526.0,,,,,,South Alabama,South Alabama:2015,1,2016,True,False,False
+dallas-tidwell-troy-2015,Dallas Tidwell,dallas tidwell,17532.0,517960,,,,,Troy,Troy:2014;Troy:2015,2,2016,True,False,True
+benjamin-anderson-arkansas-pine-bluff-2014,Benjamin Anderson,benjamin anderson,17561.0,508835,,,,,Arkansas-Pine Bluff,Arkansas-Pine Bluff:2014,1,2015,True,False,True
+tres-houston-arkansas-state-2015,Tres Houston,tres houston,17604.0,,,,,,Arkansas State,Arkansas State:2014;Arkansas State:2015,2,2016,True,False,False
+kameron-bryant-app-state-2014,Kameron Bryant,kameron bryant,17632.0,512882,,,,,App State,App State:2014,1,2015,True,False,True
+steven-bench-south-florida-2015,Steven Bench,steven bench,17685.0,539215,,,,,South Florida,South Florida:2014;South Florida:2015,2,2016,True,False,True
+karson-roberts-air-force-2015,Karson Roberts,karson roberts,17721.0,547343,,,,,Air Force,Air Force:2015,1,2016,True,False,True
+troy-mitchell-western-carolina-2015,Troy Mitchell,troy mitchell,17762.0,533122,,,,,Western Carolina,Western Carolina:2014;Western Carolina:2015,2,2016,True,False,True
+jonathan-wallace-auburn-2014,Jonathan Wallace,jonathan wallace,17820.0,,,,,,Auburn,Auburn:2014,1,2015,True,False,False
+fredi-knighten-arkansas-state-2015,Fredi Knighten,fredi knighten,17824.0,538156,,,,,Arkansas State,Arkansas State:2014;Arkansas State:2015,2,2016,True,False,True
+stephen-hogan-arkansas-state-2014,Stephen Hogan,steven hogan,17827.0,515874,,,,,Arkansas State,Arkansas State:2014,1,2015,True,False,True
+trey-taylor-austin-peay-2015,Trey Taylor,trey taylor,17839.0,552240,,,,,Austin Peay,Austin Peay:2014;Austin Peay:2015,2,2016,True,False,True
+ozzie-mann-ball-state-2014,Ozzie Mann,ozzie mann,17841.0,531552,,,,,Ball State,Ball State:2014,1,2015,True,False,True
+jaquez-johnson-florida-atlantic-2015,Jaquez Johnson,jaquez johnson,18005.0,550876,,,,,Florida Atlantic,Florida Atlantic:2014;Florida Atlantic:2015,2,2016,True,False,True
+bobby-swigert-boston-college-2015,Bobby Swigert,robert swigert,18029.0,,,,,,Boston College,Boston College:2015,1,2016,True,False,False
+tony-daniel-buffalo-2015,Tony Daniel,anthony daniel,18036.0,513615,,,,,Buffalo,Buffalo:2014;Buffalo:2015,2,2016,True,False,True
+taylor-reed-central-arkansas-2015,Taylor Reed,taylor reed,18096.0,548897,,,,,Central Arkansas,Central Arkansas:2014;Central Arkansas:2015,2,2016,True,False,True
+e-j-hilliard-florida-international-2014,E.J. Hilliard,ej hilliard,18127.0,536571,,,,,Florida International,Florida International:2014,1,2015,True,False,True
+caleb-rowe-maryland-2015,Caleb Rowe,caleb rowe,18200.0,534328,,,,,Maryland,Maryland:2014;Maryland:2015,2,2016,True,False,True
+vad-lee-james-madison-2015,Vad Lee,vad lee,18205.0,517034,,,,,James Madison,James Madison:2014;James Madison:2015,2,2016,True,False,True
+christian-lemay-jacksonville-state-2014,Christian LeMay,christian lemay,18207.0,512172,,,,,Jacksonville State,Jacksonville State:2014,1,2015,True,False,True
+kody-cook-kansas-state-2015,Kody Cook,kody cook,18371.0,,,,,,Kansas State,Kansas State:2015,1,2016,True,False,False
+max-shortell-jacksonville-state-2014,Max Shortell,max shortell,18422.0,514502,,,,,Jacksonville State,Jacksonville State:2014,1,2015,True,False,True
+quinton-pedroza-hawaii-2015,Quinton Pedroza,quinton pedroza,18427.0,,,,,,Hawaii,Hawaii:2014;Hawaii:2015,2,2016,True,False,False
+sam-richardson-iowa-state-2015,Sam Richardson,samuel richardson,18467.0,,,,,,Iowa State,Iowa State:2014;Iowa State:2015,2,2016,True,False,False
+maxwell-smith-san-diego-state-2015,Maxwell Smith,maxwell smith,18474.0,517427,,,,,San Diego State,San Diego State:2015,1,2016,True,False,True
+brett-nelson-louisville-2014,Brett Nelson,brett nelson,18488.0,545557,,,,,Louisville,Louisville:2014,1,2015,True,False,True
+drew-kummer-miami-oh-2015,Drew Kummer,andrew kummer,18541.0,514286,,,,,Miami (OH),Miami (OH):2014;Miami (OH):2015,2,2016,True,False,True
+a-j-erdely-middle-tennessee-2014,A.J. Erdely,aj erdely,18567.0,545682,,,,,Middle Tennessee,Middle Tennessee:2014,1,2015,True,False,True
+russell-bellomy-utsa-2015,Russell Bellomy,russell bellomy,18591.0,511688,,,,,Michigan;UTSA,Michigan:2014;UTSA:2015,2,2016,True,False,True
+nolan-genovese-middle-tennessee-2015,Nolan Genovese,nolan genovese,18618.0,552712,,,,,Middle Tennessee,Middle Tennessee:2015,1,2016,True,False,True
+tuskani-figaro-nicholls-2015,Tuskani Figaro,tuskani figaro,18642.0,533373,,,,,Nicholls,Nicholls:2015,1,2016,True,False,True
+everett-golson-florida-state-2015,Everett Golson,everett golson,18665.0,515409,,,,,Florida State;Notre Dame,Notre Dame:2014;Florida State:2015,2,2016,True,False,True
+zack-oliver-northwestern-2015,Zack Oliver,zachary oliver,18691.0,518323,,,,,Northwestern,Northwestern:2014;Northwestern:2015,2,2016,True,False,True
+derrius-vick-ohio-2015,Derrius Vick,derrius vick,18747.0,511552,,,,,Ohio,Ohio:2014;Ohio:2015,2,2016,True,False,True
+tyler-bolfing-mcneese-2014,Tyler Bolfing,tyler bolfing,18768.0,517680,,,,,McNeese,McNeese:2014,1,2015,True,False,True
+shadrach-thornton-nc-state-2014,Shadrach Thornton,shadrach thornton,18797.0,,,,,,NC State,NC State:2014,1,2015,True,False,False
+garrett-leatham-nc-state-2014,Garrett Leatham,garrett leatham,18870.0,511308,,,,,NC State,NC State:2014,1,2015,True,False,True
+david-anaya-new-mexico-2015,David Anaya,david anaya,18878.0,,,,,,New Mexico,New Mexico:2014;New Mexico:2015,2,2016,True,False,False
+jamal-turner-nebraska-2015,Jamal Turner,jamal turner,18893.0,,,,,,Nebraska,Nebraska:2015,1,2016,True,False,False
+j-w-walsh-oklahoma-state-2015,J.W. Walsh,jw walsh,19040.0,511260,,,,,Oklahoma State,Oklahoma State:2014;Oklahoma State:2015,2,2016,True,False,True
+driphus-jackson-rice-2015,Driphus Jackson,driphus jackson,19062.0,514894,,,,,Rice,Rice:2014;Rice:2015,2,2016,True,False,True
+joe-minden-lamar-2015,Joe Minden,joseph minden,19083.0,513787,,,,,Lamar;Stephen F. Austin,Stephen F. Austin:2014;Lamar:2015,2,2016,True,False,True
+trey-anderson-florida-international-2015,Trey Anderson,trey anderson,19120.0,519055,,,,,Florida International;Pittsburgh,Pittsburgh:2014;Florida International:2015,2,2016,True,False,True
+casey-martin-southern-miss-2015,Casey Martin,casey martin,19137.0,,,,,,Southern Miss,Southern Miss:2015,1,2016,True,False,False
+luke-turner-rice-2015,Luke Turner,luke turner,19141.0,,,,,,Rice,Rice:2014;Rice:2015,2,2016,True,False,False
+carson-barnett-samford-2014,Carson Barnett,carson barnett,19156.0,516601,,,,,Samford,Samford:2014,1,2015,True,False,True
+ker-sean-wilson-savannah-st-2014,Ker-Sean Wilson,ker sean wilson,19177.0,3131252,,,,,Savannah St,Savannah St:2014,1,2015,True,False,True
+daxx-garman-maryland-2015,Daxx Garman,daxx garman,19183.0,514105,,,,,Maryland;Oklahoma State,Oklahoma State:2014;Maryland:2015,2,2016,True,False,True
+brandon-sheperd-oklahoma-state-2015,Brandon Sheperd,brandon sheperd,19187.0,,,,,,Oklahoma State,Oklahoma State:2014;Oklahoma State:2015,2,2016,True,False,False
+kevin-earl-south-dakota-2014,Kevin Earl,kevin earl,19217.0,513823,,,,,South Dakota,South Dakota:2014,1,2015,True,False,True
+michael-eubank-samford-2015,Michael Eubank,michael eubank,19235.0,517400,,,,,Samford,Samford:2014;Samford:2015,2,2016,True,False,True
+ammon-olsen-southern-utah-2015,Ammon Olsen,ammon olsen,19277.0,485026,,,,,Southern Utah,Southern Utah:2014;Southern Utah:2015,2,2016,True,False,True
+sean-goldrich-new-hampshire-2015,Sean Goldrich,sean goldrich,19476.0,511741,,,,,New Hampshire,New Hampshire:2014;New Hampshire:2015,2,2016,True,False,True
+daniel-sams-mcneese-2014,Daniel Sams,daniel sams,19527.0,515190,,,,,McNeese,McNeese:2014,1,2015,True,False,True
+michael-brewer-virginia-tech-2015,Michael Brewer,michael brewer,19619.0,514481,,,,,Virginia Tech,Virginia Tech:2014;Virginia Tech:2015,2,2016,True,False,True
+sawyer-kollmorgen-northern-iowa-2015,Sawyer Kollmorgen,sawyer kollmorgen,19637.0,515648,,,,,Northern Iowa,Northern Iowa:2014;Northern Iowa:2015,2,2016,True,False,True
+phillip-ely-toledo-2015,Phillip Ely,phillip ely,19653.0,515906,,,,,Toledo,Toledo:2014;Toledo:2015,2,2016,True,False,True
+jarod-neal-ut-martin-2015,Jarod Neal,jarod neal,19674.0,516783,,,,,UT Martin,UT Martin:2014;UT Martin:2015,2,2016,True,False,True
+deontae-cooper-washington-2015,Deontae Cooper,deontae cooper,19676.0,,,,,,Washington,Washington:2014;Washington:2015,2,2016,True,False,False
+blake-frohnapfel-massachusetts-2015,Blake Frohnapfel,blake frohnapfel,19699.0,518271,,,,,Massachusetts,Massachusetts:2014;Massachusetts:2015,2,2016,True,False,True
+chuckie-keeton-utah-state-2015,Chuckie Keeton,chuckie keeton,19710.0,512806,,,,,Utah State,Utah State:2014;Utah State:2015,2,2016,True,False,True
+david-ash-texas-2014,David Ash,david ash,19739.0,511262,,,,,Texas,Texas:2014,1,2015,True,False,True
+quinn-billerman-north-carolina-central-2015,Quinn Billerman,quinn billerman,19744.0,3120893,,,,,North Carolina Central,North Carolina Central:2014;North Carolina Central:2015,2,2016,True,False,True
+johnathan-williams-grambling-2015,Johnathan Williams,johnathan williams,19860.0,518424,,,,,Grambling,Grambling:2015,1,2016,True,False,True
+a-j-schurr-army-2015,A.J. Schurr,aj schurr,19879.0,535646,,,,,Army,Army:2014;Army:2015,2,2016,True,False,True
+riley-gallaher-campbell-2014,Riley Gallaher,riley gallaher,19908.0,532740,,,,,Campbell,Campbell:2014,1,2015,True,False,True
+christian-reeves-william-mary-2015,Christian Reeves,christian reeves,19927.0,,,,,,William & Mary,William & Mary:2015,1,2016,True,False,False
+michael-cummings-kansas-2014,Michael Cummings,michael cummings,19940.0,535521,,,,,Kansas,Kansas:2014,1,2015,True,False,True
+john-gibbs-jr-alcorn-state-2015,John Gibbs Jr.,john gibbs,19956.0,,,,,,Alcorn State,Alcorn State:2014;Alcorn State:2015,2,2016,True,False,False
+bennie-coney-eastern-kentucky-2015,Bennie Coney,bennie coney,19961.0,535722,,,,,Eastern Kentucky,Eastern Kentucky:2014;Eastern Kentucky:2015,2,2016,True,False,True
+christian-brumbaugh-william-mary-2014,Christian Brumbaugh,christian brumbaugh,20001.0,516388,,,,,William & Mary,William & Mary:2014,1,2015,True,False,True
+vernon-adams-jr-oregon-2015,Vernon Adams Jr.,vernon adams,20008.0,511713,vernonadams,vernon-adams-1,,,Eastern Washington;Oregon,Eastern Washington:2014;Oregon:2015,2,2016,True,True,True
+cameron-coffman-wyoming-2015,Cameron Coffman,cameron coffman,20018.0,530691,,,,,Wyoming,Wyoming:2015,1,2016,True,False,True
+kelvin-white-army-2015,Kelvin White,kelvin white,20028.0,,,,,,Army,Army:2014;Army:2015,2,2016,True,False,False
+jeff-glover-eastern-kentucky-2014,Jeff Glover,jeff glover,20032.0,,,,,,Eastern Kentucky,Eastern Kentucky:2014,1,2015,True,False,False
+kyle-romano-eastern-kentucky-2015,Kyle Romano,kyle romano,20095.0,532669,,,,,Eastern Kentucky,Eastern Kentucky:2015,1,2016,True,False,True
+dante-nania-youngstown-state-2014,Dante Nania,dante nania,20109.0,514655,,,,,Youngstown State,Youngstown State:2014,1,2015,True,False,True
+kd-humphries-murray-state-2015,KD Humphries,kd humphries,20162.0,532909,,,,,Murray State,Murray State:2014;Murray State:2015,2,2016,True,False,True
+robert-council-morgan-state-2014,Robert Council,robert council,20205.0,,,,,,Morgan State,Morgan State:2014,1,2015,True,False,False
+matt-floyd-south-alabama-2014,Matt Floyd,matthew floyd,20237.0,514749,,,,,South Alabama,South Alabama:2014,1,2015,True,False,True
+max-morrison-cincinnati-2015,Max Morrison,max morrison,20285.0,,,,,,Cincinnati,Cincinnati:2015,1,2016,True,False,False
+moses-skillon-morgan-state-2015,Moses Skillon,moses skillon,20354.0,534927,,,,,Morgan State,Morgan State:2015,1,2016,True,False,True
+jarred-evans-cincinnati-2014,Jarred Evans,jarred evans,20431.0,,,,,,Cincinnati,Cincinnati:2014,1,2015,True,False,False
+conor-bednarski-stony-brook-2014,Conor Bednarski,conor bednarski,20484.0,549332,,,,,Stony Brook,Stony Brook:2014,1,2015,True,False,True
+kwashaun-quick-north-carolina-a-t-2015,Kwashaun Quick,kwashaun quick,20500.0,530080,,,,,North Carolina A&T,North Carolina A&T:2015,1,2016,True,False,True
+connor-frazier-towson-2015,Connor Frazier,connor frazier,20514.0,529954,,,,,Towson,Towson:2014;Towson:2015,2,2016,True,False,True
+hayden-alford-vmi-2014,Hayden Alford,hayden alford,20534.0,529534,,,,,VMI,VMI:2014,1,2015,True,False,True
+chris-leachman-alabama-a-m-2014,Chris Leachman,christopher leachman,20588.0,504457,,,,,Alabama A&M,Alabama A&M:2014,1,2015,True,False,True
+malik-stokes-norfolk-state-2015,Malik Stokes,malik stokes,20652.0,513603,,,,,Norfolk State,Norfolk State:2015,1,2016,True,False,True
+austin-brown-charleston-southern-2015,Austin Brown,austin brown,20776.0,518239,,,,,Charleston Southern,Charleston Southern:2014;Charleston Southern:2015,2,2016,True,False,True
+morgan-roberts-yale-2014,Morgan Roberts,morgan roberts,20779.0,511215,,,,,Yale,Yale:2014,1,2015,True,False,True
+daniel-croghan-charleston-southern-2014,Daniel Croghan,daniel croghan,20845.0,534708,,,,,Charleston Southern,Charleston Southern:2014,1,2015,True,False,True
+reese-hannon-furman-2015,Reese Hannon,reese hannon,20918.0,533146,,,,,Furman,Furman:2015,1,2016,True,False,True
+marlon-kelly-delaware-state-2014,Marlon Kelly,marlon kelly,20937.0,514934,,,,,Delaware State,Delaware State:2014,1,2015,True,False,True
+trey-wheeler-san-diego-2015,Trey Wheeler,trey wheeler,21075.0,3120280,,,,,San Diego,San Diego:2015,1,2016,True,False,True
+dontrinell-scott-mississippi-valley-state-2015,Dontrinell Scott,dontrinell scott,21115.0,537658,,,,,Mississippi Valley State,Mississippi Valley State:2015,1,2016,True,False,True
+de-auntre-smiley-prairie-view-a-m-2015,De'Auntre Smiley,deauntre smiley,21180.0,519805,,,,,Prairie View A&M,Prairie View A&M:2015,1,2016,True,False,True
+landry-klann-nicholls-2015,Landry Klann,landry klann,21204.0,505481,,,,,Nicholls,Nicholls:2015,1,2016,True,False,True
+kieran-mcdonagh-portland-state-2015,Kieran McDonagh,kieran mcdonagh,21282.0,529363,,,,,Portland State,Portland State:2014;Portland State:2015,2,2016,True,False,True
+anthony-maddie-northern-illinois-2014,Anthony Maddie,anthony maddie,21288.0,532644,,,,,Northern Illinois,Northern Illinois:2014,1,2015,True,False,True
+ryan-lamb-central-michigan-2015,Ryan Lamb,ryan lamb,21400.0,3125796,,,,,Central Michigan,Central Michigan:2015,1,2016,True,False,True
+garrett-safron-sacramento-state-2014,Garrett Safron,garrett safron,21431.0,498266,,,,,Sacramento State,Sacramento State:2014,1,2015,True,False,True
+will-irwin-wofford-2015,Will Irwin,william irwin,21497.0,,,,,,Wofford,Wofford:2015,1,2016,True,False,False
+michael-weimer-wofford-2014,Michael Weimer,michael weimer,21557.0,515987,,,,,Wofford,Wofford:2014,1,2015,True,False,True
+heys-mcmath-presbyterian-2014,Heys McMath,heys mcmath,21611.0,547381,,,,,Presbyterian,Presbyterian:2014,1,2015,True,False,True
+hayden-rettig-rutgers-2015,Hayden Rettig,hayden rettig,21652.0,545874,,,,,Rutgers,Rutgers:2015,1,2016,True,False,True
+joe-mollberg-north-dakota-2014,Joe Mollberg,joseph mollberg,21700.0,533958,,,,,North Dakota,North Dakota:2014,1,2015,True,False,True
+connor-brewer-virginia-2015,Connor Brewer,connor brewer,21714.0,531056,,,,,Virginia,Virginia:2015,1,2016,True,False,True
+mitch-ravizza-san-jose-state-2014,Mitch Ravizza,mitchell ravizza,21770.0,3125299,,,,,San Jose State,San Jose State:2014,1,2015,True,False,True
+jordan-gehrke-colorado-2015,Jordan Gehrke,jordan gehrke,21879.0,550268,,,,,Colorado,Colorado:2014;Colorado:2015,2,2016,True,False,True
+mitch-kimble-syracuse-2014,Mitch Kimble,mitchell kimble,21943.0,545275,,,,,Syracuse,Syracuse:2014,1,2015,True,False,True
+casey-cochran-connecticut-2014,Casey Cochran,casey cochran,21948.0,,,,,,Connecticut,Connecticut:2014,1,2015,True,False,False
+tim-boyle-connecticut-2015,Tim Boyle,tim boyle,21956.0,,,,,,Connecticut,Connecticut:2014;Connecticut:2015,2,2016,True,False,False
+lloyd-mills-san-diego-state-2015,Lloyd Mills,lloyd mills,22079.0,,,,,,San Diego State,San Diego State:2014;San Diego State:2015,2,2016,True,False,False
+evan-jacks-wofford-2015,Evan Jacks,evan jacks,22159.0,532323,,,,,Wofford,Wofford:2014;Wofford:2015,2,2016,True,False,True
+jack-milas-ball-state-2015,Jack Milas,jack milas,22500.0,546005,,,,,Ball State,Ball State:2014;Ball State:2015,2,2016,True,False,True
+devin-chafin-baylor-2015,Devin Chafin,devin chafin,22528.0,,,,,,Baylor,Baylor:2015,1,2016,True,False,False
+collin-michael-buffalo-2014,Collin Michael,collin michael,22534.0,531955,,,,,Buffalo,Buffalo:2014,1,2015,True,False,True
+blake-kemp-east-carolina-2015,Blake Kemp,blake kemp,22575.0,3126168,,,,,East Carolina,East Carolina:2015,1,2016,True,False,True
+thomas-sirk-duke-2015,Thomas Sirk,thomas sirk,22589.0,530478,,,,,Duke,Duke:2014;Duke:2015,2,2016,True,False,True
+jack-williams-kent-state-2014,Jack Williams,jack williams,22643.0,546030,,,,,Kent State,Kent State:2014,1,2015,True,False,True
+sean-maguire-florida-state-2015,Sean Maguire,sean maguire,22742.0,530299,,,,,Florida State,Florida State:2014;Florida State:2015,2,2016,True,False,True
+colin-reardon-kent-state-2015,Colin Reardon,colin reardon,22806.0,,,,,,Kent State,Kent State:2014;Kent State:2015,2,2016,True,False,False
+greg-hankerson-jr-norfolk-state-2015,Greg Hankerson Jr.,gregory hankerson,22834.0,550873,,,,,Florida Atlantic;Norfolk State,Florida Atlantic:2014;Norfolk State:2015,2,2016,True,False,True
+nate-boudreau-indiana-2014,Nate Boudreau,nathan boudreau,22940.0,535797,,,,,Indiana,Indiana:2014,1,2015,True,False,True
+ryan-higgins-louisiana-tech-2015,Ryan Higgins,ryan higgins,22948.0,531316,,,,,Louisiana Tech,Louisiana Tech:2014;Louisiana Tech:2015,2,2016,True,False,True
+will-gardner-louisville-2014,Will Gardner,william gardner,22950.0,530357,,,,,Louisville,Louisville:2014,1,2015,True,False,True
+drake-johnson-michigan-2014,Drake Johnson,drake johnson,23121.0,,,,,,Michigan,Michigan:2014,1,2015,True,False,False
+sam-craft-memphis-2015,Sam Craft,samuel craft,23125.0,,,,,,Memphis,Memphis:2015,1,2016,True,False,False
+shane-tucker-middle-tennessee-2014,Shane Tucker,shane tucker,23213.0,,,,,,Middle Tennessee,Middle Tennessee:2014,1,2015,True,False,False
+austin-grammer-middle-tennessee-2015,Austin Grammer,austin grammer,23315.0,531589,,,,,Middle Tennessee,Middle Tennessee:2014;Middle Tennessee:2015,2,2016,True,False,True
+brady-gustafson-montana-2015,Brady Gustafson,brady gustafson,23372.0,,,,,,Montana,Montana:2015,1,2016,True,False,False
+shawn-white-navy-2015,Shawn White,shawn white,23481.0,,,,,,Navy,Navy:2015,1,2016,True,False,False
+darnell-adams-portland-state-2014,Darnell Adams,darnell adams,23502.0,,,,,,Portland State,Portland State:2014,1,2015,True,False,False
+danny-etling-purdue-2014,Danny Etling,daniel etling,23519.0,550170,dannyetling,danny-etling-1,EtliDa00,00-0034423,LSU;Purdue,Purdue:2014,1,2018,True,True,True
+jeff-lockie-oregon-2015,Jeff Lockie,jeff lockie,23581.0,530875,,,,,Oregon,Oregon:2014;Oregon:2015,2,2016,True,False,True
+david-washington-old-dominion-2015,David Washington,david washington,23616.0,535113,,,,,Old Dominion,Old Dominion:2015,1,2016,True,False,True
+paris-penn-portland-state-2014,Paris Penn,paris penn,23629.0,,,,,,Portland State,Portland State:2014,1,2015,True,False,False
+dan-monteroso-purdue-2015,Dan Monteroso,daniel monteroso,23644.0,,,,,,Purdue,Purdue:2015,1,2016,True,False,False
+mike-fafaul-ucla-2015,Mike Fafaul,michael fafaul,23735.0,531259,,,,,UCLA,UCLA:2015,1,2016,True,False,True
+jojo-kemp-kentucky-2014,Jojo Kemp,jojo kemp,23914.0,,,,,,Kentucky,Kentucky:2014,1,2015,True,False,False
+jerry-neuheisel-ucla-2015,Jerry Neuheisel,jerry neuheisel,24010.0,511987,,,,,UCLA,UCLA:2014;UCLA:2015,2,2016,True,False,True
+mack-leftwich-utep-2015,Mack Leftwich,mack leftwich,24189.0,546104,,,,,UTEP,UTEP:2015,1,2016,True,False,True
+chris-mccormick-new-hampshire-2015,Chris McCormick,christopher mccormick,24193.0,530002,,,,,New Hampshire,New Hampshire:2015,1,2016,True,False,True
+matt-johns-virginia-2015,Matt Johns,matthew johns,24210.0,535548,,,,,Virginia,Virginia:2014;Virginia:2015,2,2016,True,False,True
+cyler-miles-washington-2014,Cyler Miles,cyler miles,24224.0,535325,,,,,Washington,Washington:2014,1,2015,True,False,True
+chris-andrews-wagner-2015,Chris Andrews,christopher andrews,24296.0,534019,,,,,Wagner,Wagner:2014;Wagner:2015,2,2016,True,False,True
+tom-thornton-wyoming-2014,Tom Thornton,thomas thornton,24314.0,,,,,,Wyoming,Wyoming:2014,1,2015,True,False,False
+jordan-west-eastern-washington-2015,Jordan West,jordan west,24327.0,534703,,,,,Eastern Washington,Eastern Washington:2015,1,2016,True,False,True
+t-j-millweard-kansas-2015,T.J. Millweard,tj millweard,24446.0,530978,,,,,Kansas,Kansas:2014;Kansas:2015,2,2016,True,False,True
+matthew-flores-northwestern-state-2014,Matthew Flores,matthew flores,24460.0,,,,,,Northwestern State,Northwestern State:2014,1,2015,True,False,False
+joe-walker-army-2015,Joe Walker,joseph walker,24470.0,,,,,,Army,Army:2014;Army:2015,2,2016,True,False,False
+jared-johnson-sam-houston-2015,Jared Johnson,jared johnson,24589.0,538456,,,,,Sam Houston,Sam Houston:2014;Sam Houston:2015,2,2016,True,False,True
+daniel-hazlewood-northwestern-state-2015,Daniel Hazlewood,daniel hazlewood,24612.0,,,,,,Northwestern State,Northwestern State:2014;Northwestern State:2015,2,2016,True,False,False
+gunner-kiel-cincinnati-2015,Gunner Kiel,gunner kiel,24708.0,534259,,,,,Cincinnati,Cincinnati:2014;Cincinnati:2015,2,2016,True,False,True
+sean-rubalcaba-northern-colorado-2014,Sean Rubalcaba,sean rubalcaba,24714.0,533762,,,,,Northern Colorado,Northern Colorado:2014,1,2015,True,False,True
+mack-lowrie-rhode-island-2014,Mack Lowrie,mack lowrie,24792.0,547236,,,,,Rhode Island,Rhode Island:2014,1,2015,True,False,True
+ryan-monaghan-wagner-2015,Ryan Monaghan,ryan monaghan,24812.0,,,,,,Wagner,Wagner:2015,1,2016,True,False,False
+trenton-norvell-western-illinois-2015,Trenton Norvell,trenton norvell,24813.0,535735,,,,,Western Illinois,Western Illinois:2014;Western Illinois:2015,2,2016,True,False,True
+brandon-wells-alabama-a-m-2014,Brandon Wells,brandon wells,24856.0,518589,,,,,Alabama A&M,Alabama A&M:2014,1,2015,True,False,True
+kyle-copeland-charleston-southern-2015,Kyle Copeland,kyle copeland,24880.0,556261,,,,,Charleston Southern,Charleston Southern:2015,1,2016,True,False,True
+gil-rivera-delaware-state-2015,Gil Rivera,gil rivera,24925.0,3139918,,,,,Delaware State,Delaware State:2014;Delaware State:2015,2,2016,True,False,True
+jared-davis-tennessee-tech-2015,Jared Davis,jared davis,25006.0,532795,,,,,Tennessee Tech,Tennessee Tech:2015,1,2016,True,False,True
+brogan-roback-eastern-michigan-2015,Brogan Roback,brogan roback,25079.0,552782,,,,,Eastern Michigan,Eastern Michigan:2014;Eastern Michigan:2015,2,2016,True,False,True
+paul-mroz-rhode-island-2015,Paul Mroz,paul mroz,25293.0,3913273,,,,,Rhode Island,Rhode Island:2015,1,2016,True,False,True
+deondre-ford-kansas-2015,Deondre Ford,deondre ford,25315.0,3928970,,,,,Kansas,Kansas:2015,1,2016,True,False,True
+jesse-kroll-central-michigan-2015,Jesse Kroll,jesse kroll,25334.0,,,,,,Central Michigan,Central Michigan:2015,1,2016,True,False,False
+michael-sanders-idaho-state-2015,Michael Sanders,michael sanders,25385.0,3925391,,,,,Idaho State,Idaho State:2015,1,2016,True,False,True
+tay-bender-southeast-missouri-state-2015,Tay Bender,tay bender,25408.0,3910149,,,,,Southeast Missouri State,Southeast Missouri State:2015,1,2016,True,False,True
+carson-earp-lamar-2015,Carson Earp,carson earp,25429.0,3910114,,,,,Lamar,Lamar:2015,1,2016,True,False,True
+emanuel-byrd-marshall-2015,Emanuel Byrd,emanuel byrd,25432.0,,,,,,Marshall,Marshall:2015,1,2016,True,False,False
+damarcus-smith-north-texas-2015,DaMarcus Smith,damarcus smith,25479.0,3914500,,,,,North Texas,North Texas:2015,1,2016,True,False,True
+tyler-matthews-southern-miss-2015,Tyler Matthews,tyler matthews,25488.0,531232,,,,,Southern Miss,Southern Miss:2015,1,2016,True,False,True
+michael-birdsong-marshall-2015,Michael Birdsong,michael birdsong,25709.0,533604,,,,,Marshall,Marshall:2015,1,2016,True,False,True
+de-angelo-ballard-alabama-a-m-2015,De'Angelo Ballard,deangelo ballard,25788.0,3928742,,,,,Alabama A&M,Alabama A&M:2015,1,2016,True,False,True
+lee-mcneill-charlotte-2015,Lee McNeill,lee mcneill,25838.0,551918,,,,,Charlotte,Charlotte:2015,1,2016,True,False,True
+trey-green-prairie-view-a-m-2015,Trey Green,trey green,25874.0,537695,,,,,Prairie View A&M,Prairie View A&M:2015,1,2016,True,False,True
+r-j-nitti-bucknell-2015,R.J. Nitti,rj nitti,25998.0,3907930,,,,,Bucknell,Bucknell:2015,1,2016,True,False,True
+dillon-woodruff-furman-2014,Dillon Woodruff,dillon woodruff,26043.0,,,,,,Furman,Furman:2014,1,2015,True,False,False
+garrett-anderson-connecticut-2015,Garrett Anderson,garrett anderson,26080.0,,,,,,Connecticut,Connecticut:2015,1,2016,True,False,False
+alejandro-bennifield-chattanooga-2015,Alejandro Bennifield,alejandro bennifield,26140.0,548475,,,,,Chattanooga,Chattanooga:2014;Chattanooga:2015,2,2016,True,False,True
+kyle-allen-texas-a-m-2015,Kyle Allen,kyle allen,26152.0,559681,,,,,Texas A&M,Texas A&M:2014;Texas A&M:2015,2,2016,True,False,True
+conor-rhoda-minnesota-2014,Conor Rhoda,conor rhoda,26179.0,545472,,,,,Minnesota,Minnesota:2014,1,2015,True,False,True
+jack-kwiatkowski-eastern-illinois-2015,Jack Kwiatkowski,jack kwiatkowski,26253.0,559547,,,,,Eastern Illinois,Eastern Illinois:2015,1,2016,True,False,True
+ryan-graham-northern-illinois-2015,Ryan Graham,ryan graham,26338.0,3126013,,,,,Northern Illinois,Northern Illinois:2015,1,2016,True,False,True
+thomas-woodson-akron-2015,Thomas Woodson,thomas woodson,26372.0,550357,,,,,Akron,Akron:2014;Akron:2015,2,2016,True,False,True
+kaylon-watson-ul-monroe-2015,Kaylon Watson,kaylon watson,26429.0,,,,,,UL Monroe,UL Monroe:2015,1,2016,True,False,False
+johnny-mccrary-vanderbilt-2015,Johnny McCrary,johnny mccrary,26439.0,546184,,,,,Vanderbilt,Vanderbilt:2014;Vanderbilt:2015,2,2016,True,False,True
+devante-kincade-ole-miss-2015,DeVante Kincade,devante kincade,26446.0,,,,,,Ole Miss,Ole Miss:2014;Ole Miss:2015,2,2016,True,False,False
+frank-nutile-temple-2015,Frank Nutile,frank nutile,26476.0,3138735,,,,,Temple,Temple:2015,1,2016,True,False,True
+nick-jeanty-new-mexico-state-2015,Nick Jeanty,nicholas jeanty,26496.0,3124971,,,,,New Mexico State,New Mexico State:2015,1,2016,True,False,True
+andrew-allen-new-mexico-state-2015,Andrew Allen,andrew allen,26510.0,,,,,,New Mexico State,New Mexico State:2014;New Mexico State:2015,2,2016,True,False,False
+jordan-wilkins-ole-miss-2014,Jordan Wilkins,jordan wilkins,26618.0,,,,,,Ole Miss,Ole Miss:2014,1,2015,True,False,False
+tanner-gueller-idaho-state-2015,Tanner Gueller,tanner gueller,26687.0,3139063,,,,,Idaho State,Idaho State:2015,1,2016,True,False,True
+ryan-buchanan-ole-miss-2015,Ryan Buchanan,ryan buchanan,26731.0,550114,,,,,Ole Miss,Ole Miss:2014;Ole Miss:2015,2,2016,True,False,True
+peyton-bender-washington-state-2015,Peyton Bender,peyton bender,26736.0,3127261,,,,,Washington State,Washington State:2015,1,2016,True,False,True
+keaton-perry-kansas-2015,Keaton Perry,keaton perry,26825.0,,,,,,Kansas,Kansas:2015,1,2016,True,False,False
+keaton-studsrud-north-dakota-2015,Keaton Studsrud,keaton studsrud,26857.0,3119431,,,,,North Dakota,North Dakota:2015,1,2016,True,False,True
+blake-bogenschutz-utsa-2015,Blake Bogenschutz,blake bogenschutz,26913.0,3124039,,,,,UTSA,UTSA:2014;UTSA:2015,2,2016,True,False,True
+chad-leckington-weber-state-2015,Chad Leckington,chad leckington,26919.0,,,,,,Weber State,Weber State:2015,1,2016,True,False,False
+drew-barker-kentucky-2015,Drew Barker,andrew barker,26947.0,559621,,,,,Kentucky,Kentucky:2015,1,2016,True,False,True
+jared-lebowitz-unlv-2014,Jared Lebowitz,jared lebowitz,26965.0,552513,,,,,UNLV,UNLV:2014,1,2015,True,False,True
+cody-callaway-bowling-green-2014,Cody Callaway,cody callaway,26968.0,3125748,,,,,Bowling Green,Bowling Green:2014,1,2015,True,False,True
+jarin-morikawa-jackson-state-2015,Jarin Morikawa,jarin morikawa,26980.0,552518,,,,,Jackson State,Jackson State:2015,1,2016,True,False,True
+coleman-key-colorado-state-2015,Coleman Key,coleman key,27027.0,3124401,,,,,Colorado State,Colorado State:2015,1,2016,True,False,True
+cade-apsay-colorado-2015,Cade Apsay,cade apsay,27137.0,3122602,,,,,Colorado,Colorado:2015,1,2016,True,False,True
+brandon-dawkins-arizona-2015,Brandon Dawkins,brandon dawkins,27142.0,3133993,,,,,Arizona,Arizona:2015,1,2016,True,False,True
+damion-terry-michigan-state-2015,Damion Terry,damion terry,27206.0,550477,,,,,Michigan State,Michigan State:2014;Michigan State:2015,2,2016,True,False,True
+christian-chapman-san-diego-state-2015,Christian Chapman,christian chapman,27211.0,3139921,,,,,San Diego State,San Diego State:2015,1,2016,True,False,True
+drew-eckels-western-kentucky-2015,Drew Eckels,andrew eckels,27245.0,3124782,,,,,Western Kentucky,Western Kentucky:2015,1,2016,True,False,True
+dj-crook-ualbany-2015,DJ Crook,dj crook,27335.0,545636,,,,,Penn State;UAlbany,Penn State:2014;UAlbany:2015,2,2016,True,False,True
+nick-bawden-san-diego-state-2014,Nick Bawden,nicholas bawden,27413.0,,,,,,San Diego State,San Diego State:2014,1,2015,True,False,False
+chase-favreau-san-diego-state-2014,Chase Favreau,chase favreau,27423.0,,,,,,San Diego State,San Diego State:2014,1,2015,True,False,False
+jeremiah-briscoe-sam-houston-2015,Jeremiah Briscoe,jeremiah briscoe,27427.0,550754;3911396,,,,,Sam Houston;UAB,UAB:2014;Sam Houston:2015,2,2016,True,False,True
+tyler-harris-ucf-2015,Tyler Harris,tyler harris,27477.0,3126304,,,,,UCF,UCF:2015,1,2016,True,False,True
+pete-dinovo-ucf-2014,Pete DiNovo,pete dinovo,27479.0,551185,,,,,UCF,UCF:2014,1,2015,True,False,True
+kilton-anderson-fresno-state-2015,Kilton Anderson,kilton anderson,27546.0,3124529,,,,,Fresno State,Fresno State:2015,1,2016,True,False,True
+c-j-spencer-uc-davis-2015,C.J. Spencer,cj spencer,27601.0,3120969,,,,,UC Davis,UC Davis:2015,1,2016,True,False,True
+chad-chalich-idaho-2014,Chad Chalich,chad chalich,27637.0,531172,,,,,Idaho,Idaho:2014,1,2015,True,False,True
+brice-ramsey-georgia-2015,Brice Ramsey,brice ramsey,27649.0,546345,,,,,Georgia,Georgia:2014;Georgia:2015,2,2016,True,False,True
+treon-harris-florida-2015,Treon Harris,treon harris,27651.0,3121647,,,,,Florida,Florida:2014;Florida:2015,2,2016,True,False,True
+brandon-goodson-wofford-2015,Brandon Goodson,brandon goodson,27744.0,552549,,,,,Wofford,Wofford:2015,1,2016,True,False,True
+brad-butler-wofford-2015,Brad Butler,brad butler,27810.0,,,,,,Wofford,Wofford:2015,1,2016,True,False,False
+j-p-caruso-app-state-2015,J.P. Caruso,jp caruso,27814.0,3123654,,,,,App State,App State:2015,1,2016,True,False,True
+troy-flutie-boston-college-2015,Troy Flutie,troy flutie,27900.0,,,,,,Boston College,Boston College:2015,1,2016,True,False,False
+damon-mitchell-arkansas-2015,Damon Mitchell,damon mitchell,27911.0,,,,,,Arkansas,Arkansas:2014;Arkansas:2015,2,2016,True,False,False
+darrien-boone-austin-peay-2014,Darrien Boone,darrien boone,27927.0,546599,,,,,Austin Peay,Austin Peay:2014,1,2015,True,False,True
+brandon-cox-arkansas-state-2014,Brandon Cox,brandon cox,28002.0,,,,,,Arkansas State,Arkansas State:2014,1,2015,True,False,False
+darius-wade-boston-college-2015,Darius Wade,darius wade,28055.0,3122790,,,,,Boston College,Boston College:2014;Boston College:2015,2,2016,True,False,True
+marcus-terrell-arkansas-pine-bluff-2014,Marcus Terrell,marcus terrell,28082.0,553010,,,,,Arkansas-Pine Bluff,Arkansas-Pine Bluff:2014,1,2015,True,False,True
+larry-brihm-bethune-cookman-2015,Larry Brihm,larry brihm,28131.0,555829,,,,,Bethune-Cookman,Bethune-Cookman:2014;Bethune-Cookman:2015,2,2016,True,False,True
+luke-rubenzer-california-2014,Luke Rubenzer,luke rubenzer,28165.0,,,,,,California,California:2014,1,2015,True,False,False
+johnny-jefferson-baylor-2015,Johnny Jefferson,johnny jefferson,28170.0,,,,,,Baylor,Baylor:2015,1,2016,True,False,False
+chris-merchant-buffalo-2015,Chris Merchant,christopher merchant,28180.0,3125767,,,,,Buffalo,Buffalo:2015,1,2016,True,False,True
+chase-forrest-california-2015,Chase Forrest,chase forrest,28221.0,3127204,,,,,California,California:2015,1,2016,True,False,True
+shaq-vann-eastern-michigan-2015,Shaq Vann,shaq vann,28243.0,,,,,,Eastern Michigan,Eastern Michigan:2015,1,2016,True,False,False
+j-j-cosentino-florida-state-2015,J.J. Cosentino,jj cosentino,28282.0,3122916,,,,,Florida State,Florida State:2015,1,2016,True,False,True
+reginald-bell-eastern-michigan-2015,Reginald Bell,reginald bell,28286.0,3125823,,,,,Eastern Michigan,Eastern Michigan:2014;Eastern Michigan:2015,2,2016,True,False,True
+joe-walker-delaware-2015,Joe Walker,joseph walker,28316.0,3912052,,,,,Delaware,Delaware:2015,1,2016,True,False,True
+don-king-iii-sam-houston-2014,Don King III,don king,28438.0,535337,,,,,Sam Houston,Sam Houston:2014,1,2015,True,False,True
+zander-diamont-indiana-2015,Zander Diamont,zander diamont,28542.0,3128254,,,,,Indiana,Indiana:2014;Indiana:2015,2,2016,True,False,True
+matt-adam-indiana-state-2015,Matt Adam,matthew adam,28591.0,547511,,,,,Indiana State,Indiana State:2015,1,2016,True,False,True
+zach-davidson-kansas-state-2015,Zach Davidson,zachary davidson,28628.0,3125059,,,,,Kansas State,Kansas State:2015,1,2016,True,False,True
+derrick-mitchell-jr-iowa-2015,Derrick Mitchell Jr.,derrick mitchell,28650.0,,,,,,Iowa,Iowa:2015,1,2016,True,False,False
+nathan-strock-kent-state-2014,Nathan Strock,nathan strock,28743.0,550246,,,,,Kent State,Kent State:2014,1,2015,True,False,True
+price-wilson-louisiana-tech-2015,Price Wilson,price wilson,28774.0,3122755,,,,,Louisiana Tech,Louisiana Tech:2015,1,2016,True,False,True
+chad-president-tulsa-2015,Chad President,chad president,28862.0,3917007,,,,,Tulsa,Tulsa:2015,1,2016,True,False,True
+clay-holgorsen-memphis-2015,Clay Holgorsen,clay holgorsen,28940.0,3126207,,,,,Memphis,Memphis:2015,1,2016,True,False,True
+kyle-shurmur-vanderbilt-2015,Kyle Shurmur,kyle shurmur,29110.0,3915776,kyleshurmur,kyle-shurmur-1,ShurKy01,00-0035163,Vanderbilt,Vanderbilt:2015,1,2019,True,True,True
+eddie-printz-missouri-2014,Eddie Printz,edward printz,29155.0,546197,,,,,Missouri,Missouri:2014,1,2015,True,False,True
+elijah-staley-mississippi-state-2015,Elijah Staley,elijah staley,29280.0,559650,,,,,Mississippi State,Mississippi State:2015,1,2016,True,False,True
+brent-stockstill-middle-tennessee-2015,Brent Stockstill,brent stockstill,29288.0,545683,,,,,Middle Tennessee,Middle Tennessee:2014;Middle Tennessee:2015,2,2016,True,False,True
+dash-duncan-nicholls-2014,Dash Duncan,dash duncan,29356.0,533375,,,,,Nicholls,Nicholls:2014,1,2015,True,False,True
+bo-hines-nc-state-2014,Bo Hines,bo hines,29430.0,,,,,,NC State,NC State:2014,1,2015,True,False,False
+dajon-williams-north-texas-2014,Dajon Williams,dajon williams,29452.0,549918,,,,,North Texas,North Texas:2014,1,2015,True,False,True
+easton-stick-north-dakota-state-2015,Easton Stick,easton stick,29466.0,3120590,eastonstick,,SticEa00,00-0035282,North Dakota State,North Dakota State:2015,1,2019,True,True,True
+hunter-fralick-nevada-2015,Hunter Fralick,hunter fralick,29510.0,3124618,,,,,Nevada,Nevada:2015,1,2016,True,False,True
+lamar-jordan-new-mexico-2015,Lamar Jordan,lamar jordan,29577.0,551028,,,,,New Mexico,New Mexico:2014;New Mexico:2015,2,2016,True,False,True
+nick-mitchell-oregon-state-2015,Nick Mitchell,nicholas mitchell,29696.0,3127333,,,,,Oregon State,Oregon State:2015,1,2016,True,False,True
+brendan-cope-ohio-2015,Brendan Cope,brendan cope,29727.0,,,,,,Ohio,Ohio:2015,1,2016,True,False,False
+marcus-mcmaryion-oregon-state-2015,Marcus McMaryion,marcus mcmaryion,29810.0,3127332,,,,,Oregon State,Oregon State:2015,1,2016,True,False,True
+kolney-cassel-sacramento-state-2015,Kolney Cassel,kolney cassel,29831.0,545334,,,,,SMU;Sacramento State,SMU:2014;Sacramento State:2015,2,2016,True,False,True
+devlin-hodges-samford-2015,Devlin Hodges,devlin hodges,29838.0,3127051,,,,,Samford,Samford:2015,1,2016,True,False,True
+michael-knox-savannah-st-2014,Michael Knox,michael knox,29962.0,,,,,,Savannah St,Savannah St:2014,1,2015,True,False,False
+jordan-davis-louisiana-2015,Jordan Davis,jordan davis,30148.0,3124912,,,,,Louisiana,Louisiana:2015,1,2016,True,False,True
+dalton-douglas-south-dakota-state-2015,Dalton Douglas,dalton douglas,30153.0,,,,,,South Dakota State,South Dakota State:2015,1,2016,True,False,False
+connor-white-texas-state-2015,Connor White,connor white,30266.0,3125432,,,,,Texas State,Texas State:2014;Texas State:2015,2,2016,True,False,True
+austin-whipple-massachusetts-2014,Austin Whipple,austin whipple,30308.0,545642,,,,,Massachusetts,Massachusetts:2014,1,2015,True,False,True
+jarrad-hayes-southern-2015,Jarrad Hayes,jarrad hayes,30338.0,3162312,,,,,Southern,Southern:2015,1,2016,True,False,True
+parker-adamson-southern-miss-2014,Parker Adamson,parker adamson,30339.0,552862,,,,,Southern Miss,Southern Miss:2014,1,2015,True,False,True
+eli-dunne-northern-iowa-2015,Eli Dunne,eli dunne,30457.0,3120656,,,,,Northern Iowa,Northern Iowa:2015,1,2016,True,False,True
+kent-myers-utah-state-2015,Kent Myers,kent myers,30603.0,3125353,,,,,Utah State,Utah State:2014;Utah State:2015,2,2016,True,False,True
+nick-smith-wyoming-2015,Nick Smith,nicholas smith,30748.0,3125418,,,,,Wyoming,Wyoming:2015,1,2016,True,False,True
+michael-julian-toledo-2015,Michael Julian,michael julian,30757.0,552746,,,,,Toledo,Toledo:2014;Toledo:2015,2,2016,True,False,True
+cameron-thomas-western-michigan-2014,Cameron Thomas,cameron thomas,30774.0,545935,,,,,Western Michigan,Western Michigan:2014,1,2015,True,False,True
+ricky-davis-youngstown-state-2015,Ricky Davis,ricky davis,30821.0,,,,,,Youngstown State,Youngstown State:2015,1,2016,True,False,False
+barton-mann-eastern-kentucky-2014,Barton Mann,barton mann,30922.0,554825,,,,,Eastern Kentucky,Eastern Kentucky:2014,1,2015,True,False,True
+david-salmon-campbell-2014,David Salmon,david salmon,30964.0,552434,,,,,Campbell,Campbell:2014,1,2015,True,False,True
+reilly-hennessey-eastern-washington-2015,Reilly Hennessey,reilly hennessey,30975.0,3119292,,,,,Eastern Washington,Eastern Washington:2015,1,2016,True,False,True
+dominique-allen-the-citadel-2015,Dominique Allen,dominique allen,31009.0,3131803,,,,,The Citadel,The Citadel:2014;The Citadel:2015,2,2016,True,False,True
+hunter-wells-youngstown-state-2015,Hunter Wells,hunter wells,31084.0,3140598,,,,,Youngstown State,Youngstown State:2015,1,2016,True,False,True
+tyrell-maxwell-gardner-webb-2015,Tyrell Maxwell,tyrell maxwell,31128.0,3140998,,,,,Gardner-Webb,Gardner-Webb:2014;Gardner-Webb:2015,2,2016,True,False,True
+breck-ruddick-missouri-state-2015,Breck Ruddick,breck ruddick,31221.0,3908537,,,,,Missouri State,Missouri State:2015,1,2016,True,False,True
+daniel-kniffin-sacramento-state-2015,Daniel Kniffin,daniel kniffin,31376.0,546921,,,,,Sacramento State,Sacramento State:2014;Sacramento State:2015,2,2016,True,False,True
+brodie-lambert-missouri-state-2015,Brodie Lambert,brodie lambert,31383.0,538084,,,,,Missouri State,Missouri State:2014;Missouri State:2015,2,2016,True,False,True
+sean-mcguire-western-illinois-2015,Sean McGuire,sean mcguire,31552.0,3121628,,,,,Western Illinois,Western Illinois:2015,1,2016,True,False,True
+luke-wright-cincinnati-2015,Luke Wright,luke wright,31682.0,3139059,,,,,Cincinnati,Cincinnati:2015,1,2016,True,False,True
+terrance-ervin-norfolk-state-2014,Terrance Ervin,terrance ervin,31721.0,3126935,,,,,Norfolk State,Norfolk State:2014,1,2015,True,False,True
+jake-hubenak-texas-a-m-2015,Jake Hubenak,jacob hubenak,32201.0,550539,,,,,Texas A&M,Texas A&M:2015,1,2016,True,False,True
+kurt-palandech-unlv-2015,Kurt Palandech,kurt palandech,32214.0,551230,,,,,UNLV,UNLV:2015,1,2016,True,False,True
+esayah-obado-delaware-state-2015,Esayah Obado,esayah obado,32262.0,538378,,,,,Delaware State,Delaware State:2015,1,2016,True,False,True
+kyle-postma-houston-2015,Kyle Postma,kyle postma,32269.0,553532,,,,,Houston,Houston:2015,1,2016,True,False,True
+joel-blumenthal-northwestern-state-2015,Joel Blumenthal,joel blumenthal,32346.0,3911356,,,,,Northwestern State,Northwestern State:2015,1,2016,True,False,True
+alex-thomson-wagner-2015,Alex Thomson,alexander thomson,32376.0,3913137,,,,,Wagner,Wagner:2015,1,2016,True,False,True
+kierra-harris-missouri-state-2014,Kierra Harris,kierra harris,32400.0,517095,,,,,Missouri State,Missouri State:2014,1,2015,True,False,True
+trent-brittain-incarnate-word-2015,Trent Brittain,trent brittain,32523.0,548839,,,,,Incarnate Word,Incarnate Word:2015,1,2016,True,False,True
+brian-gehring-wagner-2014,Brian Gehring,brian gehring,32633.0,,,,,,Wagner,Wagner:2014,1,2015,True,False,False
+cody-williams-monmouth-2015,Cody Williams,cody williams,32677.0,3121226,,,,,Monmouth,Monmouth:2015,1,2016,True,False,True
+trace-mcsorley-penn-state-2015,Trace McSorley,trace mcsorley,32819.0,3116172,tracemcsorley,trace-mcsorley-1,McSoTr00,00-0035146,Penn State,Penn State:2015,1,2019,True,True,True
+chayce-crouch-illinois-2015,Chayce Crouch,chayce crouch,32855.0,3115912,,,,,Illinois,Illinois:2015,1,2016,True,False,True
+nolan-chowbay-austin-peay-2015,Nolan Chowbay,nolan chowbay,33201.0,,,,,,Austin Peay,Austin Peay:2015,1,2016,True,False,False
+luke-langdon-army-2015,Luke Langdon,luke langdon,33213.0,3916786,,,,,Army,Army:2015,1,2016,True,False,True
+kyle-horton-gardner-webb-2015,Kyle Horton,kyle horton,33292.0,,,,,,Gardner-Webb,Gardner-Webb:2015,1,2016,True,False,False
+koy-detmer-jr-byu-2015,Koy Detmer Jr.,koy detmer,33482.0,3932342,,,,,BYU,BYU:2015,1,2016,True,False,True
+tre-von-cherry-grambling-2015,Tre'von Cherry,trevon cherry,33686.0,,,,,,Grambling,Grambling:2015,1,2016,True,False,False
+kendall-hinton-wake-forest-2015,Kendall Hinton,kendall hinton,34045.0,,,,,,Wake Forest,Wake Forest:2015,1,2016,True,False,False
+alex-kuresa-portland-state-2015,Alex Kuresa,alexander kuresa,34210.0,515503,,,,,Portland State,Portland State:2015,1,2016,True,False,True
+kareem-coles-jr-idaho-2015,Kareem Coles Jr.,kareem coles,34245.0,,,,,,Idaho,Idaho:2015,1,2016,True,False,False
+tommy-fiedler-northern-illinois-2015,Tommy Fiedler,thomas fiedler,34293.0,3921966,,,,,Northern Illinois,Northern Illinois:2015,1,2016,True,False,True
+beau-hoge-byu-2015,Beau Hoge,beau hoge,34606.0,3932345,,,,,BYU,BYU:2015,1,2016,True,False,True
+tanner-mangum-byu-2015,Tanner Mangum,tanner mangum,34607.0,545796,,,,,BYU,BYU:2015,1,2016,True,False,True
+daniel-thompson-elon-2015,Daniel Thompson,daniel thompson,34618.0,3912136,,,,,Elon,Elon:2015,1,2016,True,False,True
+aaron-banks-purdue-2015,Aaron Banks,aaron banks,34759.0,3929897,,,,,Purdue,Purdue:2015,1,2016,True,False,True
+chase-litton-marshall-2015,Chase Litton,chase litton,34874.0,3931782,chaselitton,chase-litton-1,LittCh01,00-0034291,Marshall,Marshall:2015,1,2018,True,True,True
+tyler-bell-wake-forest-2015,Tyler Bell,tyler bell,34877.0,,,,,,Wake Forest,Wake Forest:2015,1,2016,True,False,False
+kelly-bryant-clemson-2015,Kelly Bryant,kelly bryant,34897.0,3728240,kellybryant,kelly-bryant-1,BryaKe01,,Clemson;Missouri,Clemson:2015,1,2020,True,True,True
+john-fadule-boston-college-2015,John Fadule,john fadule,35420.0,,,,,,Boston College,Boston College:2015,1,2016,True,False,False
+quinten-dormady-tennessee-2015,Quinten Dormady,quinten dormady,35426.0,3886565,,,,,Tennessee,Tennessee:2015,1,2016,True,False,True
+josh-rosen-ucla-2015,Josh Rosen,josh rosen,35460.0,3886377,joshrosen,josh-rosen-1,RoseJo01,00-0034343,UCLA,UCLA:2015,1,2018,True,True,True
+riley-neal-ball-state-2015,Riley Neal,riley neal,35543.0,3915468,,,,,Ball State,Ball State:2015,1,2016,True,False,True
+brandon-wimbush-notre-dame-2015,Brandon Wimbush,brandon wimbush,35595.0,3932451,,,,,Notre Dame,Notre Dame:2015,1,2016,True,False,True
+dwayne-lawson-virginia-tech-2015,Dwayne Lawson,dwayne lawson,35633.0,3929940,,,,,Virginia Tech,Virginia Tech:2015,1,2016,True,False,True
+deon-sanders-furman-2015,Deon Sanders,deon sanders,35785.0,,,,,,Furman,Furman:2015,1,2016,True,False,False
+tyler-wiegers-iowa-2015,Tyler Wiegers,tyler wiegers,35825.0,3144983,,,,,Iowa,Iowa:2015,1,2016,True,False,True
+brooks-barden-charlotte-2015,Brooks Barden,brooks barden,37238.0,3120055,,,,,Charlotte,Charlotte:2015,1,2016,True,False,True
+jake-kolbe-illinois-state-2015,Jake Kolbe,jacob kolbe,37318.0,3118441,,,,,Illinois State,Illinois State:2015,1,2016,True,False,True
+quantavius-peterson-mississippi-valley-state-2015,Quantavius Peterson,quantavius peterson,37517.0,3139627,,,,,Mississippi Valley State,Mississippi Valley State:2015,1,2016,True,False,True
+anthony-lawrence-san-diego-2015,Anthony Lawrence,anthony lawrence,37614.0,3914253,,,,,San Diego,San Diego:2015,1,2016,True,False,True
+lamar-raynard-north-carolina-a-t-2015,Lamar Raynard,lamar raynard,37718.0,3139898,,,,,North Carolina A&T,North Carolina A&T:2015,1,2016,True,False,True
+jeremy-higgins-hawaii-2014,Jeremy Higgins,jeremy higgins,37751.0,505049,,,,,Hawaii,Hawaii:2014,1,2015,True,False,True
+jesse-scroggins-arizona-2014,Jesse Scroggins,jesse scroggins,37755.0,,,,,,Arizona,Arizona:2014,1,2015,True,False,False
+quinn-kaehler-san-diego-state-2014,Quinn Kaehler,quinn kaehler,37765.0,547570,,,,,San Diego State,San Diego State:2014,1,2015,True,False,True
+garrett-krstich-smu-2015,Garrett Krstich,garrett krstich,37876.0,519812,,,,,SMU,SMU:2014;SMU:2015,2,2016,True,False,True
+alvonta-jenkins-miami-oh-2015,Alvonta Jenkins,alvonta jenkins,37885.0,,,,,,Miami (OH),Miami (OH):2015,1,2016,True,False,False
+brad-kragthorpe-lsu-2014,Brad Kragthorpe,brad kragthorpe,37904.0,520118,,,,,LSU,LSU:2014,1,2015,True,False,True
+patton-robinette-vanderbilt-2014,Patton Robinette,patton robinette,37962.0,532000,,,,,Vanderbilt,Vanderbilt:2014,1,2015,True,False,True
+martez-walker-central-michigan-2015,Martez Walker,martez walker,37976.0,,,,,,Central Michigan,Central Michigan:2015,1,2016,True,False,False
+mark-iannotti-southern-illinois-2015,Mark Iannotti,mark iannotti,37982.0,512983,,,,,Southern Illinois,Southern Illinois:2014;Southern Illinois:2015,2,2016,True,False,True
+craig-leonard-colorado-state-2015,Craig Leonard,craig leonard,38028.0,532684,,,,,Colorado State,Colorado State:2015,1,2016,True,False,True
+billy-green-weber-state-2014,Billy Green,william green,38032.0,545788,,,,,Weber State,Weber State:2014,1,2015,True,False,True
+austin-wilson-syracuse-2015,Austin Wilson,austin wilson,38034.0,545284,,,,,Syracuse,Syracuse:2014;Syracuse:2015,2,2016,True,False,True
+aaron-lagrone-arkansas-pine-bluff-2014,Aaron Lagrone,aaron lagrone,38046.0,,,,,,Arkansas-Pine Bluff,Arkansas-Pine Bluff:2014,1,2015,True,False,False
+josh-greer-north-texas-2015,Josh Greer,josh greer,38105.0,3122972,,,,,North Texas,North Texas:2014;North Texas:2015,2,2016,True,False,True
+neal-burcham-smu-2014,Neal Burcham,neal burcham,38131.0,536139,,,,,SMU,SMU:2014,1,2015,True,False,True
+lenorris-footman-alcorn-state-2015,Lenorris Footman,lenorris footman,38162.0,547796,,,,,Alcorn State,Alcorn State:2015,1,2016,True,False,True
+dillon-buechel-duquesne-2014,Dillon Buechel,dillon buechel,38168.0,535022,,,,,Duquesne,Duquesne:2014,1,2015,True,False,True
+tedarrius-wiley-south-carolina-state-2014,TeDarrius Wiley,tedarrius wiley,38192.0,507125,,,,,South Carolina State,South Carolina State:2014,1,2015,True,False,True
+hunter-vaughn-south-alabama-2014,Hunter Vaughn,hunter vaughn,38201.0,3125255,,,,,South Alabama,South Alabama:2014,1,2015,True,False,True
+ford-childress-fresno-state-2015,Ford Childress,ford childress,38253.0,534491,,,,,Fresno State,Fresno State:2015,1,2016,True,False,True
+stephen-johnson-grambling-2014,Stephen Johnson,steven johnson,38260.0,557882,,,,,Grambling,Grambling:2014,1,2015,True,False,True
+james-tabary-arkansas-state-2015,James Tabary,james tabary,38262.0,3123719,,,,,Arkansas State,Arkansas State:2015,1,2016,True,False,True
+will-grier-florida-2015,Will Grier,william grier,38265.0,559556,willgrier,will-grier-1,GrieWi00,00-0035251,Florida;West Virginia,Florida:2015,1,2019,True,True,True
+reese-phillips-kentucky-2014,Reese Phillips,reese phillips,38271.0,546354,,,,,Kentucky,Kentucky:2014,1,2015,True,False,True
+zach-allen-tcu-2014,Zach Allen,zachary allen,38296.0,545502,,,,,TCU,TCU:2014,1,2015,True,False,True
+connor-mitch-south-carolina-2015,Connor Mitch,connor mitch,38318.0,548142,,,,,South Carolina,South Carolina:2014;South Carolina:2015,2,2016,True,False,True
+tanner-lee-tulane-2015,Tanner Lee,tanner lee,38321.0,545757,tannerlee,tanner-lee-1,LeexTa00,00-0034416,Nebraska;Tulane,Tulane:2014;Tulane:2015,2,2018,True,True,True
+aj-long-syracuse-2014,AJ Long,aj long,38322.0,3116756,,,,,Syracuse,Syracuse:2014,1,2015,True,False,True
+kyler-murray-texas-a-m-2015,Kyler Murray,kyler murray,38334.0,3917315,kylermurray,kyler-murray-1,MurrKy00,00-0035228,Oklahoma;Texas A&M,Texas A&M:2015,1,2019,True,True,True
+devin-powell-tulane-2015,Devin Powell,devin powell,38337.0,532173,,,,,Tulane,Tulane:2014;Tulane:2015,2,2016,True,False,True
+chris-johnson-baylor-2015,Chris Johnson,christopher johnson,38519.0,,,,,,Baylor,Baylor:2014;Baylor:2015,2,2016,True,False,False
+austin-robinson-utsa-2014,Austin Robinson,austin robinson,38520.0,,,,,,UTSA,UTSA:2014,1,2015,True,False,False
+adam-schulz-houston-2015,Adam Schulz,adam schulz,38551.0,518526,,,,,Houston;Utah,Utah:2014;Houston:2015,2,2016,True,False,True
+makoa-camanse-stevens-hawaii-2015,Makoa Camanse-Stevens,makoa camanse stevens,38581.0,,,,,,Hawaii,Hawaii:2015,1,2016,True,False,False
+shaq-washington-cincinnati-2014,Shaq Washington,shaq washington,38626.0,,,,,,Cincinnati,Cincinnati:2014,1,2015,True,False,False
+jason-stewart-memphis-2014,Jason Stewart,jason stewart,38678.0,3126208,,,,,Memphis,Memphis:2014,1,2015,True,False,True
+drew-belcher-maine-2015,Drew Belcher,andrew belcher,38702.0,3120540,,,,,Maine,Maine:2014;Maine:2015,2,2016,True,False,True
+damion-may-alabama-a-m-2015,Damion May,damion may,38707.0,3131432,,,,,Alabama A&M,Alabama A&M:2015,1,2016,True,False,True
+george-bollas-kent-state-2015,George Bollas,george bollas,38869.0,3125858,,,,,Kent State,Kent State:2015,1,2016,True,False,True
+jalen-fitzpatrick-temple-2014,Jalen Fitzpatrick,jalen fitzpatrick,38874.0,,,,,,Temple,Temple:2014,1,2015,True,False,False
+jalen-rowell-air-force-2015,Jalen Rowell,jalen rowell,38948.0,,,,,,Air Force,Air Force:2015,1,2016,True,False,False
+david-handler-savannah-st-2015,David Handler,david handler,39021.0,3926314,,,,,Savannah St,Savannah St:2015,1,2016,True,False,True
+adrian-kollock-jr-south-carolina-state-2014,Adrian Kollock Jr.,adrian kollock,39028.0,,,,,,South Carolina State,South Carolina State:2014,1,2015,True,False,False
+arshon-spaulding-jr-savannah-st-2015,Arshon Spaulding Jr.,arshon spaulding,39030.0,,,,,,Savannah St,Savannah St:2015,1,2016,True,False,False
+gus-ragland-miami-oh-2015,Gus Ragland,gus ragland,39063.0,3125968,,,,,Miami (OH),Miami (OH):2015,1,2016,True,False,True
+jd-sprague-ohio-2015,JD Sprague,jd sprague,39102.0,532433,,,,,Ohio,Ohio:2014;Ohio:2015,2,2016,True,False,True
+aaron-bailey-northern-iowa-2015,Aaron Bailey,aaron bailey,39138.0,546062,,,,,Illinois;Northern Iowa,Illinois:2014;Northern Iowa:2015,2,2016,True,False,True
+bram-kohlhausen-tcu-2015,Bram Kohlhausen,bram kohlhausen,39176.0,512469,,,,,TCU,TCU:2014;TCU:2015,2,2016,True,False,True
+carson-royal-florida-a-m-2015,Carson Royal,carson royal,39204.0,540215,,,,,Florida A&M,Florida A&M:2014;Florida A&M:2015,2,2016,True,False,True
+danny-cameron-indiana-2015,Danny Cameron,daniel cameron,39323.0,3134572,,,,,Indiana,Indiana:2015,1,2016,True,False,True
+parker-boehme-duke-2015,Parker Boehme,parker boehme,39372.0,545221,,,,,Duke,Duke:2014;Duke:2015,2,2016,True,False,True
+conner-manning-utah-2014,Conner Manning,conner manning,39390.0,550226,,,,,Utah,Utah:2014,1,2015,True,False,True
+vincent-testaverde-texas-tech-2014,Vincent Testaverde,vincent testaverde,39415.0,3139487,,,,,Texas Tech,Texas Tech:2014,1,2015,True,False,True
+andrew-mcnulty-north-texas-2015,Andrew McNulty,andrew mcnulty,39495.0,515147,,,,,North Texas,North Texas:2014;North Texas:2015,2,2016,True,False,True
+drew-lock-missouri-2015,Drew Lock,andrew lock,39517.0,3924327,drewlock,drew-lock-1,LockDr00,00-0035704,Missouri,Missouri:2015,1,2019,True,True,True
+lorenzo-nunez-south-carolina-2015,Lorenzo Nunez,lorenzo nunez,39564.0,,,,,,South Carolina,South Carolina:2015,1,2016,True,False,False
+chason-virgil-fresno-state-2015,Chason Virgil,chason virgil,39592.0,3918038,,,,,Fresno State,Fresno State:2015,1,2016,True,False,True
+larry-rose-iii-new-mexico-state-2015,Larry Rose III,larry rose,39604.0,,,,,,New Mexico State,New Mexico State:2015,1,2016,True,False,False
+bo-schneider-ucf-2015,Bo Schneider,bo schneider,39713.0,3929050,,,,,UCF,UCF:2015,1,2016,True,False,True
+zach-conque-stephen-f-austin-2015,Zach Conque,zachary conque,39739.0,535983,,,,,Stephen F. Austin,Stephen F. Austin:2014;Stephen F. Austin:2015,2,2016,True,False,True
+donovan-isom-se-louisiana-2015,Donovan Isom,donovan isom,39793.0,3122873,,,,,SE Louisiana,SE Louisiana:2015,1,2016,True,False,True
+bret-mooney-colgate-2015,Bret Mooney,bret mooney,39797.0,,,,,,Colgate,Colgate:2015,1,2016,True,False,False
+caleb-henderson-north-carolina-2015,Caleb Henderson,caleb henderson,39905.0,3116678,,,,,North Carolina,North Carolina:2015,1,2016,True,False,True
+jared-crump-wake-forest-2014,Jared Crump,jared crump,42037.0,,,,,,Wake Forest,Wake Forest:2014,1,2015,True,False,False
+matt-alviti-northwestern-2015,Matt Alviti,matthew alviti,44954.0,546734,,,,,Northwestern,Northwestern:2014;Northwestern:2015,2,2016,True,False,True
+brenden-motley-virginia-tech-2015,Brenden Motley,brenden motley,44983.0,530541,,,,,Virginia Tech,Virginia Tech:2014;Virginia Tech:2015,2,2016,True,False,True
+jayme-taylor-northwestern-2014,Jayme Taylor,jayme taylor,45010.0,,,,,,Northwestern,Northwestern:2014,1,2015,True,False,False
+parker-mckenzie-abilene-christian-2015,Parker McKenzie,parker mckenzie,45035.0,551394,,,,,Abilene Christian,Abilene Christian:2014;Abilene Christian:2015,2,2016,True,False,True
+cameron-birse-arkansas-state-2015,Cameron Birse,cameron birse,45341.0,545941,,,,,Arkansas State,Arkansas State:2015,1,2016,True,False,True
+da-vaun-johnson-howard-2015,Da'Vaun Johnson,davaun johnson,45648.0,,,,,,Howard,Howard:2015,1,2016,True,False,False
+malik-brown-southern-utah-2014,Malik Brown,malik brown,45688.0,,,,,,Southern Utah,Southern Utah:2014,1,2015,True,False,False
+kyle-hicks-tcu-2015,Kyle Hicks,kyle hicks,45714.0,,,,,,TCU,TCU:2015,1,2016,True,False,False
+d-ernest-johnson-south-florida-2015,D'Ernest Johnson,dernest johnson,45734.0,,,,,,South Florida,South Florida:2015,1,2016,True,False,False
+vic-enwere-california-2015,Vic Enwere,vic enwere,45746.0,,,,,,California,California:2015,1,2016,True,False,False
+royce-freeman-oregon-2014,Royce Freeman,royce freeman,45747.0,,,,,,Oregon,Oregon:2014,1,2015,True,False,False
+jalen-nixon-louisiana-2015,Jalen Nixon,jalen nixon,45916.0,531430,,,,,Louisiana,Louisiana:2014;Louisiana:2015,2,2016,True,False,True
+william-crest-jr-west-virginia-2015,William Crest Jr.,william crest,45917.0,,,,,,West Virginia,West Virginia:2014;West Virginia:2015,2,2016,True,False,False
+dontae-strickland-syracuse-2015,Dontae Strickland,dontae strickland,45943.0,,,,,,Syracuse,Syracuse:2015,1,2016,True,False,False
+richard-mcquarley-new-mexico-2015,Richard McQuarley,richard mcquarley,45970.0,,,,,,New Mexico,New Mexico:2015,1,2016,True,False,False
+a-j-ouellette-ohio-2014,A.J. Ouellette,aj ouellette,45974.0,,,,,,Ohio,Ohio:2014,1,2015,True,False,False
+tyrell-clay-utsa-2015,Tyrell Clay,tyrell clay,45987.0,,,,,,UTSA,UTSA:2015,1,2016,True,False,False
+shaun-wilson-duke-2015,Shaun Wilson,shaun wilson,45993.0,,,,,,Duke,Duke:2015,1,2016,True,False,False
+matt-johnson-charlotte-2015,Matt Johnson,matthew johnson,46383.0,,,,,,Charlotte,Charlotte:2015,1,2016,True,False,False
+kavika-johnson-utep-2015,Kavika Johnson,kavika johnson,46384.0,,,,,,UTEP,UTEP:2015,1,2016,True,False,False
+jeremy-johnson-auburn-2015,Jeremy Johnson,jeremy johnson,46386.0,550019,,,,,Auburn,Auburn:2014;Auburn:2015,2,2016,True,False,True
+j-t-barrett-iv-ohio-state-2015,J.T. Barrett IV,jt barrett,46387.0,545624,jtbarrett,jt-barrett-1,BarrJ.00,00-0034126,Ohio State,Ohio State:2014;Ohio State:2015,2,2018,True,True,True
+joe-hubener-kansas-state-2015,Joe Hubener,joseph hubener,46389.0,517248,,,,,Kansas State,Kansas State:2014;Kansas State:2015,2,2016,True,False,True
+ryan-burns-stanford-2014,Ryan Burns,ryan burns,46394.0,546469,,,,,Stanford,Stanford:2014,1,2015,True,False,True
+darell-garretson-utah-state-2014,Darell Garretson,darell garretson,46397.0,550720,,,,,Utah State,Utah State:2014,1,2015,True,False,True
+chris-laviano-rutgers-2015,Chris Laviano,christopher laviano,46398.0,547549,,,,,Rutgers,Rutgers:2014;Rutgers:2015,2,2016,True,False,True
+wilton-speight-michigan-2015,Wilton Speight,wilton speight,46399.0,3115966,,,,,Michigan,Michigan:2015,1,2016,True,False,True
+al-cobb-vmi-2015,Al Cobb,al cobb,46400.0,547410,,,,,VMI,VMI:2014;VMI:2015,2,2016,True,False,True
+jake-browning-washington-2015,Jake Browning,jacob browning,46401.0,3886812,jakebrowning,jake-browning-1,BrowJa08,00-0035100,Washington,Washington:2015,1,2019,True,True,True
+luke-del-rio-oregon-state-2014,Luke Del Rio,luke del rio,46403.0,546362,,,,,Oregon State,Oregon State:2014,1,2015,True,False,True
+jake-melville-colgate-2015,Jake Melville,jacob melville,46405.0,547756,,,,,Colgate,Colgate:2014;Colgate:2015,2,2016,True,False,True
+mccoy-hill-byu-2014,McCoy Hill,mccoy hill,46407.0,530619,,,,,BYU,BYU:2014,1,2015,True,False,True
+gunnar-holcombe-marshall-2015,Gunnar Holcombe,gunnar holcombe,46409.0,535461,,,,,Marshall,Marshall:2014;Marshall:2015,2,2016,True,False,True
+hayden-moore-cincinnati-2015,Hayden Moore,hayden moore,46410.0,3125813,,,,,Cincinnati,Cincinnati:2015,1,2016,True,False,True
+troy-cook-ut-martin-2015,Troy Cook,troy cook,46411.0,551552,,,,,UT Martin,UT Martin:2015,1,2016,True,False,True
+dan-collins-maine-2015,Dan Collins,daniel collins,46412.0,533619,,,,,Maine,Maine:2014;Maine:2015,2,2016,True,False,True
+bryant-shirreffs-connecticut-2015,Bryant Shirreffs,bryant shirreffs,46413.0,,,,,,Connecticut,Connecticut:2015,1,2016,True,False,False
+kyle-bolin-louisville-2015,Kyle Bolin,kyle bolin,46414.0,545559,,,,,Louisville,Louisville:2014;Louisville:2015,2,2016,True,False,True
+lamar-jackson-louisville-2015,Lamar Jackson,lamar jackson,46416.0,3916387,lamarjackson,lamar-jackson-1,JackLa00,00-0034796,Louisville,Louisville:2015,1,2018,True,True,True
+ben-cheek-presbyterian-2015,Ben Cheek,benjamin cheek,46417.0,3121291,,,,,Presbyterian,Presbyterian:2015,1,2016,True,False,True
+alex-mcgough-florida-international-2015,Alex McGough,alexander mcgough,46420.0,3128843,,,,,Florida International,Florida International:2014;Florida International:2015,2,2016,True,False,True
+taylor-lamb-app-state-2015,Taylor Lamb,taylor lamb,46422.0,548447,,,,,App State,App State:2014;App State:2015,2,2016,True,False,True
+jalan-mcclendon-nc-state-2015,Jalan McClendon,jalan mcclendon,46423.0,3116715,,,,,NC State,NC State:2015,1,2016,True,False,True
+steve-cluley-william-mary-2015,Steve Cluley,steven cluley,46424.0,529984,,,,,William & Mary,William & Mary:2014;William & Mary:2015,2,2016,True,False,True
+ryan-finley-boise-state-2015,Ryan Finley,ryan finley,46426.0,546288,ryanfinley,ryan-finley-1,FinlRy00,00-0035652,Boise State;NC State,Boise State:2014;Boise State:2015,2,2019,True,True,True
+damion-hobbs-utah-state-2015,Damion Hobbs,damion hobbs,46427.0,,,,,,Utah State,Utah State:2015,1,2016,True,False,False
+jadrian-clark-weber-state-2015,Jadrian Clark,jadrian clark,46428.0,533818,,,,,Weber State,Weber State:2015,1,2016,True,False,True
+tyler-stehling-rice-2015,Tyler Stehling,tyler stehling,46429.0,536503,,,,,Rice,Rice:2014;Rice:2015,2,2016,True,False,True
+troy-williams-washington-2014,Troy Williams,troy williams,46431.0,546876,,,,,Washington,Washington:2014,1,2015,True,False,True
+wade-freebeck-vanderbilt-2015,Wade Freebeck,wade freebeck,46432.0,3122157,,,,,Vanderbilt,Vanderbilt:2014;Vanderbilt:2015,2,2016,True,False,True
+perry-orth-south-carolina-2015,Perry Orth,perry orth,46435.0,548144,,,,,South Carolina,South Carolina:2014;South Carolina:2015,2,2016,True,False,True
+matt-linehan-idaho-2015,Matt Linehan,matthew linehan,46436.0,553235,,,,,Idaho,Idaho:2014;Idaho:2015,2,2016,True,False,True
+mitch-leidner-minnesota-2015,Mitch Leidner,mitchell leidner,46437.0,530731,mitchleidner,mitch-leidner-1,LeidMi00,,Minnesota,Minnesota:2014;Minnesota:2015,2,2017,True,True,True
+ryan-saeger-south-dakota-2015,Ryan Saeger,ryan saeger,46438.0,537987,,,,,South Dakota,South Dakota:2014;South Dakota:2015,2,2016,True,False,True
+austin-apodaca-new-mexico-2015,Austin Apodaca,austin apodaca,46439.0,534863,,,,,New Mexico,New Mexico:2015,1,2016,True,False,True
+chris-streveler-minnesota-2014,Chris Streveler,christopher streveler,46440.0,,,,,,Minnesota,Minnesota:2014,1,2015,True,False,False
+johnny-stanton-nebraska-2014,Johnny Stanton,johnny stanton,46441.0,545618,,,,,Nebraska,Nebraska:2014,1,2015,True,False,True
+la-montiez-ivy-jackson-state-2015,La Montiez Ivy,la montiez ivy,46443.0,,,,,,Jackson State,Jackson State:2015,1,2016,True,False,False
+emiere-scaife-georgia-state-2015,Emiere Scaife,emiere scaife,46446.0,,,,,,Georgia State,Georgia State:2015,1,2016,True,False,False
+ahmad-bradshaw-army-2015,Ahmad Bradshaw,ahmad bradshaw,46451.0,3129089,,,,,Army,Army:2015,1,2016,True,False,True
+kyle-lauletta-richmond-2015,Kyle Lauletta,kyle lauletta,46452.0,548643,kylelauletta,,LaulKy00,00-0034369,Richmond,Richmond:2015,1,2018,True,True,True
+mike-white-south-florida-2014,Mike White,michael white,46453.0,549804,mikewhite,,WhitMi01,00-0034401,South Florida;Western Kentucky,South Florida:2014,1,2018,True,True,True
+john-wolford-wake-forest-2015,John Wolford,john wolford,46454.0,3124092,,,,,Wake Forest,Wake Forest:2014;Wake Forest:2015,2,2016,True,False,True
+matt-davis-smu-2015,Matt Davis,matthew davis,46456.0,532113,,,,,SMU,SMU:2014;SMU:2015,2,2016,True,False,True
+zack-mahoney-syracuse-2015,Zack Mahoney,zachary mahoney,46457.0,3892833,,,,,Syracuse,Syracuse:2015,1,2016,True,False,True
+eric-dungey-syracuse-2015,Eric Dungey,eric dungey,46458.0,3916447,,,,,Syracuse,Syracuse:2015,1,2016,True,False,True
+p-j-blazejowski-furman-2015,P.J. Blazejowski,pj blazejowski,46459.0,559492,,,,,Furman,Furman:2014;Furman:2015,2,2016,True,False,True
+tyler-o-connor-michigan-state-2015,Tyler O'Connor,tyler oconnor,46460.0,535578,,,,,Michigan State,Michigan State:2014;Michigan State:2015,2,2016,True,False,True
+neven-sussman-ualbany-2015,Neven Sussman,neven sussman,46461.0,3911912,,,,,UAlbany,UAlbany:2015,1,2016,True,False,True
+brooks-haack-louisiana-2015,Brooks Haack,brooks haack,46462.0,531678,,,,,Louisiana,Louisiana:2014;Louisiana:2015,2,2016,True,False,True
+j-d-almond-northwestern-state-2015,J.D. Almond,jd almond,46463.0,549717,,,,,Northwestern State,Northwestern State:2015,1,2016,True,False,True
+seth-russell-baylor-2015,Seth Russell,seth russell,46467.0,535511,sethrussell,seth-russell-1,RussSe00,,Baylor,Baylor:2014;Baylor:2015,2,2017,True,True,True
+nick-stevens-colorado-state-2015,Nick Stevens,nicholas stevens,46468.0,546267,,,,,Colorado State,Colorado State:2014;Colorado State:2015,2,2016,True,False,True
+faton-bauta-georgia-2015,Faton Bauta,faton bauta,46470.0,530931,,,,,Georgia,Georgia:2014;Georgia:2015,2,2016,True,False,True
+chad-voytik-pittsburgh-2015,Chad Voytik,chad voytik,46471.0,530450,,,,,Pittsburgh,Pittsburgh:2014;Pittsburgh:2015,2,2016,True,False,True
+keller-chryst-stanford-2015,Keller Chryst,keller chryst,46472.0,3117245,,,,,Stanford,Stanford:2015,1,2016,True,False,True
+tyler-stewart-nevada-2015,Tyler Stewart,tyler stewart,46474.0,536228,,,,,Nevada,Nevada:2015,1,2016,True,False,True
+dano-graves-cal-poly-2014,Dano Graves,dano graves,46475.0,,,,,,Cal Poly,Cal Poly:2014,1,2015,True,False,False
+matthew-jordan-georgia-tech-2015,Matthew Jordan,matthew jordan,46476.0,3116614,,,,,Georgia Tech,Georgia Tech:2015,1,2016,True,False,True
+patrick-towles-kentucky-2015,Patrick Towles,patrick towles,46478.0,530944,,,,,Kentucky,Kentucky:2014;Kentucky:2015,2,2016,True,False,True
+shuler-bentley-old-dominion-2015,Shuler Bentley,shuler bentley,46479.0,3123209,,,,,Old Dominion,Old Dominion:2015,1,2016,True,False,True
+brandon-cox-utah-2014,Brandon Cox,brandon cox,46480.0,550218,,,,,Utah,Utah:2014,1,2015,True,False,True
+jaylian-williamson-hampton-2014,Jaylian Williamson,jaylian williamson,46482.0,537150,,,,,Hampton,Hampton:2014,1,2015,True,False,True
+brandon-silvers-troy-2015,Brandon Silvers,brandon silvers,46483.0,546145,,,,,Troy,Troy:2014;Troy:2015,2,2016,True,False,True
+anthony-jennings-lsu-2014,Anthony Jennings,anthony jennings,46485.0,546033,,,,,LSU,LSU:2014,1,2015,True,False,True
+thomas-stuart-boise-state-2015,Thomas Stuart,thomas stuart,46486.0,3124371,,,,,Boise State,Boise State:2015,1,2016,True,False,True
+brett-rypien-boise-state-2015,Brett Rypien,brett rypien,46487.0,3722362,brettrypien,brett-rypien-1,RypiBr00,00-0034955,Boise State,Boise State:2015,1,2019,True,True,True
+dalton-sturm-utsa-2015,Dalton Sturm,dalton sturm,46488.0,3124037,,,,,UTSA,UTSA:2014;UTSA:2015,2,2016,True,False,True
+perry-hills-maryland-2015,Perry Hills,perry hills,46491.0,534317,,,,,Maryland,Maryland:2014;Maryland:2015,2,2016,True,False,True
+kalen-johnson-howard-2015,Kalen Johnson,kalen johnson,46493.0,3148078,,,,,Howard,Howard:2015,1,2016,True,False,True
+ikaika-woolsey-hawaii-2015,Ikaika Woolsey,ikaika woolsey,46495.0,532976,,,,,Hawaii,Hawaii:2014;Hawaii:2015,2,2016,True,False,True
+damian-williams-mississippi-state-2014,Damian Williams,damian williams,46496.0,546603,,,,,Mississippi State,Mississippi State:2014,1,2015,True,False,True
+nick-fitzgerald-mississippi-state-2015,Nick Fitzgerald,nicholas fitzgerald,46497.0,558337,nickfitzgerald,nick-fitzgerald-2,FitzNi01,00-0035471,Mississippi State,Mississippi State:2015,1,2019,True,True,True
+will-worth-navy-2014,Will Worth,william worth,46498.0,551208,,,,,Navy,Navy:2014,1,2015,True,False,True
+kevin-anderson-fordham-2015,Kevin Anderson,kevin anderson,46499.0,552663,,,,,Fordham,Fordham:2015,1,2016,True,False,True
+clayton-thorson-northwestern-2015,Clayton Thorson,clayton thorson,46501.0,3116144,claytonthorson,clayton-thorson-1,ThorCl00,00-0035283,Northwestern,Northwestern:2015,1,2019,True,True,True
+tom-flacco-western-michigan-2015,Tom Flacco,thomas flacco,46503.0,3916725,,,,,Western Michigan,Western Michigan:2015,1,2016,True,False,True
+james-knapke-bowling-green-2015,James Knapke,james knapke,46506.0,531801,,,,,Bowling Green,Bowling Green:2014;Bowling Green:2015,2,2016,True,False,True
+maty-mauk-missouri-2015,Maty Mauk,maty mauk,46507.0,531385,,,,,Missouri,Missouri:2014;Missouri:2015,2,2016,True,False,True
+david-blough-purdue-2015,David Blough,david blough,46508.0,3116188,,,,,Purdue,Purdue:2015,1,2016,True,False,True
+grant-rohach-iowa-state-2014,Grant Rohach,grant rohach,46510.0,531222,,,,,Iowa State,Iowa State:2014,1,2015,True,False,True
+chris-carter-army-2015,Chris Carter,christopher carter,46512.0,3916793,,,,,Army,Army:2015,1,2016,True,False,True
+tago-smith-navy-2015,Tago Smith,tago smith,46514.0,551222,,,,,Navy,Navy:2014;Navy:2015,2,2016,True,False,True
+john-o-korn-houston-2014,John O'Korn,john okorn,46515.0,545550,,,,,Houston,Houston:2014,1,2015,True,False,True
+shane-morris-michigan-2014,Shane Morris,shane morris,46516.0,546706,,,,,Michigan,Michigan:2014,1,2015,True,False,True
+logan-woodside-toledo-2014,Logan Woodside,logan woodside,46517.0,545910,loganwoodside,logan-woodside-1,WoodLo00,00-0034438,Toledo,Toledo:2014,1,2018,True,True,True
+baker-mayfield-oklahoma-2015,Baker Mayfield,baker mayfield,46518.0,550373,bakermayfield,baker-mayfield-1,MayfBa00,00-0034855,Oklahoma,Oklahoma:2015,1,2018,True,True,True
+stephon-masha-liberty-2015,Stephon Masha,stephon masha,46520.0,547303,,,,,Liberty,Liberty:2015,1,2016,True,False,True
+dallas-sealey-abilene-christian-2015,Dallas Sealey,dallas sealey,46523.0,3134120,,,,,Abilene Christian,Abilene Christian:2015,1,2016,True,False,True
+nate-romine-air-force-2015,Nate Romine,nathan romine,46524.0,554528,,,,,Air Force,Air Force:2014;Air Force:2015,2,2016,True,False,True
+k-j-carta-samuels-washington-2015,K.J. Carta-Samuels,kj carta samuels,46525.0,3127291,,,,,Washington,Washington:2015,1,2016,True,False,True
+billy-bahl-miami-oh-2015,Billy Bahl,william bahl,46531.0,3915317,,,,,Miami (OH),Miami (OH):2015,1,2016,True,False,True
+greg-windham-ohio-2015,Greg Windham,gregory windham,46533.0,532440,,,,,Ohio,Ohio:2014;Ohio:2015,2,2016,True,False,True
+tyler-jones-texas-state-2015,Tyler Jones,tyler jones,46534.0,548240,,,,,Texas State,Texas State:2014;Texas State:2015,2,2016,True,False,True
+taylor-cornelius-oklahoma-state-2015,Taylor Cornelius,taylor cornelius,46535.0,3122424,,,,,Oklahoma State,Oklahoma State:2015,1,2016,True,False,True
+justin-alo-se-louisiana-2015,Justin Alo,justin alo,46537.0,3929728,,,,,SE Louisiana,SE Louisiana:2015,1,2016,True,False,True
+brandon-harris-lsu-2015,Brandon Harris,brandon harris,46538.0,559751,,,,,LSU,LSU:2014;LSU:2015,2,2016,True,False,True
+kurt-benkert-east-carolina-2014,Kurt Benkert,kurt benkert,46540.0,545645,kurtbenkert,kurt-benkert-1,BenkKu01,00-0034131,East Carolina;Virginia,East Carolina:2014,1,2018,True,True,True
+austin-allen-arkansas-2015,Austin Allen,austin allen,46542.0,547206,austinallen,austin-allen-1,,,Arkansas,Arkansas:2014;Arkansas:2015,2,2018,True,True,True
+dakota-prukop-montana-state-2014,Dakota Prukop,dakota prukop,46543.0,533805,,,,,Montana State,Montana State:2014,1,2015,True,False,True
+ben-scott-uc-davis-2015,Ben Scott,benjamin scott,46544.0,533916,,,,,UC Davis,UC Davis:2015,1,2016,True,False,True
+greyson-lambert-georgia-2015,Greyson Lambert,greyson lambert,46545.0,530521,,,,,Georgia;Virginia,Virginia:2014;Georgia:2015,2,2016,True,False,True
+jason-driskel-florida-atlantic-2015,Jason Driskel,jason driskel,46547.0,3122713,,,,,Florida Atlantic,Florida Atlantic:2015,1,2016,True,False,True
+malcolm-bell-north-carolina-central-2015,Malcolm Bell,malcolm bell,46548.0,537229,,,,,North Carolina Central,North Carolina Central:2014;North Carolina Central:2015,2,2016,True,False,True
+malik-rosier-miami-2015,Malik Rosier,malik rosier,46550.0,3123047,,,,,Miami,Miami:2015,1,2016,True,False,True
+kenneth-coleman-florida-a-m-2015,Kenneth Coleman,kenneth coleman,46551.0,3927945,,,,,Florida A&M,Florida A&M:2015,1,2016,True,False,True
+leon-prunty-savannah-st-2014,Leon Prunty,leon prunty,46553.0,534967,,,,,Savannah St,Savannah St:2014,1,2015,True,False,True
+favian-upshaw-georgia-southern-2015,Favian Upshaw,favian upshaw,46554.0,549301,,,,,Georgia Southern,Georgia Southern:2014;Georgia Southern:2015,2,2016,True,False,True
+kevin-ellison-georgia-southern-2015,Kevin Ellison,kevin ellison,46555.0,532925,,,,,Georgia Southern,Georgia Southern:2014;Georgia Southern:2015,2,2016,True,False,True
+wes-holcombe-western-carolina-2015,Wes Holcombe,wes holcombe,46558.0,3133163,,,,,Western Carolina,Western Carolina:2015,1,2016,True,False,True
+tra-von-chapman-akron-2015,Tra'Von Chapman,travon chapman,46559.0,546646,,,,,Akron,Akron:2015,1,2016,True,False,True
+dane-evans-tulsa-2015,Dane Evans,dane evans,46560.0,532273,,,,,Tulsa,Tulsa:2014;Tulsa:2015,2,2016,True,False,True
+kenny-potter-san-jose-state-2015,Kenny Potter,kenneth potter,46562.0,3914864,,,,,San Jose State,San Jose State:2015,1,2016,True,False,True
+montell-cozart-kansas-2015,Montell Cozart,montell cozart,46563.0,545417,,,,,Kansas,Kansas:2014;Kansas:2015,2,2016,True,False,True
+garrett-smith-ul-monroe-2015,Garrett Smith,garrett smith,46568.0,3124944,,,,,UL Monroe,UL Monroe:2015,1,2016,True,False,True
+mason-rudolph-oklahoma-state-2015,Mason Rudolph,mason rudolph,46569.0,3116407,masonrudolph,mason-rudolph-1,RudoMa00,00-0034771,Oklahoma State,Oklahoma State:2014;Oklahoma State:2015,2,2018,True,True,True
+deonte-shorts-southern-2015,Deonte Shorts,deonte shorts,46575.0,553188,,,,,Southern,Southern:2014;Southern:2015,2,2016,True,False,True
+austin-howard-southern-2015,Austin Howard,austin howard,46576.0,3140995,,,,,Southern,Southern:2014;Southern:2015,2,2016,True,False,True
+darrel-colbert-jr-smu-2015,Darrel Colbert Jr.,darrel colbert,46577.0,3128413,,,,,SMU,SMU:2015,1,2016,True,False,True
+alec-morris-alabama-2015,Alec Morris,alec morris,46578.0,,,,,,Alabama,Alabama:2015,1,2016,True,False,False
+ellis-knudson-towson-2015,Ellis Knudson,ellis knudson,46579.0,,,,,,Towson,Towson:2015,1,2016,True,False,False
+quinton-flowers-south-florida-2015,Quinton Flowers,quinton flowers,46580.0,3139591,quintonflowers,quinton-flowers-1,,,South Florida,South Florida:2014;South Florida:2015,2,2018,True,True,True
+justin-holman-ucf-2015,Justin Holman,justin holman,46581.0,551184,,,,,UCF,UCF:2014;UCF:2015,2,2016,True,False,True
+nick-patti-ucf-2015,Nick Patti,nicholas patti,46582.0,531755,,,,,UCF,UCF:2014;UCF:2015,2,2016,True,False,True
+ross-comis-massachusetts-2015,Ross Comis,ross comis,46584.0,3125927,,,,,Massachusetts,Massachusetts:2015,1,2016,True,False,True
+luke-falk-washington-state-2015,Luke Falk,luke falk,46586.0,550629,lukefalk,luke-falk-1,FalkLu00,00-0034412,Washington State,Washington State:2014;Washington State:2015,2,2018,True,True,True
+zack-greenlee-fresno-state-2015,Zack Greenlee,zachary greenlee,46587.0,550587,,,,,Fresno State,Fresno State:2014;Fresno State:2015,2,2016,True,False,True
+ryker-fyfe-nebraska-2015,Ryker Fyfe,ryker fyfe,46588.0,533182,,,,,Nebraska,Nebraska:2014;Nebraska:2015,2,2016,True,False,True
+tommy-armstrong-jr-nebraska-2015,Tommy Armstrong Jr.,thomas armstrong,46589.0,533270,,,,,Nebraska,Nebraska:2014;Nebraska:2015,2,2016,True,False,True
+zach-lujan-south-dakota-state-2015,Zach Lujan,zachary lujan,46590.0,3140828,,,,,South Dakota State,South Dakota State:2014;South Dakota State:2015,2,2016,True,False,True
+hunter-taylor-stephen-f-austin-2015,Hunter Taylor,hunter taylor,46592.0,533490,,,,,Stephen F. Austin,Stephen F. Austin:2015,1,2016,True,False,True
+nic-shimonek-texas-tech-2015,Nic Shimonek,nic shimonek,46594.0,545364,nicshimonek,nic-shimonek-1,,,Texas Tech,Texas Tech:2015,1,2018,True,True,True
+cooper-bateman-alabama-2015,Cooper Bateman,cooper bateman,46596.0,546359,,,,,Alabama,Alabama:2015,1,2016,True,False,True
+joel-lanning-iowa-state-2015,Joel Lanning,joel lanning,46597.0,,,,,,Iowa State,Iowa State:2015,1,2016,True,False,False
+sean-white-auburn-2015,Sean White,sean white,46598.0,3121585,,,,,Auburn,Auburn:2015,1,2016,True,False,True
+anu-solomon-arizona-2015,Anu Solomon,anu solomon,46599.0,552097,,,,,Arizona,Arizona:2014;Arizona:2015,2,2016,True,False,True
+drew-hare-northern-illinois-2015,Drew Hare,andrew hare,46600.0,532480,,,,,Northern Illinois,Northern Illinois:2014;Northern Illinois:2015,2,2016,True,False,True
+josh-allen-wyoming-2015,Josh Allen,josh allen,46601.0,3918298,joshallen,josh-allen-7,AlleJo02,00-0034857,Wyoming,Wyoming:2015,1,2018,True,True,True
+case-cookus-northern-arizona-2015,Case Cookus,case cookus,46603.0,3913822,,,,,Northern Arizona,Northern Arizona:2015,1,2016,True,False,True
+manny-wilkins-arizona-state-2015,Manny Wilkins,manny wilkins,46604.0,3128814,,,,,Arizona State,Arizona State:2015,1,2016,True,False,True
+max-browne-usc-2015,Max Browne,max browne,46632.0,546415,,,,,USC,USC:2014;USC:2015,2,2016,True,False,True
+malik-zaire-notre-dame-2015,Malik Zaire,malik zaire,46634.0,550967,,,,,Notre Dame,Notre Dame:2014;Notre Dame:2015,2,2016,True,False,True
+kenny-hill-texas-a-m-2014,Kenny Hill,kenneth hill,46637.0,549865,,,,,Texas A&M,Texas A&M:2014,1,2015,True,False,True
+tyler-rogers-new-mexico-state-2015,Tyler Rogers,tyler rogers,46638.0,3124981,,,,,New Mexico State,New Mexico State:2014;New Mexico State:2015,2,2016,True,False,True
+jeff-lindquist-washington-2014,Jeff Lindquist,jeff lindquist,47029.0,,,,,,Washington,Washington:2014,1,2015,True,False,False
+todd-stafford-massachusetts-2014,Todd Stafford,todd stafford,47072.0,,,,,,Massachusetts,Massachusetts:2014,1,2015,True,False,False
+cole-gautsche-new-mexico-2014,Cole Gautsche,cole gautsche,47093.0,,,,,,New Mexico,New Mexico:2014,1,2015,True,False,False
+ryan-swingle-vmi-2014,Ryan Swingle,ryan swingle,47135.0,3117104,,,,,VMI,VMI:2014,1,2015,True,False,True
+tyler-cameron-wake-forest-2014,Tyler Cameron,tyler cameron,47287.0,530328,,,,,Wake Forest,Wake Forest:2014,1,2015,True,False,True
+jonathan-giles-texas-tech-2015,Jonathan Giles,jonathan giles,47416.0,,,,,,Texas Tech,Texas Tech:2015,1,2016,True,False,False
+eugene-lewis-penn-state-2015,Eugene Lewis,eugene lewis,47434.0,,,,,,Penn State,Penn State:2015,1,2016,True,False,False
+ian-sadler-texas-tech-2015,Ian Sadler,ian sadler,47435.0,,,,,,Texas Tech,Texas Tech:2015,1,2016,True,False,False
+frederick-gammage-arizona-state-2015,Frederick Gammage,frederick gammage,47438.0,,,,,,Arizona State,Arizona State:2014;Arizona State:2015,2,2016,True,False,False
+garrett-johnson-kentucky-2014,Garrett Johnson,garrett johnson,47450.0,,,,,,Kentucky,Kentucky:2014,1,2015,True,False,False
+twarn-mixson-hampton-2014,Twarn Mixson,twarn mixson,47473.0,,,,,,Hampton,Hampton:2014,1,2015,True,False,False
+zach-wright-rice-2015,Zach Wright,zachary wright,47483.0,,,,,,Rice,Rice:2015,1,2016,True,False,False
+thomas-sperbeck-boise-state-2015,Thomas Sperbeck,thomas sperbeck,47487.0,,,,,,Boise State,Boise State:2014;Boise State:2015,2,2016,True,False,False
+dane-forlines-vmi-2015,Dane Forlines,dane forlines,47516.0,,,,,,VMI,VMI:2015,1,2016,True,False,False
+markell-pack-ole-miss-2015,Markell Pack,markell pack,47520.0,,,,,,Ole Miss,Ole Miss:2015,1,2016,True,False,False
+reggie-bonnafon-louisville-2015,Reggie Bonnafon,reggie bonnafon,47542.0,,,,,,Louisville,Louisville:2014;Louisville:2015,2,2016,True,False,False
+corey-lacanaria-ball-state-2014,Corey Lacanaria,corey lacanaria,47550.0,,,,,,Ball State,Ball State:2014,1,2015,True,False,False
+tim-crawley-san-jose-state-2015,Tim Crawley,tim crawley,47574.0,,,,,,San Jose State,San Jose State:2015,1,2016,True,False,False
+aregeros-turner-northern-illinois-2014,Aregeros Turner,aregeros turner,47577.0,,,,,,Northern Illinois,Northern Illinois:2014,1,2015,True,False,False
+lynx-hawthorne-baylor-2015,Lynx Hawthorne,lynx hawthorne,47631.0,,,,,,Baylor,Baylor:2015,1,2016,True,False,False
+jerrod-heard-texas-2015,Jerrod Heard,jerrod heard,47635.0,,,,,,Texas,Texas:2015,1,2016,True,False,False
+bilal-marshall-purdue-2015,Bilal Marshall,bilal marshall,47641.0,,,,,,Purdue,Purdue:2015,1,2016,True,False,False
+kavontae-turpin-tcu-2015,KaVontae Turpin,kavontae turpin,47658.0,,,,,,TCU,TCU:2015,1,2016,True,False,False
+austin-hays-oklahoma-state-2015,Austin Hays,austin hays,47659.0,,,,,,Oklahoma State,Oklahoma State:2015,1,2016,True,False,False
+nick-holley-kent-state-2014,Nick Holley,nicholas holley,47688.0,550339,,,,,Kent State,Kent State:2014,1,2015,True,False,True
+desmon-white-tcu-2014,Desmon White,desmon white,47694.0,,,,,,TCU,TCU:2014,1,2015,True,False,False
+ajalen-holley-ul-monroe-2015,Ajalen Holley,ajalen holley,47699.0,,,,,,UL Monroe,UL Monroe:2015,1,2016,True,False,False
+ronnie-moore-bowling-green-2015,Ronnie Moore,ronnie moore,47704.0,,,,,,Bowling Green,Bowling Green:2014;Bowling Green:2015,2,2016,True,False,False
+teldrick-morgan-new-mexico-state-2015,Teldrick Morgan,teldrick morgan,47726.0,,,,,,New Mexico State,New Mexico State:2015,1,2016,True,False,False
+terryon-robinson-western-carolina-2014,Terryon Robinson,terryon robinson,47787.0,,,,,,Western Carolina,Western Carolina:2014,1,2015,True,False,False
+seth-collins-oregon-state-2015,Seth Collins,seth collins,47812.0,,,,,,Oregon State,Oregon State:2015,1,2016,True,False,False
+jalen-greene-usc-2015,Jalen Greene,jalen greene,47819.0,,,,,,USC,USC:2015,1,2016,True,False,False
+bernard-davis-massachusetts-2014,Bernard Davis,bernard davis,47836.0,,,,,,Massachusetts,Massachusetts:2014,1,2015,True,False,False
+mike-sharp-southern-utah-2014,Mike Sharp,michael sharp,47877.0,,,,,,Southern Utah,Southern Utah:2014,1,2015,True,False,False
+brian-williams-ul-monroe-2015,Brian Williams,brian williams,47880.0,,,,,,UL Monroe,UL Monroe:2015,1,2016,True,False,False
+gabe-myles-mississippi-state-2015,Gabe Myles,gabe myles,47881.0,,,,,,Mississippi State,Mississippi State:2014;Mississippi State:2015,2,2016,True,False,False
+jerico-richardson-nevada-2015,Jerico Richardson,jerico richardson,47944.0,,,,,,Nevada,Nevada:2015,1,2016,True,False,False
+terry-godwin-ii-georgia-2015,Terry Godwin II,terry godwin,47946.0,,,,,,Georgia,Georgia:2015,1,2016,True,False,False
+braxton-berrios-miami-2015,Braxton Berrios,braxton berrios,47961.0,,,,,,Miami,Miami:2015,1,2016,True,False,False
+desmond-cain-illinois-2015,Desmond Cain,desmond cain,47979.0,,,,,,Illinois,Illinois:2015,1,2016,True,False,False
+andrew-scanlan-northwestern-2015,Andrew Scanlan,andrew scanlan,48025.0,,,,,,Northwestern,Northwestern:2014;Northwestern:2015,2,2016,True,False,False
+jauan-jennings-tennessee-2015,Jauan Jennings,jauan jennings,48027.0,,,,,,Tennessee,Tennessee:2015,1,2016,True,False,False
+jeff-smith-boston-college-2015,Jeff Smith,jeff smith,48055.0,,,,,,Boston College,Boston College:2015,1,2016,True,False,False
+ryan-metz-utep-2015,Ryan Metz,ryan metz,48058.0,3124698,,,,,UTEP,UTEP:2015,1,2016,True,False,True
+jason-smith-auburn-2015,Jason Smith,jason smith,48071.0,,,,,,Auburn,Auburn:2015,1,2016,True,False,False
+nate-german-rice-2015,Nate German,nathan german,48095.0,,,,,,Rice,Rice:2015,1,2016,True,False,False
+antonio-callaway-florida-2015,Antonio Callaway,antonio callaway,48101.0,,,,,,Florida,Florida:2015,1,2016,True,False,False
+nyheim-miller-hines-nc-state-2015,Nyheim Miller-Hines,nyheim miller hines,48103.0,,,,,,NC State,NC State:2015,1,2016,True,False,False
+dante-pettis-washington-2015,Dante Pettis,dante pettis,48113.0,,,,,,Washington,Washington:2015,1,2016,True,False,False
+de-mornay-pierson-el-nebraska-2014,De'Mornay Pierson-El,demornay pierson el,48141.0,,,,,,Nebraska,Nebraska:2014,1,2015,True,False,False
+tino-smith-ii-savannah-st-2015,Tino Smith II,tino smith,48272.0,4250464,,,,,Savannah St,Savannah St:2014;Savannah St:2015,2,2016,True,False,True
+nacarius-fant-western-kentucky-2015,Nacarius Fant,nacarius fant,48276.0,,,,,,Western Kentucky,Western Kentucky:2014;Western Kentucky:2015,2,2016,True,False,False
+steven-sims-kansas-2015,Steven Sims,steven sims,48341.0,,,,,,Kansas,Kansas:2015,1,2016,True,False,False
+brad-stewart-georgia-tech-2015,Brad Stewart,brad stewart,48348.0,,,,,,Georgia Tech,Georgia Tech:2015,1,2016,True,False,False
+nick-scott-penn-state-2015,Nick Scott,nicholas scott,49012.0,,,,,,Penn State,Penn State:2015,1,2016,True,False,False
+joe-dineen-kansas-2014,Joe Dineen,joseph dineen,49816.0,,,,,,Kansas,Kansas:2014,1,2015,True,False,False
+chris-covington-indiana-2014,Chris Covington,christopher covington,49825.0,,,,,,Indiana,Indiana:2014,1,2015,True,False,False
+shane-cockerille-maryland-2015,Shane Cockerille,shane cockerille,50875.0,,,,,,Maryland,Maryland:2015,1,2016,True,False,False
+chase-hansen-utah-2015,Chase Hansen,chase hansen,51448.0,,,,,,Utah,Utah:2015,1,2016,True,False,False
+ryan-willis-kansas-2015,Ryan Willis,ryan willis,60594.0,3917958,,,,,Kansas,Kansas:2015,1,2016,True,False,True
+jerod-evans-virginia-tech-2017,Jerod Evans,jerod evans,,556465,jerodevans,jerod-evans-1,EvanJe01,EVA297676,Virginia Tech,,0,2017,False,True,True
+riley-ferguson-memphis-2018,Riley Ferguson,riley ferguson,,546539,rileyferguson,riley-ferguson-1,FergRi00,,Memphis,,0,2018,False,True,True
+sam-darnold-usc-2018,Sam Darnold,samuel darnold,,3912547,samdarnold,sam-darnold-1,DarnSa00,00-0034869,USC,,0,2018,False,True,True
+daniel-jones-duke-2019,Daniel Jones,daniel jones,,3917792,danieljones,daniel-jones-4,JoneDa05,00-0035710,Duke,,0,2019,False,True,True
+dwayne-haskins-ohio-state-2019,Dwayne Haskins,dwayne haskins,,4040616,dwaynehaskins,dwayne-haskins-1,HaskDw00,00-0035232,Ohio State,,0,2019,False,True,True
+gardner-minshew-washington-state-2019,Gardner Minshew,gardner minshew,,4038524,gardnerminshew,gardner-minshew-1,MinsGa00,00-0035289,Washington State,,0,2019,False,True,True
+jordan-ta-amu-ole-miss-2019,Jordan Ta'amu,jordan taamu,,4242418,jordantaamu,jordan-taamu-1,TaamJo01,00-0035735,Ole Miss,,0,2019,False,True,True
+tyree-jackson-buffalo-2019,Tyree Jackson,tyree jackson,,3916564,tyreejackson,tyree-jackson-1,JackTy01,00-0035356,Buffalo,,0,2019,False,True,True
+anthony-gordon-washington-state-2020,Anthony Gordon,anthony gordon,,4055171,anthonygordon,anthony-gordon-2,GordAn01,00-0035988,Washington State,,0,2020,False,True,True
+brian-lewerke-michigan-state-2020,Brian Lewerke,brian lewerke,,3929824,brianlewerke,brian-lewerke-1,LeweBr00,00-0036092,Michigan State,,0,2020,False,True,True
+cole-mcdonald-hawaii-2020,Cole McDonald,cole mcdonald,,4038220,colemcdonald,cole-mcdonald-1,McDoCo00,,Hawaii,,0,2020,False,True,True
+jacob-eason-washington-2020,Jacob Eason,jacob eason,,4035003,jacobeason,jacob-eason-1,EasoJa00,00-0036226,Washington,,0,2020,False,True,True
+jake-fromm-georgia-2020,Jake Fromm,jacob fromm,,4240689,jakefromm,jake-fromm-1,FromJa00,00-0036197,Georgia,,0,2020,False,True,True
+jalen-hurts-oklahoma-2020,Jalen Hurts,jalen hurts,,4040715,jalenhurts,jalen-hurts-1,HurtJa00,00-0036389,Oklahoma,,0,2020,False,True,True
+james-morgan-florida-international-2020,James Morgan,james morgan,,3914395,jamesmorgan,james-morgan-1,MorgJa00,00-0036301,Florida International,,0,2020,False,True,True
+joe-burrow-lsu-2020,Joe Burrow,joseph burrow,,3915511,joeburrow,joe-burrow-1,BurrJo01,00-0036442,LSU,,0,2020,False,True,True
+jordan-love-utah-state-2020,Jordan Love,jordan love,,4036378,jordanlove,jordan-love-2,LoveJo03,00-0036264,Utah State,,0,2020,False,True,True
+justin-herbert-oregon-2020,Justin Herbert,justin herbert,,4038941,justinherbert,justin-herbert-1,HerbJu00,00-0036355,Oregon,,0,2020,False,True,True
+kevin-davidson-princeton-2020,Kevin Davidson,kevin davidson,,,kevindavidson,,DaviKe04,,Princeton,,0,2020,False,True,False
+nate-stanley-iowa-2020,Nate Stanley,nathan stanley,,4036149,natestanley,nathan-stanley-2,StanNa00,00-0036279,Iowa,,0,2020,False,True,True
+shea-patterson-michigan-2020,Shea Patterson,shea patterson,,4035292,sheapatterson,shea-patterson-1,PattSh00,,Michigan,,0,2020,False,True,True
+steven-montez-colorado-2020,Steven Montez,steven montez,,3915436,stevenmontez,steven-montez-1,MontSt01,00-0036022,Colorado,,0,2020,False,True,True
+tua-tagovailoa-alabama-2020,Tua Tagovailoa,tua tagovailoa,,4241479,tuatagovailoa,tua-tagovailoa-1,TagoTu00,00-0036212,Alabama,,0,2020,False,True,True
+brady-davis-memphis-2021,Brady Davis,brady davis,,3916142,bradydavis,brady-davis-2,,,Memphis,,0,2021,False,True,True
+brady-white-memphis-2021,Brady White,brady white,,3893630,bradywhite,brady-white-1,WhitBr00,,Memphis,,0,2021,False,True,True
+david-moore-central-michigan-2021,David Moore,david moore,,4039354,davidmoore,david-moore-5,,,Central Michigan,,0,2021,False,True,True
+davis-mills-stanford-2021,Davis Mills,davis mills,,4242546,davismills,davis-mills-1,MillDa02,00-0036898,Stanford,,0,2021,False,True,True
+feleipe-franks-arkansas-2021,Feleipe Franks,feleipe franks,,4034948,feleipefranks,feleipe-franks-1,FranFe00,00-0036825,Arkansas,,0,2021,False,True,True
+ian-book-notre-dame-2021,Ian Book,ian book,,4046678,ianbook,ian-book-1,BookIa00,00-0036929,Notre Dame,,0,2021,False,True,True
+jamie-newman-georgia-2021,Jamie Newman,jamie newman,,,jamienewman,jamie-newman-1,NewmJa00,,Georgia,,0,2021,False,True,False
+justin-fields-ohio-state-2021,Justin Fields,justin fields,,4362887,justinfields,justin-fields-2,FielJu00,00-0036945,Ohio State,,0,2021,False,True,True
+kevin-thomson-washington-2021,Kevin Thomson,kevin thomson,,,kevinthomson,kevin-thomson-1,ThomKe05,,Washington,,0,2021,False,True,False
+kyle-trask-florida-2021,Kyle Trask,kyle trask,,4034946,kyletrask,kyle-trask-1,TrasKy00,00-0036928,Florida,,0,2021,False,True,True
+mac-jones-alabama-2021,Mac Jones,mac jones,,4241464,macjones,mac-jones-1,JoneMa05,00-0036972,Alabama,,0,2021,False,True,True
+peyton-ramsey-northwestern-2021,Peyton Ramsey,peyton ramsey,,4045290,peytonramsey,peyton-ramsey-1,RamsPe00,,Northwestern,,0,2021,False,True,True
+sam-ehlinger-texas-2021,Sam Ehlinger,samuel ehlinger,,4241820,samehlinger,sam-ehlinger-1,EhliSa00,00-0036879,Texas,,0,2021,False,True,True
+trevor-lawrence-clemson-2021,Trevor Lawrence,trevor lawrence,,4360310,trevorlawrence,trevor-lawrence-1,LawrTr00,00-0036971,Clemson,,0,2021,False,True,True
+trey-lance-north-dakota-state-2021,Trey Lance,trey lance,,,treylance,trey-lance-1,LancTr00,00-0037012,North Dakota State,,0,2021,False,True,False
+zac-thomas-app-state-2021,Zac Thomas,zac thomas,,4036429,zacthomas,zac-thomas-2,ThomZa03,,App State,,0,2021,False,True,True
+zach-smith-tulsa-2021,Zach Smith,zachary smith,,4035409,zachsmith,zach-smith-6,SmitZa01,,Tulsa,,0,2021,False,True,True
+zach-wilson-byu-2021,Zach Wilson,zachary wilson,,4361259,zachwilson,zach-wilson-3,WilsZa00,00-0037013,BYU,,0,2021,False,True,True
+bailey-zappe-western-kentucky-2022,Bailey Zappe,bailey zappe,,4250360,baileyzappe,bailey-zappe-1,ZappBa00,00-0038108,Western Kentucky,,0,2022,False,True,True
+brock-purdy-iowa-state-2022,Brock Purdy,brock purdy,,4361741,brockpurdy,brock-purdy-1,PurdBr00,00-0037834,Iowa State,,0,2022,False,True,True
+carson-strong-nevada-2022,Carson Strong,carson strong,,4361435,carsonstrong,carson-strong-1,StroCa00,00-0037139,Nevada,,0,2022,False,True,True
+cole-kelley-se-louisiana-2022,Cole Kelley,cole kelley,,4035584,colekelley,,,,SE Louisiana,,0,2022,False,True,True
+d-eriq-king-miami-2022,D'Eriq King,deriq king,,4039300,deriqking,deriq-king-1,KingDE02,00-0037201,Miami,,0,2022,False,True,True
+desmond-ridder-cincinnati-2022,Desmond Ridder,desmond ridder,,4239086,desmondridder,desmond-ridder-1,RiddDe00,00-0038122,Cincinnati,,0,2022,False,True,True
+dustin-crum-kent-state-2022,Dustin Crum,dustin crum,,4244068,dustincrum,dustin-crum-1,CrumDu00,,Kent State,,0,2022,False,True,True
+ej-perry-brown-2022,EJ Perry,ej perry,,,ejperry,,,,Brown,,0,2022,False,True,False
+jack-coan-notre-dame-2022,Jack Coan,jack coan,,4242331,jackcoan,jack-coan-1,CoanJa00,,Notre Dame,,0,2022,False,True,True
+kaleb-eleby-western-michigan-2022,Kaleb Eleby,kaleb eleby,,4362230,kalebeleby,kaleb-eleby-1,ElebKa00,,Western Michigan,,0,2022,False,True,True
+kenny-pickett-pittsburgh-2022,Kenny Pickett,kenneth pickett,,4240703,kennypickett,kenny-pickett-1,PickKe00,00-0038102,Pittsburgh,,0,2022,False,True,True
+malik-willis-liberty-2022,Malik Willis,malik willis,,4242512,malikwillis,malik-willis-1,WillMa12,00-0038128,Liberty,,0,2022,False,True,True
+matt-corral-ole-miss-2022,Matt Corral,matthew corral,,4362874,mattcorral,matt-corral-1,CorrMa00,00-0038132,Ole Miss,,0,2022,False,True,True
+sam-howell-north-carolina-2022,Sam Howell,samuel howell,,4426875,samhowell,sam-howell-1,HoweSa00,00-0037077,North Carolina,,0,2022,False,True,True
+skylar-thompson-kansas-state-2022,Skylar Thompson,skylar thompson,,,skylarthompson,skylar-thompson-1,ThomSk00,00-0037327,Kansas State,,0,2022,False,True,False
+aidan-o-connell-purdue-2023,Aidan O'Connell,aidan oconnell,,4260394,aidanoconnell,aidan-oconnell-1,OConAi00,00-0038579,Purdue,,0,2023,False,True,True
+anthony-richardson-florida-2023,Anthony Richardson,anthony richardson,,4429084,anthonyrichardson,anthony-richardson-2,RichAn03,00-0039164,Florida,,0,2023,False,True,True
+bryce-young-alabama-2023,Bryce Young,bryce young,,4685720,bryceyoung,bryce-young-1,YounBr01,00-0039150,Alabama,,0,2023,False,True,True
+c-j-stroud-ohio-state-2023,C.J. Stroud,cj stroud,,4432577,cjstroud,cj-stroud-1,StroCJ00,00-0039163,Ohio State,,0,2023,False,True,True
+clayton-tune-houston-2023,Clayton Tune,clayton tune,,4360175,claytontune,clayton-tune-1,TuneCl00,00-0038582,Houston,,0,2023,False,True,True
+dorian-thompson-robinson-ucla-2023,Dorian Thompson-Robinson,dorian thompson robinson,,4367178,dorianthompsonrobinson,dorian-thompson-robinson-1,ThomDo02,00-0038583,UCLA,,0,2023,False,True,True
+hendon-hooker-tennessee-2023,Hendon Hooker,hendon hooker,,4240858,hendonhooker,hendon-hooker-1,HookHe00,00-0038550,Tennessee,,0,2023,False,True,True
+jake-haener-fresno-state-2023,Jake Haener,jacob haener,,4243322,jakehaener,jake-haener-1,HaenJa00,00-0038998,Fresno State,,0,2023,False,True,True
+jaren-hall-byu-2023,Jaren Hall,jaren hall,,4373632,jarenhall,jaren-hall-1,HallJa00,00-0038598,BYU,,0,2023,False,True,True
+malik-cunningham-louisville-2023,Malik Cunningham,malik cunningham,,4240069,malikcunningham,malik-cunningham-1,CunnMa00,00-0038911,Louisville,,0,2023,False,True,True
+max-duggan-tcu-2023,Max Duggan,max duggan,,4427105,maxduggan,max-duggan-1,DuggMa00,00-0038637,TCU,,0,2023,False,True,True
+stetson-bennett-georgia-2023,Stetson Bennett,stetson bennett,,4259553,stetsonbennett,stetson-bennett-1,BennSt00,00-0039107,Georgia,,0,2023,False,True,True
+tanner-mckee-stanford-2023,Tanner McKee,tanner mckee,,4685201,tannermckee,tanner-mckee-1,McKeTa01,00-0038400,Stanford,,0,2023,False,True,True
+tyson-bagent-shepherd-2023,Tyson Bagent,tyson bagent,,,tysonbagent,,,,Shepherd,,0,2023,False,True,False
+will-levis-kentucky-2023,Will Levis,william levis,,4361418,willlevis,will-levis-1,LeviWi00,00-0039152,Kentucky,,0,2023,False,True,True
+austin-reed-western-kentucky-2024,Austin Reed,austin reed,,4368343,austinreed,austin-reed-2,ReedAu00,00-0039464,Western Kentucky,,0,2024,False,True,True
+bo-nix-oregon-2024,Bo Nix,bo nix,,4426338,bonix,bo-nix-1,NixxBo00,00-0039732,Oregon,,0,2024,False,True,True
+caleb-williams-usc-2024,Caleb Williams,caleb williams,,4431611,calebwilliams,caleb-williams-3,WillCa03,00-0039918,USC,,0,2024,False,True,True
+devin-leary-kentucky-2024,Devin Leary,devin leary,,4361653,devinleary,devin-leary-1,LearDe00,00-0039801,Kentucky,,0,2024,False,True,True
+drake-maye-north-carolina-2024,Drake Maye,drake maye,,4431452,drakemaye,drake-maye-1,MayeDr00,00-0039851,North Carolina,,0,2024,False,True,True
+j-j-mccarthy-michigan-2024,J.J. McCarthy,jj mccarthy,,4433970,jjmccarthy,jj-mccarthy-1,McCaJJ00,00-0039923,Michigan,,0,2024,False,True,True
+jayden-daniels-lsu-2024,Jayden Daniels,jayden daniels,,4426348,jaydendaniels,jayden-daniels-1,DaniJa02,00-0039910,LSU,,0,2024,False,True,True
+joe-milton-tennessee-2024,Joe Milton,joseph milton,,4360698,joemilton,joe-milton-2,MiltJo00,00-0039398,Tennessee,,0,2024,False,True,True
+jordan-travis-florida-state-2024,Jordan Travis,jordan travis,,4360799,jordantravis,jordan-travis-1,TravJo00,00-0039797,Florida State,,0,2024,False,True,True
+kedon-slovis-byu-2024,Kedon Slovis,kedon slovis,,4428512,kedonslovis,kedon-slovis-1,SlovKe00,00-0039577,BYU,,0,2024,False,True,True
+michael-penix-jr-washington-2024,Michael Penix Jr.,michael penix,,4360423,michaelpenixjr,michael-penix-jr-1,PeniMi00,00-0039917,Washington,,0,2024,False,True,True
+michael-pratt-tulane-2024,Michael Pratt,michael pratt,,4685039,michaelpratt,michael-pratt-1,PratMi00,00-0039238,Tulane,,0,2024,False,True,True
+sam-hartman-notre-dame-2024,Sam Hartman,samuel hartman,,4361994,samhartman,sam-hartman-1,HartSa00,00-0039677,Notre Dame,,0,2024,False,True,True
+spencer-rattler-south-carolina-2024,Spencer Rattler,spencer rattler,,4426339,spencerrattler,spencer-rattler-1,RattSp00,00-0039376,South Carolina,,0,2024,False,True,True
+brady-cook-missouri-2025,Brady Cook,brady cook,,4429435,bradycook,brady-cook-1,CookBr03,00-0040398,Missouri,,0,2025,False,True,True
+cam-ward-miami-2025,Cam Ward,cameron ward,,4688380,camward,cameron-ward-1,WardCa00,00-0040676,Miami,,0,2025,False,True,True
+dillon-gabriel-oregon-2025,Dillon Gabriel,dillon gabriel,,4427238,dillongabriel,dillon-gabriel-1,GabrDi00,00-0040704,Oregon,,0,2025,False,True,True
+graham-mertz-florida-2025,Graham Mertz,graham mertz,,4426335,grahammertz,graham-mertz-1,MertGr00,00-0040211,Florida,,0,2025,False,True,True
+jalen-milroe-alabama-2025,Jalen Milroe,jalen milroe,,4432734,jalenmilroe,jalen-milroe-1,MilrJa00,00-0040673,Alabama,,0,2025,False,True,True
+jaxson-dart-ole-miss-2025,Jaxson Dart,jaxson dart,,4689114,jaxsondart,jaxson-dart-1,DartJa00,00-0040691,Ole Miss,,0,2025,False,True,True
+kurtis-rourke-indiana-2025,Kurtis Rourke,kurtis rourke,,4430431,kurtisrourke,kurtis-rourke-1,RourKu01,00-0040589,Indiana,,0,2025,False,True,True
+kyle-mccord-syracuse-2025,Kyle McCord,kyle mccord,,4433971,kylemccord,kyle-mccord-1,McCoKy00,00-0040014,Syracuse,,0,2025,False,True,True
+max-brosmer-minnesota-2025,Max Brosmer,max brosmer,,4573398,maxbrosmer,max-brosmer-1,BrosMa00,00-0040494,Minnesota,,0,2025,False,True,True
+quinn-ewers-texas-2025,Quinn Ewers,quinn ewers,,4889929,quinnewers,quinn-ewers-1,EwerQu00,00-0040234,Texas,,0,2025,False,True,True
+riley-leonard-notre-dame-2025,Riley Leonard,riley leonard,,4683423,rileyleonard,riley-leonard-1,LeonRi02,00-0040206,Notre Dame,,0,2025,False,True,True
+seth-henigan-memphis-2025,Seth Henigan,seth henigan,,4606194,sethhenigan,seth-henigan-1,HeniSe00,00-0040330,Memphis,,0,2025,False,True,True
+shedeur-sanders-colorado-2025,Shedeur Sanders,shedeur sanders,,4432762,shedeursanders,shedeur-sanders-1,SandSh00,00-0040668,Colorado,,0,2025,False,True,True
+tyler-shough-louisville-2025,Tyler Shough,tyler shough,,4360689,tylershough,tyler-shough-1,ShouTy00,00-0040743,Louisville,,0,2025,False,True,True
+will-howard-ohio-state-2025,Will Howard,william howard,,4429955,willhoward,will-howard-2,HowaWi01,00-0040203,Ohio State,,0,2025,False,True,True
+behren-morton-texas-tech-2026,Behren Morton,behren morton,,4431465,behrenmorton,behren-morton-1,MortBe00,MOR767384,Texas Tech,,0,2026,False,True,True
+cade-klubnik-clemson-2026,Cade Klubnik,cade klubnik,,4685413,cadeklubnik,cade-klubnik-1,KlubCa00,KLU066027,Clemson,,0,2026,False,True,True
+carson-beck-miami-2026,Carson Beck,carson beck,,4430841,carsonbeck,carson-beck-1,BeckCa01,,Miami,,0,2026,False,True,True
+cole-payton-north-dakota-state-2026,Cole Payton,cole payton,,4879250,colepayton,,,,North Dakota State,,0,2026,False,True,True
+diego-pavia-vanderbilt-2026,Diego Pavia,diego pavia,,5084180,diegopavia,diego-pavia-1,PaviDi00,,Vanderbilt,,0,2026,False,True,True
+drew-allar-penn-state-2026,Drew Allar,andrew allar,,4714771,drewallar,drew-allar-1,AllaDr00,ALL015451,Penn State,,0,2026,False,True,True
+fernando-mendoza-indiana-2026,Fernando Mendoza,fernando mendoza,,4837248,fernandomendoza,fernando-mendoza-1,MendFe00,MEN516487,Indiana,,0,2026,False,True,True
+garrett-nussmeier-lsu-2026,Garrett Nussmeier,garrett nussmeier,,4567747,garrettnussmeier,garrett-nussmeier-1,NussGa00,NUS440041,LSU,,0,2026,False,True,True
+haynes-king-georgia-tech-2026,Haynes King,haynes king,,4428993,haynesking,haynes-king-1,,,Georgia Tech,,0,2026,False,True,True
+jalon-daniels-kansas-2026,Jalon Daniels,jalon daniels,,4596472,jalondaniels,jalon-daniels-1,DaniJa03,,Kansas,,0,2026,False,True,True
+joe-fagnano-connecticut-2026,Joe Fagnano,joseph fagnano,,,joefagnano,joe-fagnano-1,FagnJo00,,Connecticut,,0,2026,False,True,False
+jose-aguilar-tennessee-2026,Jose Aguilar,jose aguilar,,,joseaguilar,joey-aguilar-1,,,Tennessee,,0,2026,False,True,False
+luke-altmyer-illinois-2026,Luke Altmyer,luke altmyer,,4597679,lukealtmyer,luke-altmyer-1,AltmLu00,,Illinois,,0,2026,False,True,True
+sawyer-robertson-baylor-2026,Sawyer Robertson,sawyer robertson,,4432759,sawyerrobertson,sawyer-robertson-1,RobeSa01,,Baylor,,0,2026,False,True,True
+taylen-green-arkansas-2026,Taylen Green,taylen green,,4431325,taylengreen,taylen-green-1,GreeTa00,GRE361852,Arkansas,,0,2026,False,True,True
+ty-simpson-alabama-2026,Ty Simpson,ty simpson,,4685522,tysimpson,ty-simpson-1,SimpTy00,SIM639376,Alabama,,0,2026,False,True,True
