@@ -7,7 +7,7 @@ Charts (matplotlib, colorblind-safe validated palette, clean light style):
   3. ppa_distribution.png     - career PPA: hits vs non-hits
   4. model_auc.png            - forward AUC: PFF/no-PFF vs draft-capital baselines
   5. calibration.png          - post-draft model calibration
-  6. projections_board.png    - top projected QBs, 2024/2025/2026
+  6. projections_board.png    - top projected QBs, 2024/2025/2026/2027
 
 Run: python3 -m analysis.make_figures
 """
@@ -207,9 +207,10 @@ def fig_calibration(joined):
 
 def fig_projections_board():
     p = pd.read_csv(os.path.join(os.path.dirname(os.path.dirname(__file__)), "model", "projections.csv"))
-    fig, axes = plt.subplots(1, 3, figsize=(14.5, 5.2))
-    class_color = {2024: BLUE, 2025: AQUA, 2026: VIOLET}
-    for ax, yr in zip(axes, [2024, 2025, 2026]):
+    classes = [yr for yr in [2024, 2025, 2026, 2027] if (p["draft_season"] == yr).any()]
+    fig, axes = plt.subplots(1, len(classes), figsize=(4.35 * len(classes), 5.2), squeeze=False)
+    class_color = {2024: BLUE, 2025: AQUA, 2026: VIOLET, 2027: ORANGE}
+    for ax, yr in zip(axes[0], classes):
         s = p[p["draft_season"] == yr].sort_values("draft_adjusted_hit_prob").tail(8)
         y = np.arange(len(s))
         ax.barh(y, s["draft_adjusted_hit_prob"], color=class_color[yr], height=0.68,
@@ -220,10 +221,10 @@ def fig_projections_board():
         ax.set_xlim(0, max(0.8, s["draft_adjusted_hit_prob"].max() + 0.12))
         ax.set_title(f"{yr} class", fontweight="bold", fontsize=12)
         ax.grid(axis="y", visible=False)
-        ax.set_xlabel("Draft-adjusted hit probability")
-    fig.suptitle("Projection board: top QBs by draft-adjusted hit probability",
+        ax.set_xlabel("Headline hit probability")
+    fig.suptitle("Projection board: top QBs by headline hit probability",
                  fontweight="bold", x=0.5, y=0.99, fontsize=13.5)
-    fig.text(0.5, 0.93, "Drafted QBs use max(post-draft model, pick-only market baseline); PFF pre-draft deltas remain in model/projections.csv.",
+    fig.text(0.5, 0.93, "Drafted QBs use max(post-draft model, pick-only market baseline); 2027 watchlist rows have no pick yet and use the PFF pre-draft score.",
              ha="center", fontsize=9, color=MUTED)
     fig.tight_layout(rect=(0, 0, 1, 0.9))
     fig.savefig(os.path.join(FIGDIR, "projections_board.png"), dpi=150)

@@ -120,7 +120,9 @@ function scoreMode() {
 
 function scoreValue(row, mode = state.scoreMode) {
   const config = SCORE_MODES[mode] ?? SCORE_MODES.draft;
-  return toNumber(row[config.column]) ?? hitProb(row);
+  const value = toNumber(row[config.column]);
+  if (mode === "market") return value;
+  return value ?? hitProb(row);
 }
 
 function oneDecimal(value) {
@@ -163,6 +165,9 @@ function draftRead(row) {
   const round = cleanNumber(row.round);
   const pick = cleanNumber(row.pick);
   const market = toNumber(row.model_hit_prob_pick_only);
+  if (!round && row.label_status === "watchlist") {
+    return "There is no draft slot yet, so the score is only a college-data projection.";
+  }
   if (!round) return "There is no draft slot, so the score leans on college and testing data.";
   return `The draft slot, R${round}${pick ? ` / ${pick}` : ""}, gives a market baseline of ${pct(market)}.`;
 }
@@ -217,7 +222,7 @@ function filteredRows() {
   rankBy("model_hit_prob_pick_only", "_marketRank");
   rows.forEach((row) => {
     row._rankMove = row._noPffRank - row._pffRank;
-    row._score = toNumber(row[activeScore.column]) ?? hitProb(row);
+    row._score = scoreValue(row);
   });
 
   return rows
@@ -294,7 +299,9 @@ function renderBoardSummary(rows) {
 
   const scores = rows.map((row) => toNumber(row._score)).filter((value) => value !== null);
   const avg = scores.length ? scores.reduce((sum, value) => sum + value, 0) / scores.length : null;
-  const top = [...rows].sort((a, b) => (toNumber(b._score) ?? -Infinity) - (toNumber(a._score) ?? -Infinity))[0];
+  const top = scores.length
+    ? [...rows].sort((a, b) => (toNumber(b._score) ?? -Infinity) - (toNumber(a._score) ?? -Infinity))[0]
+    : null;
   const pffUp = rows.filter((row) => (toNumber(row.pff_model_delta) ?? 0) >= 0.05).length;
   const pffDown = rows.filter((row) => (toNumber(row.pff_model_delta) ?? 0) <= -0.05).length;
   const label = scoreMode().label;
@@ -308,12 +315,30 @@ function renderBoardSummary(rows) {
   `;
 }
 
+function renderClassNote(rows) {
+  const host = $("#classNote");
+  if (!host) return;
+  const has2027 = rows.some((row) => row.draft_season === "2027");
+  const only2027 = state.year === "2027";
+  if (!has2027) {
+    host.hidden = true;
+    host.textContent = "";
+    return;
+  }
+
+  host.hidden = false;
+  host.textContent = only2027
+    ? "2027 is an early watchlist, not a finished draft class. These scores use through-2025 PFF/CFBD data only. There is no 2026 tape, combine, or draft slot yet, so Market is blank until players are actually drafted."
+    : "Includes an early 2027 watchlist scored from through-2025 college data only.";
+}
+
 function renderTable() {
   const rows = filteredRows();
   const tbody = $("#projectionRows");
   const scoreButton = $("#scoreSortButton");
   if (scoreButton) scoreButton.textContent = scoreMode().shortLabel;
   renderBoardSummary(rows);
+  renderClassNote(rows);
 
   if (!rows.length) {
     tbody.innerHTML = `<tr><td colspan="8" class="loading">No quarterbacks match this view.</td></tr>`;
@@ -332,7 +357,7 @@ function renderTable() {
       const indicators = splitIndicators(row.top_positive_indicators).slice(0, 2);
       const pick = cleanNumber(row.pick);
       const round = cleanNumber(row.round);
-      const draftText = round ? `R${round}${pick ? ` / ${pick}` : ""}` : "Undrafted";
+      const draftText = round ? `R${round}${pick ? ` / ${pick}` : ""}` : row.label_status === "watchlist" ? "Watchlist" : "Undrafted";
       const deltaNumber = toNumber(row.pff_model_delta);
       const deltaClass = deltaNumber === null ? "" : deltaNumber >= 0 ? "good" : "bad";
       const rankMove = toNumber(row._rankMove);
@@ -400,7 +425,7 @@ function renderDetail(row) {
   const negatives = splitIndicators(row.top_negative_indicators);
   const round = cleanNumber(row.round);
   const pick = cleanNumber(row.pick);
-  const draftText = round ? `Round ${round}${pick ? `, pick ${pick}` : ""}` : "No draft slot";
+  const draftText = round ? `Round ${round}${pick ? `, pick ${pick}` : ""}` : row.label_status === "watchlist" ? "No draft slot yet" : "No draft slot";
   const label = row.label_status ? row.label_status.replace("_", " ") : "model score";
   const scoreRows = [
     ["Draft Adj", row.draft_adjusted_hit_prob],

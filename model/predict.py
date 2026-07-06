@@ -22,8 +22,10 @@ from model.data import (CAND_BY_COL, REPO, add_derived, join_labels_profiles,
                         load_profiles)
 from model.train import (POST_DRAFT_FEATS, POST_DRAFT_PFF_FEATS,
                          PRE_DRAFT_FEATS, PRE_DRAFT_NO_PFF_FEATS)
+from pipeline.normalize import normalize_name
 
 ART = os.path.join(REPO, "model", "artifacts")
+WATCHLIST_2027_PATH = os.path.join(REPO, "data", "watchlists", "qb_2027_watchlist.csv")
 
 # human-readable feature labels (fall back to the candidate catalogue)
 _LABELS = {c: f.label for c, f in CAND_BY_COL.items()}
@@ -131,6 +133,69 @@ def coverage_note(row) -> str:
     return ", ".join(parts)
 
 
+def _best_watchlist_profile(profiles: pd.DataFrame, normalized_name: str):
+    candidates = profiles[profiles["normalized_name"].eq(normalized_name)].copy()
+    if candidates.empty:
+        return None
+
+    final_season = pd.to_numeric(candidates.get("final_season"), errors="coerce").fillna(0)
+    dropbacks = pd.to_numeric(candidates.get("final_concept_dropbacks"), errors="coerce").fillna(0)
+    candidates["_watch_score"] = (
+        candidates["in_pff"].astype(int) * 8
+        + candidates["in_cfbd"].astype(int) * 4
+        + candidates["in_combine"].astype(int)
+        + final_season / 10000
+        + np.log1p(dropbacks) / 100
+    )
+    best = candidates.sort_values("_watch_score", ascending=False).iloc[0]
+    return best.drop(labels="_watch_score")
+
+
+def _watchlist_note(row: pd.Series) -> str:
+    tier = str(row.get("watchlist_tier", "watch")).strip() or "watch"
+    source = str(row.get("source_note", "")).strip()
+    if source:
+        source = f"{source}. "
+    return (
+        f"2027 early watchlist ({tier}): {source}"
+        "Scored from through-2025 PFF/CFBD only; no 2026 season, combine, or draft slot yet."
+    )
+
+
+def _load_2027_watchlist_profiles(profiles: pd.DataFrame, existing_names: set[str]) -> pd.DataFrame:
+    if not os.path.exists(WATCHLIST_2027_PATH):
+        return profiles.iloc[0:0].copy()
+
+    watchlist = pd.read_csv(WATCHLIST_2027_PATH)
+    rows = []
+    missing = []
+    for _, wr in watchlist.iterrows():
+        normalized = normalize_name(wr["player"])
+        if normalized in existing_names:
+            continue
+        best = _best_watchlist_profile(profiles, normalized)
+        if best is None:
+            missing.append(wr["player"])
+            continue
+
+        row = best.to_dict()
+        row["draft_year"] = 2027
+        row["draft_season"] = 2027
+        row["round"] = np.nan
+        row["pick"] = np.nan
+        row["success_tier"] = np.nan
+        row["label_status"] = "watchlist"
+        row["college"] = wr.get("display_college") or row.get("colleges")
+        row["notes"] = _watchlist_note(wr)
+        rows.append(row)
+
+    if missing:
+        print("missing 2027 watchlist profiles:", ", ".join(missing))
+    if not rows:
+        return profiles.iloc[0:0].copy()
+    return pd.DataFrame(rows)
+
+
 # --------------------------------------------------------------------------- #
 def _percentiles(values: np.ndarray, reference: np.ndarray) -> np.ndarray:
     ref = np.sort(reference)
@@ -207,6 +272,13 @@ def build_outputs():
         watch_2026["notes"] = "2026 combine/watchlist row; not an outcome label"
         proj = pd.concat([proj, watch_2026], ignore_index=True, sort=False)
 
+    watch_2027 = _load_2027_watchlist_profiles(
+        profiles,
+        set(proj["normalized_name"].dropna()),
+    )
+    if not watch_2027.empty:
+        proj = pd.concat([proj, watch_2027], ignore_index=True, sort=False)
+
     proj["model_hit_prob"] = score(proj, "pre_draft")
     proj["model_hit_prob_no_pff"] = score(proj, "pre_draft_no_pff")
     proj["pff_model_delta"] = proj["model_hit_prob"] - proj["model_hit_prob_no_pff"]
@@ -241,6 +313,8 @@ def build_outputs():
             proj["college"] = proj["college"].fillna(proj["colleges"])
 
     proj = proj.rename(columns={"success_tier": "actual_tier_or_projection", "notes": "scout_note"})
+    for col in ["draft_season", "round", "pick"]:
+        proj[col] = pd.to_numeric(proj[col], errors="coerce").astype("Int64")
     proj_cols = ["canonical_name", "college", "draft_season", "round", "pick",
                  "draft_adjusted_hit_prob", "model_hit_prob", "model_hit_prob_no_pff",
                  "model_hit_prob_pick_only", "model_hit_prob_post_draft",

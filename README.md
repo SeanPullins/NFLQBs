@@ -2,9 +2,10 @@
 
 Live site: https://seanpullins.github.io/NFLQBs/
 
-Model + website that projects incoming NFL QBs (recent draft classes) from
-their college production, PFF charting data, and athletic testing — trained on
-what actually separated NFL hits from busts in the 2015–2023 draft classes.
+Model + website that projects incoming NFL QBs and watchlist prospects from
+their college production, PFF charting data, athletic testing, and draft capital
+when available. The 2027 class is an early watchlist scored from through-2025
+college data only.
 
 ## Repo layout
 
@@ -23,11 +24,12 @@ docs/            # DATA_NEEDS.md — what's still missing and why it matters
 
 | source | seasons | grain | status |
 |---|---|---|---|
-| PFF college QB (6 stat families) | 2014–2015 | player-season | ✅ in repo; **2016–2025 wanted** |
+| PFF college QB (6 stat families) | 2014–2025 | player-season | ✅ in repo |
 | CFBD player PPA | 2014–2025 | player-season | ✅ in repo |
 | Combine + pro-day testing | 2016–2026 draft classes | player | ✅ in repo |
 | ESPN QBR | — | player-season | ❌ all uploads 0 bytes (broken export) |
-| NFL outcomes (labels) | 2015–2025 classes | player | ✅ hand-curated, see `data/labels/README.md` |
+| NFL outcomes (labels) | 2015–2026 classes | player | ✅ hand-curated, see `data/labels/README.md` |
+| 2027 QB watchlist | 2027 draft cycle | player | ✅ early projections, no draft capital yet |
 
 ## Quick start
 

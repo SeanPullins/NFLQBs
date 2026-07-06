@@ -36,13 +36,25 @@ The 2026 drafted QB class is now in `data/labels/nfl_qb_outcomes.csv` as
 fields. The board uses a draft-adjusted display score for these rows:
 `max(post_draft_model, pick_only_market_baseline)`.
 
-## 4. NFL outcome verification data (LOW — have curated substitute)
+## 4. 2027 QB watchlist (EARLY — projections only)
+`data/watchlists/qb_2027_watchlist.csv` adds likely 2027 QB candidates from
+current public draft boards plus local PFF/CFBD coverage checks. These rows are
+`label_status=watchlist`, not draft labels. They are scored from through-2025
+college data only, with no 2026 season, combine/pro-day testing, or draft slot.
+
+To make the 2027 board materially better, refresh after:
+- 2026 PFF QB exports become available
+- 2026 CFBD PPA is available
+- official 2027 draft declarations and combine/pro-day testing arrive
+- the 2027 NFL Draft supplies real round/pick market data
+
+## 5. NFL outcome verification data (LOW — have curated substitute)
 `data/labels/nfl_qb_outcomes.csv` is hand-curated from knowledge. To verify /
 auto-update it, either upload nflverse `draft_picks.csv` + seasonal QB stats,
 or add the `nflverse/nflverse-data` GitHub repo to this session (network policy
 blocks me from fetching it myself).
 
-## 5. Optional enrichers (LOW)
+## 6. Optional enrichers (LOW)
 - College team context: SP+/FEI team ratings, offensive line grades (isolates QB from supporting cast)
 - Recruiting data (247 composite) — age/pedigree features
 - QB age at draft, breakout age

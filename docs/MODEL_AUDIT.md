@@ -68,3 +68,6 @@ Biggest PFF downgrades:
   is automatically better for every player.
 - 2026 is now a drafted-QB projection class, not a watchlist. Outcome fields are
   still blank because no NFL career outcomes are known yet.
+- 2027 is an early QB watchlist. It is deliberately excluded from training labels
+  and has no draft-capital signal; the board falls back to the PFF pre-draft
+  score until 2026 college data and the 2027 draft arrive.

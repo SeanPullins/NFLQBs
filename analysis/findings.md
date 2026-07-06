@@ -230,11 +230,12 @@ similar spots.** Three findings:
   misses are prolific college passers who busted (Mason Rudolph, Marcus Mariota,
   Sam Howell) and a physical marvel it under-rated pre-draft (Josh Allen). A
   production model structurally under-weights the boom-bust "tools" prospect.
-- **2024–26 outcomes are unknown.** The projections in `model/projections.csv` are
+- **2024–27 outcomes are unknown.** The projections in `model/projections.csv` are
   genuine forecasts. The 2026 class now uses actual drafted-QB round/pick/team
   rows, but the NFL outcome fields are still blank. The website's headline hit
   probability is draft-adjusted for drafted QBs and keeps the PFF pre-draft score
-  as an audit column.
+  as an audit column. The 2027 rows are an early watchlist: they use through-2025
+  PFF/CFBD data only and have no 2026 season, combine, or draft-slot signal yet.
 
 ---
 
@@ -243,6 +244,6 @@ similar spots.** Three findings:
 - `model/indicators.csv` — tidy ranked indicator table (deliverable E)
 - `model/train.py`, `model/predict.py`, `model/data.py` — reproducible pipeline
 - `model/artifacts/` — fitted models + `features_used.json` + `cv_metrics.json`
-- `model/projections.csv` — 2023–2026 class projections (deliverable D)
+- `model/projections.csv` — 2023–2027 class projections/watchlist (deliverable D)
 - `model/historical_scored.csv` — every labeled QB, model score next to real outcome
 - `analysis/figures/` — the charts above

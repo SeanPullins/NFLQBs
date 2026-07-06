@@ -316,6 +316,15 @@ figure,
   white-space: nowrap;
 }
 
+.class-note {
+  padding: 11px 22px;
+  color: #5f4a1d;
+  background: #fff6df;
+  border-bottom: 1px solid #ead9ad;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
 .table-wrap {
   overflow-x: auto;
 }
