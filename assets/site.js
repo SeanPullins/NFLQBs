@@ -75,6 +75,13 @@ function signedPct(value, digits = 0) {
   return `${sign}${(number * 100).toFixed(digits)}%`;
 }
 
+function signedRank(value) {
+  const number = toNumber(value);
+  if (number === null) return "--";
+  const sign = number > 0 ? "+" : "";
+  return `${sign}${number}`;
+}
+
 function oneDecimal(value) {
   const number = toNumber(value);
   return number === null ? "--" : number.toFixed(1);
@@ -112,15 +119,43 @@ function years() {
 
 function filteredRows() {
   const query = state.query.trim().toLowerCase();
-  return state.projections
+  const rows = state.projections
     .filter((row) => state.year === "all" || row.draft_season === state.year)
     .filter((row) => {
       if (!query) return true;
       return `${row.canonical_name} ${row.college}`.toLowerCase().includes(query);
     })
+    .map((row) => ({ ...row }));
+
+  const rankBy = (key, target) => {
+    [...rows]
+      .sort((a, b) => {
+        const av = toNumber(a[key]) ?? -Infinity;
+        const bv = toNumber(b[key]) ?? -Infinity;
+        return bv - av || String(a.canonical_name).localeCompare(String(b.canonical_name));
+      })
+      .forEach((row, index) => {
+        row[target] = index + 1;
+      });
+  };
+
+  rankBy("model_hit_prob", "_pffRank");
+  rankBy("model_hit_prob_no_pff", "_noPffRank");
+  rows.forEach((row) => {
+    row._rankMove = row._noPffRank - row._pffRank;
+  });
+
+  return rows
     .sort((a, b) => {
       const key = state.sortKey;
-      const numericKeys = ["model_hit_prob", "model_hit_prob_no_pff", "pff_model_delta", "expected_tier", "draft_season"];
+      const numericKeys = [
+        "model_hit_prob",
+        "model_hit_prob_no_pff",
+        "pff_model_delta",
+        "_rankMove",
+        "expected_tier",
+        "draft_season",
+      ];
       const av = numericKeys.includes(key) ? toNumber(a[key]) : a[key];
       const bv = numericKeys.includes(key) ? toNumber(b[key]) : b[key];
       let result = 0;
@@ -152,7 +187,7 @@ function renderTable() {
   const tbody = $("#projectionRows");
 
   if (!rows.length) {
-    tbody.innerHTML = `<tr><td colspan="7" class="loading">No quarterbacks match this view.</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="8" class="loading">No quarterbacks match this view.</td></tr>`;
     renderDetail(null);
     return;
   }
@@ -171,6 +206,8 @@ function renderTable() {
       const draftText = round ? `R${round}${pick ? ` / ${pick}` : ""}` : "Undrafted";
       const deltaNumber = toNumber(row.pff_model_delta);
       const deltaClass = deltaNumber === null ? "" : deltaNumber >= 0 ? "good" : "bad";
+      const rankMove = toNumber(row._rankMove);
+      const rankMoveClass = rankMove === null || rankMove === 0 ? "" : rankMove > 0 ? "good" : "bad";
 
       return `
         <tr class="${selected}" tabindex="0" data-name="${escapeHtml(row.canonical_name)}">
@@ -194,6 +231,7 @@ function renderTable() {
             </div>
           </td>
           <td><span class="delta ${deltaClass}">${signedPct(row.pff_model_delta)}</span></td>
+          <td><span class="rank-delta ${rankMoveClass}">${signedRank(row._rankMove)}</span></td>
           <td>${oneDecimal(row.expected_tier)}</td>
           <td>
             <div class="pill-line">
@@ -245,6 +283,7 @@ function renderDetail(row) {
       <div class="detail-stat"><span>Hit Prob</span><strong>${pct(row.model_hit_prob)}</strong></div>
       <div class="detail-stat"><span>No-PFF Prob</span><strong>${pct(row.model_hit_prob_no_pff)}</strong></div>
       <div class="detail-stat"><span>PFF Delta</span><strong>${signedPct(row.pff_model_delta)}</strong></div>
+      <div class="detail-stat"><span>Rank Delta</span><strong>${signedRank(row._rankMove)}</strong></div>
       <div class="detail-stat"><span>Expected Tier</span><strong>${oneDecimal(row.expected_tier)}</strong></div>
       <div class="detail-stat"><span>Percentile</span><strong>${oneDecimal(row.percentile_vs_history)}</strong></div>
       <div class="detail-stat"><span>Actual Tier</span><strong>${oneDecimal(row.actual_tier_or_projection)}</strong></div>

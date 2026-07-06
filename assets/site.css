@@ -252,7 +252,7 @@ figure,
 
 table {
   width: 100%;
-  min-width: 860px;
+  min-width: 940px;
   border-collapse: collapse;
 }
 
@@ -378,7 +378,8 @@ tbody tr.selected {
   font-weight: 750;
 }
 
-.delta {
+.delta,
+.rank-delta {
   display: inline-flex;
   align-items: center;
   min-width: 58px;
@@ -391,12 +392,18 @@ tbody tr.selected {
   font-weight: 850;
 }
 
-.delta.good {
+.rank-delta {
+  min-width: 44px;
+}
+
+.delta.good,
+.rank-delta.good {
   color: var(--green);
   background: #eaf6f0;
 }
 
-.delta.bad {
+.delta.bad,
+.rank-delta.bad {
   color: var(--red);
   background: #faece9;
 }
