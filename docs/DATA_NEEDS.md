@@ -12,6 +12,12 @@ features only cover the 2015–2016 classes.
 Drop them in as `data/raw/pff/<season>/<family>__QB__<season>.csv` (or just
 upload the zips — the pipeline auto-discovers season folders).
 
+Two problems found in the PFF files already uploaded — worth re-exporting:
+- `passing-depth__QB__2014.csv` is **0 bytes** (same empty-export issue as QBR)
+- `allowed-pressure__QB__{2014,2015}.csv` are **byte-identical copies of
+  passing-grades** — the export grabbed the wrong report. If "allowed pressure"
+  exists as a real report, re-export it; otherwise ignore.
+
 ## 2. ESPN QBR files (MEDIUM — currently broken export)
 **Every `qbr_season_*.csv` uploaded so far (2014–2025 batch, then 2017–2020
 re-upload) is 0 bytes.** The export step itself is producing empty files —

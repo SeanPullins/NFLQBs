@@ -32,6 +32,9 @@ Note: `allowed-pressure` is byte-identical to `passing-grades` in both 2014 and 
   - with combine data: 179
   - with CFBD PPA data: 746
 
+Note on the combine -> PFF rate below: PFF only covers 2014-2015 today, so only the 2016 combine class (final college season 2015) can fully match, plus any player from a later class who happened to log an early-career (backup/freshman) season in 2014-2015. Expect this rate to climb automatically as PFF 2016-2025 files are added -- no code changes needed.
+
+
 Combine -> PFF match rate: **35.2%** (63/179)
 
 Combine -> CFBD match rate: **95.0%** (170/179)
