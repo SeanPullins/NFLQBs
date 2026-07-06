@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NFLQBs Projection Board</title>
+    <meta
+      name="description"
+      content="College-to-pro NFL quarterback projection board built from PPA, combine data, draft capital, and historical NFL outcome labels."
+    >
+    <link rel="stylesheet" href="assets/site.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#board" aria-label="NFLQBs home">
+        <span class="brand-mark">QB</span>
+        <span>
+          <strong>NFLQBs</strong>
+          <small>College-to-pro projection model</small>
+        </span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="#board">Board</a>
+        <a href="#model">Model</a>
+        <a href="#signals">Signals</a>
+        <a href="#data">Data</a>
+        <a href="https://github.com/SeanPullins/NFLQBs">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="board-band" id="board">
+        <div class="layout board-layout">
+          <div class="board-main">
+            <div class="section-heading">
+              <p class="eyebrow">Projection board</p>
+              <h1>NFL QB Projection Board</h1>
+            </div>
+
+            <div class="toolbar" aria-label="Projection controls">
+              <div class="segmented" id="yearFilters" aria-label="Draft class filter"></div>
+              <label class="search">
+                <span>Search</span>
+                <input id="searchInput" type="search" placeholder="Player or school" autocomplete="off">
+              </label>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Rank</th>
+                    <th scope="col">
+                      <button class="sort-button" data-sort="canonical_name" type="button">QB</button>
+                    </th>
+                    <th scope="col">
+                      <button class="sort-button" data-sort="draft_season" type="button">Class</button>
+                    </th>
+                    <th scope="col">
+                      <button class="sort-button" data-sort="model_hit_prob" type="button">Hit Prob</button>
+                    </th>
+                    <th scope="col">
+                      <button class="sort-button" data-sort="expected_tier" type="button">Tier</button>
+                    </th>
+                    <th scope="col">Indicators</th>
+                  </tr>
+                </thead>
+                <tbody id="projectionRows">
+                  <tr>
+                    <td colspan="6" class="loading">Loading projection board...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <aside class="detail-pane" id="playerDetail" aria-live="polite">
+            <div class="detail-empty">Loading quarterback profile...</div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="metric-band" id="model">
+        <div class="layout">
+          <div class="section-heading">
+            <p class="eyebrow">Model validation</p>
+            <h2>College data nearly matches the draft market. Together, they beat it.</h2>
+          </div>
+          <div class="metric-grid" id="metricGrid"></div>
+          <div class="figure-grid">
+            <figure>
+              <img src="analysis/figures/model_auc.png" alt="Model AUC comparison chart">
+              <figcaption>Leave-one-draft-class-out validation across final-labeled QB classes.</figcaption>
+            </figure>
+            <figure>
+              <img src="analysis/figures/calibration.png" alt="Model calibration chart">
+              <figcaption>Post-draft model calibration by prediction bucket.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="signals-band" id="signals">
+        <div class="layout signals-layout">
+          <div>
+            <div class="section-heading">
+              <p class="eyebrow">Success signals</p>
+              <h2>Production, draft capital, and explosiveness carry the signal.</h2>
+            </div>
+            <div class="signal-list" id="signalList"></div>
+          </div>
+          <figure class="wide-figure">
+            <img src="analysis/figures/indicator_effects.png" alt="Indicator effect size chart">
+            <figcaption>Univariate signal strength, sorted by separation between NFL hits and non-hits.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="history-band">
+        <div class="layout">
+          <div class="section-heading">
+            <p class="eyebrow">Historical check</p>
+            <h2>Top historical pre-draft model scores</h2>
+          </div>
+          <div class="history-grid" id="historyGrid"></div>
+        </div>
+      </section>
+
+      <section class="data-band" id="data">
+        <div class="layout data-layout">
+          <div class="section-heading">
+            <p class="eyebrow">Artifacts</p>
+            <h2>Project files</h2>
+          </div>
+          <div class="link-grid">
+            <a href="model/projections.csv">Projection CSV</a>
+            <a href="model/historical_scored.csv">Historical Scores</a>
+            <a href="model/indicators.csv">Indicator Rankings</a>
+            <a href="analysis/findings.md">Findings Writeup</a>
+            <a href="docs/DATA_NEEDS.md">Data Needs</a>
+            <a href="https://github.com/SeanPullins/NFLQBs/releases/tag/FIRST_RELEASE">Release</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>NFLQBs</span>
+      <span>Generated from the released repository artifacts.</span>
+    </footer>
+
+    <script src="assets/site.js" defer></script>
+  </body>
+</html>
