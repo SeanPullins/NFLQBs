@@ -1,0 +1,67 @@
+{
+  "pick_only": {
+    "auc": 0.8218,
+    "log_loss": 0.3959,
+    "brier": 0.1258,
+    "n": 84,
+    "n_hit": 17,
+    "base_rate": 0.2024,
+    "C": 1.0,
+    "features": [
+      "neg_log_pick"
+    ]
+  },
+  "pre_draft": {
+    "auc": 0.7875,
+    "log_loss": 0.4292,
+    "brier": 0.1378,
+    "n": 84,
+    "n_hit": 17,
+    "base_rate": 0.2024,
+    "C": 1.0,
+    "features": [
+      "career_average_ppa_all",
+      "career_total_ppa_all",
+      "final_average_ppa_passing_downs",
+      "combine_weight",
+      "combine_forty",
+      "combine_broad",
+      "power5",
+      "career_cfbd_seasons"
+    ]
+  },
+  "post_draft": {
+    "auc": 0.8622,
+    "log_loss": 0.3698,
+    "brier": 0.1222,
+    "n": 84,
+    "n_hit": 17,
+    "base_rate": 0.2024,
+    "C": 0.25,
+    "features": [
+      "career_average_ppa_all",
+      "career_total_ppa_all",
+      "final_average_ppa_passing_downs",
+      "combine_weight",
+      "combine_forty",
+      "combine_broad",
+      "power5",
+      "career_cfbd_seasons",
+      "neg_log_pick"
+    ]
+  },
+  "round1_heuristic": {
+    "auc": 0.8222,
+    "precision": 0.5385,
+    "recall": 0.8235,
+    "n_round1": 26,
+    "note": "predict hit iff round==1"
+  },
+  "college_lift_over_pick": 0.0404,
+  "tier_pre_draft": {
+    "spearman_rho": 0.4712,
+    "mae": 0.9216,
+    "n": 84,
+    "note": "Ridge onto success_tier, PRE-DRAFT features, LOCO-CV on final rows"
+  }
+}

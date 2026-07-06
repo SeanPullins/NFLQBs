@@ -1,0 +1,33 @@
+{
+  "pre_draft": [
+    "career_average_ppa_all",
+    "career_total_ppa_all",
+    "final_average_ppa_passing_downs",
+    "combine_weight",
+    "combine_forty",
+    "combine_broad",
+    "power5",
+    "career_cfbd_seasons"
+  ],
+  "post_draft": [
+    "career_average_ppa_all",
+    "career_total_ppa_all",
+    "final_average_ppa_passing_downs",
+    "combine_weight",
+    "combine_forty",
+    "combine_broad",
+    "power5",
+    "career_cfbd_seasons",
+    "neg_log_pick"
+  ],
+  "pick_only": [
+    "neg_log_pick"
+  ],
+  "chosen_C": {
+    "pick_only": 1.0,
+    "pre_draft": 1.0,
+    "post_draft": 0.25
+  },
+  "imputation": "median (no missing-indicators; power5=0 for FCS/missing)",
+  "notes": "PPA+combine+context; PFF excluded from deployable model due to 2014-15-only coverage. Trained on final(1.0)+provisional(0.5)."
+}

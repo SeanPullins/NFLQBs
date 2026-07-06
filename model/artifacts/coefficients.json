@@ -1,0 +1,23 @@
+{
+  "pre_draft": {
+    "career_total_ppa_all": 1.1568,
+    "career_average_ppa_all": 0.8274,
+    "career_cfbd_seasons": -0.5752,
+    "combine_broad": 0.4337,
+    "combine_weight": 0.3836,
+    "final_average_ppa_passing_downs": 0.2575,
+    "power5": -0.1171,
+    "combine_forty": -0.0999
+  },
+  "post_draft": {
+    "neg_log_pick": 0.8146,
+    "career_total_ppa_all": 0.748,
+    "career_average_ppa_all": 0.4382,
+    "combine_broad": 0.2712,
+    "career_cfbd_seasons": -0.2261,
+    "combine_weight": 0.1875,
+    "power5": -0.1169,
+    "final_average_ppa_passing_downs": 0.0443,
+    "combine_forty": -0.0353
+  }
+}
