@@ -39,12 +39,20 @@
             </div>
 
             <div class="toolbar" aria-label="Projection controls">
-              <div class="segmented" id="yearFilters" aria-label="Draft class filter"></div>
+              <div class="filter-group">
+                <span class="control-label">Class</span>
+                <div class="segmented" id="yearFilters" aria-label="Draft class filter"></div>
+              </div>
+              <div class="filter-group score-filter">
+                <span class="control-label">Score</span>
+                <div class="segmented" id="scoreModes" aria-label="Score mode"></div>
+              </div>
               <label class="search">
                 <span>Search</span>
                 <input id="searchInput" type="search" placeholder="Player or school" autocomplete="off">
               </label>
             </div>
+            <div class="board-summary" id="boardSummary" aria-live="polite"></div>
 
             <div class="table-wrap">
               <table>
@@ -58,7 +66,7 @@
                       <button class="sort-button" data-sort="draft_season" type="button">Class</button>
                     </th>
                     <th scope="col">
-                      <button class="sort-button" data-sort="draft_adjusted_hit_prob" type="button">Hit Prob</button>
+                      <button class="sort-button" data-sort="_score" type="button" id="scoreSortButton">Score</button>
                     </th>
                     <th scope="col">
                       <button class="sort-button" data-sort="pff_model_delta" type="button">PFF Δ</button>

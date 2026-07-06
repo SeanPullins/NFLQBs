@@ -5,14 +5,38 @@ const paths = {
   metrics: "model/artifacts/cv_metrics.json",
 };
 
+const SCORE_MODES = {
+  draft: {
+    label: "Draft Adj",
+    shortLabel: "Hit",
+    column: "draft_adjusted_hit_prob",
+  },
+  pff: {
+    label: "PFF Pre",
+    shortLabel: "PFF",
+    column: "model_hit_prob",
+  },
+  noPff: {
+    label: "No-PFF",
+    shortLabel: "No-PFF",
+    column: "model_hit_prob_no_pff",
+  },
+  market: {
+    label: "Market",
+    shortLabel: "Market",
+    column: "model_hit_prob_pick_only",
+  },
+};
+
 const state = {
   projections: [],
   historical: [],
   indicators: [],
   metrics: null,
   year: "all",
+  scoreMode: "draft",
   query: "",
-  sortKey: "draft_adjusted_hit_prob",
+  sortKey: "_score",
   sortDir: "desc",
   selectedName: "",
 };
@@ -86,6 +110,15 @@ function hitProb(row) {
   return toNumber(row.draft_adjusted_hit_prob) ?? toNumber(row.model_hit_prob);
 }
 
+function scoreMode() {
+  return SCORE_MODES[state.scoreMode] ?? SCORE_MODES.draft;
+}
+
+function scoreValue(row, mode = state.scoreMode) {
+  const config = SCORE_MODES[mode] ?? SCORE_MODES.draft;
+  return toNumber(row[config.column]) ?? hitProb(row);
+}
+
 function oneDecimal(value) {
   const number = toNumber(value);
   return number === null ? "--" : number.toFixed(1);
@@ -123,6 +156,7 @@ function years() {
 
 function filteredRows() {
   const query = state.query.trim().toLowerCase();
+  const activeScore = scoreMode();
   const rows = state.projections
     .filter((row) => state.year === "all" || row.draft_season === state.year)
     .filter((row) => {
@@ -145,8 +179,11 @@ function filteredRows() {
 
   rankBy("model_hit_prob", "_pffRank");
   rankBy("model_hit_prob_no_pff", "_noPffRank");
+  rankBy("draft_adjusted_hit_prob", "_draftRank");
+  rankBy("model_hit_prob_pick_only", "_marketRank");
   rows.forEach((row) => {
     row._rankMove = row._noPffRank - row._pffRank;
+    row._score = toNumber(row[activeScore.column]) ?? hitProb(row);
   });
 
   return rows
@@ -159,6 +196,7 @@ function filteredRows() {
         "model_hit_prob_post_draft",
         "model_hit_prob_post_draft_pff",
         "draft_adjusted_hit_prob",
+        "_score",
         "pff_model_delta",
         "_rankMove",
         "expected_tier",
@@ -190,9 +228,55 @@ function renderYearFilters() {
   });
 }
 
+function renderScoreModes() {
+  const host = $("#scoreModes");
+  host.innerHTML = Object.entries(SCORE_MODES)
+    .map(([key, config]) => `
+      <button type="button" data-score="${key}" aria-pressed="${state.scoreMode === key}">
+        ${escapeHtml(config.label)}
+      </button>
+    `)
+    .join("");
+
+  host.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.scoreMode = button.dataset.score;
+      state.sortKey = "_score";
+      state.sortDir = "desc";
+      renderAll();
+    });
+  });
+}
+
+function renderBoardSummary(rows) {
+  const host = $("#boardSummary");
+  if (!rows.length) {
+    host.innerHTML = "";
+    return;
+  }
+
+  const scores = rows.map((row) => toNumber(row._score)).filter((value) => value !== null);
+  const avg = scores.length ? scores.reduce((sum, value) => sum + value, 0) / scores.length : null;
+  const top = [...rows].sort((a, b) => (toNumber(b._score) ?? -Infinity) - (toNumber(a._score) ?? -Infinity))[0];
+  const pffUp = rows.filter((row) => (toNumber(row.pff_model_delta) ?? 0) >= 0.05).length;
+  const pffDown = rows.filter((row) => (toNumber(row.pff_model_delta) ?? 0) <= -0.05).length;
+  const label = scoreMode().label;
+
+  host.innerHTML = `
+    <div class="summary-item"><span>QBs</span><strong>${rows.length}</strong></div>
+    <div class="summary-item"><span>Score</span><strong>${escapeHtml(label)}</strong></div>
+    <div class="summary-item"><span>Top</span><strong>${escapeHtml(top?.canonical_name || "--")}</strong></div>
+    <div class="summary-item"><span>Average</span><strong>${pct(avg)}</strong></div>
+    <div class="summary-item"><span>PFF movers</span><strong>${pffUp} up / ${pffDown} down</strong></div>
+  `;
+}
+
 function renderTable() {
   const rows = filteredRows();
   const tbody = $("#projectionRows");
+  const scoreButton = $("#scoreSortButton");
+  if (scoreButton) scoreButton.textContent = scoreMode().shortLabel;
+  renderBoardSummary(rows);
 
   if (!rows.length) {
     tbody.innerHTML = `<tr><td colspan="8" class="loading">No quarterbacks match this view.</td></tr>`;
@@ -207,7 +291,7 @@ function renderTable() {
   tbody.innerHTML = rows
     .map((row, index) => {
       const selected = row.canonical_name === state.selectedName ? " selected" : "";
-      const prob = Math.max(0, Math.min(100, (hitProb(row) ?? 0) * 100));
+      const prob = Math.max(0, Math.min(100, (toNumber(row._score) ?? 0) * 100));
       const indicators = splitIndicators(row.top_positive_indicators).slice(0, 2);
       const pick = cleanNumber(row.pick);
       const round = cleanNumber(row.round);
@@ -235,7 +319,7 @@ function renderTable() {
               <div class="prob-track" aria-hidden="true">
                 <span class="prob-fill" style="--w: ${prob}%"></span>
               </div>
-              <strong>${pct(hitProb(row))}</strong>
+              <strong>${pct(row._score)}</strong>
             </div>
           </td>
           <td><span class="delta ${deltaClass}">${signedPct(row.pff_model_delta)}</span></td>
@@ -281,19 +365,37 @@ function renderDetail(row) {
   const pick = cleanNumber(row.pick);
   const draftText = round ? `Round ${round}${pick ? `, pick ${pick}` : ""}` : "No draft slot";
   const label = row.label_status ? row.label_status.replace("_", " ") : "model score";
+  const scoreRows = [
+    ["Draft Adj", row.draft_adjusted_hit_prob],
+    ["PFF Pre", row.model_hit_prob],
+    ["No-PFF", row.model_hit_prob_no_pff],
+    ["Market", row.model_hit_prob_pick_only],
+  ];
 
   pane.innerHTML = `
     <div class="detail-kicker">${escapeHtml(row.draft_season)} class / ${escapeHtml(label)}</div>
     <h2>${escapeHtml(row.canonical_name)}</h2>
     <p class="detail-school">${escapeHtml(row.college || "Unknown school")} / ${escapeHtml(draftText)}</p>
 
+    <div class="score-stack">
+      ${scoreRows.map(([name, value]) => {
+        const number = toNumber(value);
+        const width = Math.max(0, Math.min(100, (number ?? 0) * 100));
+        return `
+          <div class="score-bar">
+            <span>${escapeHtml(name)}</span>
+            <div class="prob-track" aria-hidden="true">
+              <span class="prob-fill" style="--w: ${width}%"></span>
+            </div>
+            <strong>${pct(number)}</strong>
+          </div>
+        `;
+      }).join("")}
+    </div>
+
     <div class="detail-stats">
-      <div class="detail-stat"><span>Hit Prob</span><strong>${pct(hitProb(row))}</strong></div>
-      <div class="detail-stat"><span>PFF Pre</span><strong>${pct(row.model_hit_prob)}</strong></div>
-      <div class="detail-stat"><span>No-PFF Pre</span><strong>${pct(row.model_hit_prob_no_pff)}</strong></div>
-      <div class="detail-stat"><span>Market</span><strong>${pct(row.model_hit_prob_pick_only)}</strong></div>
       <div class="detail-stat"><span>PFF Delta</span><strong>${signedPct(row.pff_model_delta)}</strong></div>
-      <div class="detail-stat"><span>Rank Delta</span><strong>${signedRank(row._rankMove)}</strong></div>
+      <div class="detail-stat"><span>PFF Rank</span><strong>${signedRank(row._rankMove)}</strong></div>
       <div class="detail-stat"><span>Expected Tier</span><strong>${oneDecimal(row.expected_tier)}</strong></div>
       <div class="detail-stat"><span>Percentile</span><strong>${oneDecimal(row.percentile_vs_history)}</strong></div>
       <div class="detail-stat"><span>Actual Tier</span><strong>${oneDecimal(row.actual_tier_or_projection)}</strong></div>
@@ -389,6 +491,7 @@ function renderHistory() {
 
 function renderAll() {
   renderYearFilters();
+  renderScoreModes();
   renderTable();
   renderMetrics();
   renderSignals();

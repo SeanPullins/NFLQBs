@@ -186,8 +186,26 @@ figure,
   align-items: center;
   justify-content: space-between;
   gap: 14px;
+  flex-wrap: wrap;
   padding: 12px 22px 18px;
   border-bottom: 1px solid var(--line);
+}
+
+.filter-group {
+  display: grid;
+  gap: 6px;
+}
+
+.score-filter {
+  flex: 1;
+  min-width: 290px;
+}
+
+.control-label {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .segmented {
@@ -212,6 +230,10 @@ figure,
   border-radius: 6px;
   font-size: 0.88rem;
   font-weight: 800;
+}
+
+.score-filter .segmented button {
+  min-width: 82px;
 }
 
 .segmented button[aria-pressed="true"] {
@@ -244,6 +266,38 @@ figure,
 .search input:focus {
   border-color: var(--teal);
   box-shadow: 0 0 0 3px rgba(11, 111, 106, 0.14);
+}
+
+.board-summary {
+  display: grid;
+  grid-template-columns: 72px 104px minmax(150px, 1fr) 96px 136px;
+  gap: 0;
+  padding: 12px 22px;
+  background: #fbfcfa;
+  border-bottom: 1px solid var(--line);
+}
+
+.summary-item {
+  min-width: 0;
+  padding-right: 14px;
+}
+
+.summary-item span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.summary-item strong {
+  display: block;
+  overflow: hidden;
+  margin-top: 2px;
+  font-size: 0.96rem;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .table-wrap {
@@ -441,6 +495,32 @@ tbody tr.selected {
 .detail-school {
   margin: 0 0 18px;
   color: var(--muted);
+}
+
+.score-stack {
+  display: grid;
+  gap: 9px;
+  margin: 0 0 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.score-bar {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr) 48px;
+  gap: 10px;
+  align-items: center;
+}
+
+.score-bar span {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.score-bar strong {
+  text-align: right;
 }
 
 .detail-stats {
@@ -713,8 +793,23 @@ footer {
     flex-direction: column;
   }
 
+  .score-filter {
+    min-width: 0;
+  }
+
   .search {
     min-width: 0;
+  }
+
+  .board-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .summary-item {
+    padding-right: 8px;
   }
 
   .figure-grid,
