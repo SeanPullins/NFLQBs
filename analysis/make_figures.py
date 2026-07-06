@@ -5,7 +5,7 @@ Charts (matplotlib, colorblind-safe validated palette, clean light style):
   1. indicator_effects.png   - univariate signal (|AUC-0.5|) per college metric
   2. hitrate_by_quartile.png - hit rate by quartile for the headline metrics
   3. ppa_distribution.png     - career PPA: hits vs non-hits
-  4. model_auc.png            - LOCO-CV AUC: college vs draft-capital baselines
+  4. model_auc.png            - forward AUC: PFF/no-PFF vs draft-capital baselines
   5. calibration.png          - post-draft model calibration
   6. projections_board.png    - top projected QBs, 2024/2025/2026
 
@@ -23,8 +23,8 @@ import numpy as np
 import pandas as pd
 
 from model.data import add_derived, join_labels_profiles
-from model.train import (PICK_ONLY_FEATS, POST_DRAFT_FEATS, PRE_DRAFT_FEATS,
-                        loco_oof, pick_best_C)
+from model.train import (FIXED_C, PICK_ONLY_FEATS, POST_DRAFT_FEATS,
+                         PRE_DRAFT_FEATS, PRE_DRAFT_NO_PFF_FEATS, forward_oof)
 from model import predict as pred
 
 FIGDIR = os.path.join(os.path.dirname(__file__), "figures")
@@ -74,14 +74,14 @@ def fig_indicator_effects(ind):
     # group legend (only groups actually shown)
     present = [g for g in ["ppa", "combine", "pff", "context", "capital"] if g in set(d["group"])]
     handles = [plt.Line2D([0], [0], marker="s", ls="", ms=10, color=GROUP_COLOR[g],
-                          label={"ppa": "CFBD PPA", "combine": "Combine", "pff": "PFF (2015-16 only)",
+                          label={"ppa": "CFBD PPA", "combine": "Combine", "pff": "PFF",
                                  "context": "Context", "capital": "Draft capital"}[g])
                for g in present]
     ax.legend(handles=handles, loc="lower right", frameon=False, fontsize=9, ncol=1)
     ax.grid(axis="y", visible=False)
     fig.suptitle("Which college metrics separate NFL hits from non-hits?", fontweight="bold",
                  fontsize=14, y=0.99)
-    fig.text(0.5, 0.945, "Final-label draft classes 2015-2022 (n=84, 17 hits). Bars past the line = more hits at higher values.",
+    fig.text(0.5, 0.945, "Final-label draft classes 2015-2022 (n=88, 17 hits). Bars past the line = more hits at higher values.",
              ha="center", fontsize=9, color=MUTED)
     fig.tight_layout(rect=(0, 0, 1, 0.92))
     fig.savefig(os.path.join(FIGDIR, "indicator_effects.png"), dpi=150)
@@ -151,15 +151,17 @@ def fig_model_auc(joined):
     train = train.reset_index(drop=True)
     specs = [("Round-1 = hit\n(rule of thumb)", None, MUTED),
              ("Draft slot only\n(the market's bet)", PICK_ONLY_FEATS, ORANGE),
-             ("College + combine\n(pre-draft, no slot)", PRE_DRAFT_FEATS, BLUE),
+             ("College + combine\n(no PFF)", PRE_DRAFT_NO_PFF_FEATS, BLUE),
+             ("College + combine + PFF\n(pre-draft)", PRE_DRAFT_FEATS, VIOLET),
              ("College + combine + slot\n(post-draft)", POST_DRAFT_FEATS, GREEN)]
     aucs = []
     from sklearn.metrics import roc_auc_score
-    fin = train[train["label_status"] == "final"]
+    y_pick, _, yrs = forward_oof(train, PICK_ONLY_FEATS, FIXED_C["pick_only"])
+    fin = train[(train["label_status"] == "final") & (train["draft_year"].isin(yrs))]
     aucs.append(roc_auc_score(fin["y"], (fin["round"] == 1).astype(int)))
-    for _, feats, _c in specs[1:]:
-        C = pick_best_C(train, feats)
-        y, p = loco_oof(train, feats, C)
+    fixed_names = ["pick_only", "pre_draft_no_pff", "pre_draft", "post_draft"]
+    for (_, feats, _c), name in zip(specs[1:], fixed_names):
+        y, p, _ = forward_oof(train, feats, FIXED_C[name])
         aucs.append(roc_auc_score(y, p))
     fig, ax = plt.subplots(figsize=(9.2, 4.8))
     x = np.arange(len(specs))
@@ -170,8 +172,8 @@ def fig_model_auc(joined):
     ax.axhline(0.5, color=INK2, lw=1.2)
     ax.text(-0.42, 0.505, "coin flip", color=INK2, fontsize=8.5, ha="left")
     ax.set_xticks(x); ax.set_xticklabels([s[0] for s in specs], fontsize=9.5)
-    ax.set_ylim(0.5, 0.92); ax.set_ylabel("Leave-one-class-out AUC")
-    ax.set_title("College stats alone nearly match the draft market; together they beat it",
+    ax.set_ylim(0.5, 0.92); ax.set_ylabel("Forward-by-draft-year AUC")
+    ax.set_title("Full PFF helps pre-draft a little; draft capital still dominates",
                  fontweight="bold", pad=10)
     ax.grid(axis="x", visible=False)
     fig.tight_layout()
@@ -184,8 +186,7 @@ def fig_calibration(joined):
     train["y"] = train["hit"].astype(int)
     train["w"] = np.where(train["label_status"] == "final", 1.0, 0.5)
     train = train.reset_index(drop=True)
-    C = pick_best_C(train, POST_DRAFT_FEATS)
-    y, p = loco_oof(train, POST_DRAFT_FEATS, C)
+    y, p, _ = forward_oof(train, POST_DRAFT_FEATS, FIXED_C["post_draft"])
     bins = [0, 0.1, 0.2, 0.35, 0.6, 1.01]
     df = pd.DataFrame({"y": y, "p": p})
     df["b"] = pd.cut(df["p"], bins, right=False)
@@ -220,9 +221,9 @@ def fig_projections_board():
         ax.set_title(f"{yr} class", fontweight="bold", fontsize=12)
         ax.grid(axis="y", visible=False)
         ax.set_xlabel("Pre-draft hit probability")
-    fig.suptitle("Projection board: top-8 QBs by pre-draft model (college + combine only)",
+    fig.suptitle("Projection board: top-8 QBs by PFF-enabled pre-draft model",
                  fontweight="bold", x=0.5, y=0.99, fontsize=13.5)
-    fig.text(0.5, 0.93, "Same model that gives Burrow the 94th percentile and Mr.-Irrelevant Purdy the 73rd historically. No draft slot used.",
+    fig.text(0.5, 0.93, "No draft slot used. PFF-enabled probabilities are shown with the no-PFF baseline in model/projections.csv.",
              ha="center", fontsize=9, color=MUTED)
     fig.tight_layout(rect=(0, 0, 1, 0.9))
     fig.savefig(os.path.join(FIGDIR, "projections_board.png"), dpi=150)

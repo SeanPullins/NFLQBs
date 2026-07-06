@@ -68,6 +68,13 @@ function pct(value, digits = 0) {
   return number === null ? "--" : `${(number * 100).toFixed(digits)}%`;
 }
 
+function signedPct(value, digits = 0) {
+  const number = toNumber(value);
+  if (number === null) return "--";
+  const sign = number > 0 ? "+" : "";
+  return `${sign}${(number * 100).toFixed(digits)}%`;
+}
+
 function oneDecimal(value) {
   const number = toNumber(value);
   return number === null ? "--" : number.toFixed(1);
@@ -113,8 +120,9 @@ function filteredRows() {
     })
     .sort((a, b) => {
       const key = state.sortKey;
-      const av = ["model_hit_prob", "expected_tier", "draft_season"].includes(key) ? toNumber(a[key]) : a[key];
-      const bv = ["model_hit_prob", "expected_tier", "draft_season"].includes(key) ? toNumber(b[key]) : b[key];
+      const numericKeys = ["model_hit_prob", "model_hit_prob_no_pff", "pff_model_delta", "expected_tier", "draft_season"];
+      const av = numericKeys.includes(key) ? toNumber(a[key]) : a[key];
+      const bv = numericKeys.includes(key) ? toNumber(b[key]) : b[key];
       let result = 0;
       if (typeof av === "number" && typeof bv === "number") result = av - bv;
       else result = String(av ?? "").localeCompare(String(bv ?? ""));
@@ -144,7 +152,7 @@ function renderTable() {
   const tbody = $("#projectionRows");
 
   if (!rows.length) {
-    tbody.innerHTML = `<tr><td colspan="6" class="loading">No quarterbacks match this view.</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="7" class="loading">No quarterbacks match this view.</td></tr>`;
     renderDetail(null);
     return;
   }
@@ -161,6 +169,8 @@ function renderTable() {
       const pick = cleanNumber(row.pick);
       const round = cleanNumber(row.round);
       const draftText = round ? `R${round}${pick ? ` / ${pick}` : ""}` : "Undrafted";
+      const deltaNumber = toNumber(row.pff_model_delta);
+      const deltaClass = deltaNumber === null ? "" : deltaNumber >= 0 ? "good" : "bad";
 
       return `
         <tr class="${selected}" tabindex="0" data-name="${escapeHtml(row.canonical_name)}">
@@ -183,6 +193,7 @@ function renderTable() {
               <strong>${pct(row.model_hit_prob)}</strong>
             </div>
           </td>
+          <td><span class="delta ${deltaClass}">${signedPct(row.pff_model_delta)}</span></td>
           <td>${oneDecimal(row.expected_tier)}</td>
           <td>
             <div class="pill-line">
@@ -232,6 +243,8 @@ function renderDetail(row) {
 
     <div class="detail-stats">
       <div class="detail-stat"><span>Hit Prob</span><strong>${pct(row.model_hit_prob)}</strong></div>
+      <div class="detail-stat"><span>No-PFF Prob</span><strong>${pct(row.model_hit_prob_no_pff)}</strong></div>
+      <div class="detail-stat"><span>PFF Delta</span><strong>${signedPct(row.pff_model_delta)}</strong></div>
       <div class="detail-stat"><span>Expected Tier</span><strong>${oneDecimal(row.expected_tier)}</strong></div>
       <div class="detail-stat"><span>Percentile</span><strong>${oneDecimal(row.percentile_vs_history)}</strong></div>
       <div class="detail-stat"><span>Actual Tier</span><strong>${oneDecimal(row.actual_tier_or_projection)}</strong></div>
@@ -259,10 +272,11 @@ function renderDetail(row) {
 function renderMetrics() {
   const metrics = state.metrics || {};
   const cards = [
-    ["Pre-draft AUC", metrics.pre_draft?.auc, "College and combine only"],
-    ["Post-draft AUC", metrics.post_draft?.auc, "Adds draft capital"],
+    ["PFF Pre-draft AUC", metrics.pre_draft?.auc, "Forward by draft year"],
+    ["No-PFF AUC", metrics.pre_draft_no_pff?.auc, "Old feature family"],
+    ["PFF Lift", metrics.pff_lift_over_no_pff, "AUC over old pre-draft"],
+    ["Post-draft AUC", metrics.post_draft?.auc, "No-PFF plus draft capital"],
     ["Pick-only AUC", metrics.pick_only?.auc, "The market baseline"],
-    ["College lift", metrics.college_lift_over_pick, "AUC over pick-only"],
   ];
 
   $("#metricGrid").innerHTML = cards
@@ -371,6 +385,6 @@ loadData()
   .then(renderAll)
   .catch((error) => {
     console.error(error);
-    $("#projectionRows").innerHTML = `<tr><td colspan="6" class="loading">Could not load projection data.</td></tr>`;
+    $("#projectionRows").innerHTML = `<tr><td colspan="7" class="loading">Could not load projection data.</td></tr>`;
     $("#playerDetail").innerHTML = `<div class="detail-empty">Could not load model artifacts.</div>`;
   });

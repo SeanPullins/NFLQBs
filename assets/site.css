@@ -252,7 +252,7 @@ figure,
 
 table {
   width: 100%;
-  min-width: 760px;
+  min-width: 860px;
   border-collapse: collapse;
 }
 
@@ -378,6 +378,29 @@ tbody tr.selected {
   font-weight: 750;
 }
 
+.delta {
+  display: inline-flex;
+  align-items: center;
+  min-width: 58px;
+  justify-content: center;
+  padding: 4px 8px;
+  color: var(--muted);
+  background: #f2f4f3;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.delta.good {
+  color: var(--green);
+  background: #eaf6f0;
+}
+
+.delta.bad {
+  color: var(--red);
+  background: #faece9;
+}
+
 .loading {
   padding: 36px 18px;
   color: var(--muted);
@@ -472,7 +495,7 @@ tbody tr.selected {
 
 .metric-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
 }
 

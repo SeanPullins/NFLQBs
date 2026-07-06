@@ -2,21 +2,26 @@
 
 Status of each data source and what would improve the model most, in priority order.
 
-## 1. PFF college QB files for seasons 2016–2025 (HIGH — biggest win)
-You've uploaded `QB_2014.zip` and `QB_2015.zip` (6 CSVs each: passing-grades,
-passing-depth, passing-pressure, passing-concept, time-in-pocket,
-allowed-pressure). The same exports for **2016–2025** would let the model use
-PFF grades/stability metrics for draft classes 2017–2026 — right now PFF
-features only cover the 2015–2016 classes.
+## 1. PFF college QB files for seasons 2014–2025 (DONE — now imported)
+The `QB_2014.zip` through `QB_2025.zip` exports were imported into
+`data/raw/pff/<season>/` and now feed the pipeline. To refresh this data later,
+drop the zip files in a local folder and run:
 
-Drop them in as `data/raw/pff/<season>/<family>__QB__<season>.csv` (or just
-upload the zips — the pipeline auto-discovers season folders).
+```bash
+python3 scripts/import_pff_qb_zips.py /path/to/pff_zips
+python3 -m pipeline.build
+python3 -m model.train
+python3 -m model.predict
+```
 
-Two problems found in the PFF files already uploaded — worth re-exporting:
-- `passing-depth__QB__2014.csv` is **0 bytes** (same empty-export issue as QBR)
-- `allowed-pressure__QB__{2014,2015}.csv` are **byte-identical copies of
-  passing-grades** — the export grabbed the wrong report. If "allowed pressure"
-  exists as a real report, re-export it; otherwise ignore.
+Important PFF caveats:
+- Some family exports are missing or empty by year, including empty
+  `passing-depth` in 2014, empty `passing-pressure` in 2021, and empty
+  `passing-grades` in 2025.
+- `allowed-pressure` appears redundant/suspect and is not used as a model
+  signal.
+- The PFF-enabled model uses selected concept/pressure features because those
+  cover modern classes better than the top-level `passing-grades` file.
 
 ## 2. ESPN QBR files (MEDIUM — currently broken export)
 **Every `qbr_season_*.csv` uploaded so far (2014–2025 batch, then 2017–2020

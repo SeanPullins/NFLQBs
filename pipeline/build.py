@@ -136,11 +136,9 @@ def _write_match_report(pff_load_notes, espn_skip_notes, report, pff_df, cfbd_df
         lines.append(f"| {note['year']} | {loaded} | {missing} |")
     lines.append("")
     lines.append(
-        "Note: `allowed-pressure` is byte-identical to `passing-grades` in both 2014 and 2015 "
-        "(same columns, same values for every player) -- looks like a duplicated export on PFF's "
-        "side rather than a distinct allowed-pressure metric. Kept as its own `allowed_` family "
-        "per spec, but treat `allowed_*` columns as redundant with `grades_*` until PFF ships "
-        "real allowed-pressure data.\n"
+        "Note: PFF family coverage varies by year because some source exports are missing or "
+        "empty. The loader keeps whatever family files are populated and leaves missing metrics "
+        "as nulls for downstream imputation/filtering.\n"
     )
 
     lines.append("## ESPN QBR\n")
@@ -165,11 +163,9 @@ def _write_match_report(pff_load_notes, espn_skip_notes, report, pff_df, cfbd_df
     lines.append(f"  - with combine data: {counts.get('entities_with_combine', 0)}")
     lines.append(f"  - with CFBD PPA data: {counts.get('entities_with_cfbd', 0)}")
     lines.append(
-        "\nNote on the combine -> PFF rate below: PFF only covers 2014-2015 today, so only the 2016 "
-        "combine class (final college season 2015) can fully match, plus any player from a later "
-        "class who happened to log an early-career (backup/freshman) season in 2014-2015. Expect "
-        "this rate to climb automatically as PFF 2016-2025 files are added -- no code changes "
-        "needed.\n"
+        "\nNote on the combine -> PFF rate below: with the 2014-2025 QB PFF drop imported, almost "
+        "every combine QB should now resolve to a PFF player unless the player is outside PFF's "
+        "college coverage or has a naming/school alias issue.\n"
     )
     if counts.get("combine_rows"):
         rate = 100.0 * counts.get("combine_linked_to_pff", 0) / counts["combine_rows"]

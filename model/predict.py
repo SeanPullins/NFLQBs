@@ -20,7 +20,8 @@ import pandas as pd
 
 from model.data import (CAND_BY_COL, REPO, add_derived, join_labels_profiles,
                         load_profiles)
-from model.train import POST_DRAFT_FEATS, PRE_DRAFT_FEATS
+from model.train import (POST_DRAFT_FEATS, POST_DRAFT_PFF_FEATS,
+                         PRE_DRAFT_FEATS, PRE_DRAFT_NO_PFF_FEATS)
 
 ART = os.path.join(REPO, "model", "artifacts")
 
@@ -44,8 +45,13 @@ def _load(model: str):
 
 
 def _feats(model: str):
-    return {"pre_draft": PRE_DRAFT_FEATS, "post_draft": POST_DRAFT_FEATS,
-            "pick_only": ["neg_log_pick"]}[model]
+    return {
+        "pre_draft": PRE_DRAFT_FEATS,
+        "pre_draft_no_pff": PRE_DRAFT_NO_PFF_FEATS,
+        "post_draft": POST_DRAFT_FEATS,
+        "post_draft_pff": POST_DRAFT_PFF_FEATS,
+        "pick_only": ["neg_log_pick"],
+    }[model]
 
 
 def _prep(profiles_df: pd.DataFrame) -> pd.DataFrame:
@@ -108,7 +114,12 @@ def per_player_indicators(profiles_df: pd.DataFrame, model: str = "pre_draft",
 
 def coverage_note(row) -> str:
     parts = []
-    parts.append("no PFF years yet" if not row.get("in_pff", False) else "has PFF")
+    if not row.get("in_pff", False):
+        parts.append("no PFF")
+    elif pd.isna(row.get("final_concept_dropbacks")) and pd.isna(row.get("final_grades_dropbacks")):
+        parts.append("PFF partial")
+    else:
+        parts.append("PFF")
     if not row.get("in_combine", False):
         parts.append("no combine testing")
     elif pd.isna(row.get("combine_forty")):
@@ -132,16 +143,21 @@ def build_outputs():
     joined = add_derived(joined)
     profiles = add_derived(load_profiles())
 
-    # historical reference distribution = pre-draft probs of all labeled QBs
+    # historical reference distribution = PFF-enabled pre-draft probs of all labeled QBs
     hist_prob = score(joined, "pre_draft")
+    hist_prob_no_pff = score(joined, "pre_draft_no_pff")
 
     # -------- historical_scored.csv --------
     hs = joined.copy()
     hs["model_hit_prob_pre_draft"] = hist_prob
+    hs["model_hit_prob_pre_draft_no_pff"] = hist_prob_no_pff
+    hs["pff_model_delta"] = hs["model_hit_prob_pre_draft"] - hs["model_hit_prob_pre_draft_no_pff"]
     has_pick = hs["pick"].notna()
     hs["model_hit_prob_post_draft"] = np.nan
+    hs["model_hit_prob_post_draft_pff"] = np.nan
     if has_pick.any():
         hs.loc[has_pick, "model_hit_prob_post_draft"] = score(hs[has_pick], "post_draft")
+        hs.loc[has_pick, "model_hit_prob_post_draft_pff"] = score(hs[has_pick], "post_draft_pff")
     hs["model_expected_tier"] = expected_tier(hs)
     hs["percentile_vs_history"] = _percentiles(hist_prob, hist_prob)
     ind = per_player_indicators(hs, "pre_draft")
@@ -151,7 +167,8 @@ def build_outputs():
     hist_cols = ["canonical_name", "college", "draft_year", "round", "pick",
                  "label_status", "success_tier", "hit", "seasons_primary_starter",
                  "model_hit_prob_pre_draft", "model_hit_prob_post_draft",
-                 "model_expected_tier", "percentile_vs_history",
+                 "model_hit_prob_pre_draft_no_pff", "model_hit_prob_post_draft_pff",
+                 "pff_model_delta", "model_expected_tier", "percentile_vs_history",
                  "top_positive_indicators", "top_negative_indicators",
                  "data_coverage", "notes"]
     hs = hs.rename(columns={"colleges": "college_prof"})
@@ -159,9 +176,29 @@ def build_outputs():
     hs[hist_cols].sort_values("model_hit_prob_pre_draft", ascending=False)\
         .to_csv(os.path.join(REPO, "model", "historical_scored.csv"), index=False)
 
-    # -------- projections.csv (classes 2023-2026) --------
-    proj = profiles[profiles["draft_season"].isin([2023, 2024, 2025, 2026])].copy()
+    # -------- projections.csv --------
+    # Use the labeled draft universe for 2023-2025, then append a compact
+    # 2026 combine/watchlist slice. Do not publish every PFF-only college QB
+    # whose final observed season happens to imply a 2026 draft season.
+    proj = joined[joined["label_status"].isin(["provisional", "projection_target"])].copy()
+    # Label-backed rows should display their real draft year/slot even when
+    # their best feature profile is a PFF-only proxy season.
+    proj["draft_season"] = proj["draft_year"]
+
+    watch_2026 = profiles[(profiles["draft_season"].eq(2026)) & (profiles["in_combine"])].copy()
+    if not watch_2026.empty:
+        watch_2026 = watch_2026[~watch_2026["normalized_name"].isin(proj["normalized_name"])].copy()
+        watch_2026["draft_year"] = watch_2026["draft_season"]
+        watch_2026["round"] = np.nan
+        watch_2026["pick"] = np.nan
+        watch_2026["success_tier"] = np.nan
+        watch_2026["label_status"] = "watchlist"
+        watch_2026["notes"] = "2026 combine/watchlist row; not an outcome label"
+        proj = pd.concat([proj, watch_2026], ignore_index=True, sort=False)
+
     proj["model_hit_prob"] = score(proj, "pre_draft")
+    proj["model_hit_prob_no_pff"] = score(proj, "pre_draft_no_pff")
+    proj["pff_model_delta"] = proj["model_hit_prob"] - proj["model_hit_prob_no_pff"]
     proj["expected_tier"] = expected_tier(proj)
     proj["percentile_vs_history"] = _percentiles(proj["model_hit_prob"].values, hist_prob)
     pind = per_player_indicators(proj, "pre_draft")
@@ -169,19 +206,19 @@ def build_outputs():
     proj["top_negative_indicators"] = [d["top_negative_indicators"] for d in pind]
     proj["data_coverage"] = proj.apply(coverage_note, axis=1)
 
-    # attach actual (provisional/target) outcome where we have a label
-    lab = pd.read_csv(os.path.join(REPO, "data", "labels", "nfl_qb_outcomes.csv"))
-    from pipeline.normalize import normalize_name
-    lab["normalized_name"] = lab["player"].map(normalize_name)
-    proj = proj.merge(lab[["normalized_name", "draft_year", "round", "pick",
-                           "success_tier", "label_status", "notes"]],
-                      left_on=["normalized_name", "draft_season"],
-                      right_on=["normalized_name", "draft_year"], how="left")
+    # Attach/normalize outcome metadata for labeled projection rows.
+    if "draft_year" not in proj.columns:
+        proj["draft_year"] = proj["draft_season"]
+    if "colleges" in proj.columns:
+        if "college" not in proj.columns:
+            proj["college"] = proj["colleges"]
+        else:
+            proj["college"] = proj["college"].fillna(proj["colleges"])
 
-    proj = proj.rename(columns={"colleges": "college", "success_tier": "actual_tier_or_projection",
-                                "label_status": "label_status", "notes": "scout_note"})
+    proj = proj.rename(columns={"success_tier": "actual_tier_or_projection", "notes": "scout_note"})
     proj_cols = ["canonical_name", "college", "draft_season", "round", "pick",
-                 "model_hit_prob", "expected_tier", "percentile_vs_history",
+                 "model_hit_prob", "model_hit_prob_no_pff", "pff_model_delta",
+                 "expected_tier", "percentile_vs_history",
                  "actual_tier_or_projection", "label_status",
                  "top_positive_indicators", "top_negative_indicators",
                  "data_coverage", "scout_note"]

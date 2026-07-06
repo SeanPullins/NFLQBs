@@ -13,10 +13,10 @@ Method (small-n honest):
   Reported directionally (0.5 = no signal; distance from 0.5 = strength).
 - Cliff's delta = 2*AUC - 1 (rank effect size, robust to outliers & small n).
 - Mann-Whitney U p-value + point-biserial r as supporting evidence.
-- PFF metrics carry a coverage flag: PFF charting only exists for 2014-2015
-  college seasons, so it is a TRUE final-season snapshot for 2015-2016 draft
-  classes only; later classes reflect a 2015 underclassman season. PFF metrics
-  are additionally filtered to >=200 final-season dropbacks to drop cameo noise.
+- PFF metrics carry a coverage flag: full QB PFF charting is available for
+  most 2014-2025 source seasons, with a few missing/empty family exports by
+  season. PFF metrics are filtered to >=200 relevant final-season dropbacks
+  where a denominator column is available, dropping cameo noise.
 """
 
 from __future__ import annotations
@@ -34,6 +34,16 @@ from model.data import (CANDIDATES, REPO, add_derived, join_labels_profiles)
 PFF_MIN_DROPBACKS = 200
 OUT_CSV = os.path.join(REPO, "model", "indicators.csv")
 OUT_JSON = os.path.join(REPO, "analysis", "_indicator_stats.json")
+
+
+def _pff_dropback_col(feature_col: str) -> str:
+    if feature_col.startswith("final_concept_"):
+        return "final_concept_dropbacks"
+    if feature_col.startswith("final_pressure_"):
+        return "final_pressure_base_dropbacks"
+    if feature_col.startswith("final_depth_"):
+        return "final_depth_base_dropbacks"
+    return "final_grades_dropbacks"
 
 
 def _evidence(auc: float, n: int, p: float) -> str:
@@ -59,10 +69,10 @@ def compute(df: pd.DataFrame) -> pd.DataFrame:
         sub = fin[[f.col, "hit"]].copy()
         note = ""
         if f.group == "pff":
-            db = fin.get("final_grades_dropbacks")
+            db = fin.get(_pff_dropback_col(f.col))
             if db is not None:
                 sub = sub[db >= PFF_MIN_DROPBACKS]
-            note = "PFF coverage 2014-15 only; true final-season for 2015-16 classes, else a 2015 underclassman season"
+            note = "PFF QB charting imported for 2014-2025; some seasons have missing/empty family exports"
         sub = sub.dropna(subset=[f.col])
         x = sub[f.col].astype(float).values
         y = sub["hit"].astype(int).values

@@ -1,71 +1,10 @@
 {
   "n_labels_total": 126,
-  "n_joined": 120,
-  "n_unjoinable": 6,
-  "unjoinable": [
-    {
-      "draft_year": 2020,
-      "player": "Ben DiNucci",
-      "college": "James Madison",
-      "success_tier": 0,
-      "hit": 0.0,
-      "label_status": "final",
-      "normalized_name": "benjamin dinucci",
-      "reason": "no PFF and no combine seed row (CFBD-only / FCS / non-combine)"
-    },
-    {
-      "draft_year": 2020,
-      "player": "Tommy Stevens",
-      "college": "Mississippi State",
-      "success_tier": 0,
-      "hit": 0.0,
-      "label_status": "final",
-      "normalized_name": "thomas stevens",
-      "reason": "no PFF and no combine seed row (CFBD-only / FCS / non-combine)"
-    },
-    {
-      "draft_year": 2021,
-      "player": "Kellen Mond",
-      "college": "Texas A&M",
-      "success_tier": 0,
-      "hit": 0.0,
-      "label_status": "final",
-      "normalized_name": "kellen mond",
-      "reason": "no PFF and no combine seed row (CFBD-only / FCS / non-combine)"
-    },
-    {
-      "draft_year": 2022,
-      "player": "Chris Oladokun",
-      "college": "South Dakota State",
-      "success_tier": 0,
-      "hit": 0.0,
-      "label_status": "final",
-      "normalized_name": "christopher oladokun",
-      "reason": "no PFF and no combine seed row (CFBD-only / FCS / non-combine)"
-    },
-    {
-      "draft_year": 2023,
-      "player": "Sean Clifford",
-      "college": "Penn State",
-      "success_tier": 0,
-      "hit": 0.0,
-      "label_status": "provisional",
-      "normalized_name": "sean clifford",
-      "reason": "no PFF and no combine seed row (CFBD-only / FCS / non-combine)"
-    },
-    {
-      "draft_year": 2025,
-      "player": "Cam Miller",
-      "college": "North Dakota State",
-      "success_tier": 0,
-      "hit": NaN,
-      "label_status": "projection_target",
-      "normalized_name": "cameron miller",
-      "reason": "no PFF and no combine seed row (CFBD-only / FCS / non-combine)"
-    }
-  ],
-  "n_final": 84,
+  "n_joined": 126,
+  "n_unjoinable": 0,
+  "unjoinable": [],
+  "n_final": 88,
   "n_final_hits": 17,
-  "final_base_rate": 0.2024,
+  "final_base_rate": 0.1932,
   "pff_min_dropbacks": 200
 }

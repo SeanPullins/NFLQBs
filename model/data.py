@@ -8,10 +8,10 @@ Responsibilities
    fallback for the handful of QBs whose profile ``draft_season`` is a PFF
    proxy year rather than their real draft year, e.g. Chad Kelly, Alex McGough).
 3. Expose a hand-curated, football-grounded candidate feature list (NOT the
-   ~2,300 raw columns) split into groups that tolerate the PFF coverage gap:
+   ~2,300 raw columns) split into groups:
        - ppa      : CFBD expected-points-added, present for classes 2015-2026
        - combine  : athletic testing / measurables, present 2016-2026
-       - pff      : PFF charting, present only for classes ~2015-2019 today
+       - pff      : PFF charting, present for most 2014-2025 source seasons
        - context  : conference strength, experience
        - capital  : draft slot (post-draft model only)
 4. Build derived features (power-5 flag, log(pick), etc.).
@@ -71,7 +71,20 @@ CANDIDATES: list[Feat] = [
     Feat("combine_vertical", "Vertical jump", "combine", +1),
     Feat("combine_broad", "Broad jump", "combine", +1),
     Feat("speed_score", "Speed score (derived)", "combine", +1),
-    # --- PFF charting (classes ~2015-2019 only today) ---------------------
+    # --- PFF charting -----------------------------------------------------
+    # Prefer concept/pressure family features for modeling: 2025's
+    # passing-grades export is empty, but concept/pressure exist and cover the
+    # 2026 watchlist. The original top-level grades_* features are retained
+    # for indicator analysis and backwards comparison.
+    Feat("final_concept_no_screen_grades_pass", "PFF passing grade, no screens (final yr)", "pff", +1),
+    Feat("final_concept_no_screen_accuracy_percent", "PFF accuracy %, no screens (final yr)", "pff", +1),
+    Feat("final_concept_no_screen_btt_rate", "Big-time-throw rate, no screens (final yr)", "pff", +1),
+    Feat("final_concept_no_screen_twp_rate", "Turnover-worthy-play rate, no screens (final yr)", "pff", -1),
+    Feat("final_concept_no_screen_pressure_to_sack_rate", "Pressure-to-sack rate, no screens (final yr)", "pff", -1),
+    Feat("final_pressure_pressure_grades_pass", "PFF passing grade under pressure (final yr)", "pff", +1),
+    Feat("final_pressure_no_pressure_grades_pass", "PFF passing grade clean pocket (final yr)", "pff", +1),
+    Feat("final_pressure_grades_run", "PFF rushing grade (final yr)", "pff", +1),
+    Feat("final_concept_dropbacks", "PFF dropbacks (final yr)", "pff", +1),
     Feat("final_grades_grades_pass", "PFF passing grade (final yr)", "pff", +1),
     Feat("final_grades_grades_offense", "PFF offense grade (final yr)", "pff", +1),
     Feat("final_grades_accuracy_percent", "PFF accuracy % (final yr)", "pff", +1),

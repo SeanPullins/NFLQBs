@@ -57,7 +57,10 @@
                       <button class="sort-button" data-sort="draft_season" type="button">Class</button>
                     </th>
                     <th scope="col">
-                      <button class="sort-button" data-sort="model_hit_prob" type="button">Hit Prob</button>
+                      <button class="sort-button" data-sort="model_hit_prob" type="button">PFF Hit Prob</button>
+                    </th>
+                    <th scope="col">
+                      <button class="sort-button" data-sort="pff_model_delta" type="button">PFF Δ</button>
                     </th>
                     <th scope="col">
                       <button class="sort-button" data-sort="expected_tier" type="button">Tier</button>
@@ -67,7 +70,7 @@
                 </thead>
                 <tbody id="projectionRows">
                   <tr>
-                    <td colspan="6" class="loading">Loading projection board...</td>
+                    <td colspan="7" class="loading">Loading projection board...</td>
                   </tr>
                 </tbody>
               </table>
@@ -137,6 +140,7 @@
             <a href="model/historical_scored.csv">Historical Scores</a>
             <a href="model/indicators.csv">Indicator Rankings</a>
             <a href="analysis/findings.md">Findings Writeup</a>
+            <a href="docs/MODEL_AUDIT.md">Model Audit</a>
             <a href="docs/DATA_NEEDS.md">Data Needs</a>
             <a href="https://github.com/SeanPullins/NFLQBs/releases/tag/FIRST_RELEASE">Release</a>
           </div>

@@ -1,5 +1,13 @@
 # What Defines NFL Success, From College Data
 
+> **Update after full PFF import:** the first-release writeup below was written
+> before `QB_2016.zip` through `QB_2025.zip` were imported. The current model
+> artifacts now include a PFF-enabled pre-draft model, a no-PFF baseline, and a
+> forward-by-draft-year validation audit. See `docs/MODEL_AUDIT.md` and
+> `model/artifacts/cv_metrics.json` for the current results. In short: full PFF
+> helps the pre-draft model slightly, but the selected post-draft model remains
+> no-PFF because draft capital plus PPA/combine validates better.
+
 *QB draft-projection project — modeling & analysis writeup. Generated 2026-07-06.*
 
 **The one-sentence answer:** among the college numbers we can measure, **how much

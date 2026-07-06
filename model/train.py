@@ -7,17 +7,19 @@ Run end-to-end:
 What it does
 ------------
 1. Joins labels -> profiles (via model.data), builds the training frame from
-   FINAL labels (weight 1.0) + PROVISIONAL 2023 labels (weight 0.5, documented).
-   projection_target rows (2024-25) are NEVER trained on.
-2. Trains regularized logistic models on a hand-curated, PFF-gap-tolerant
-   feature set (CFBD PPA + combine + context):
-       - PRE-DRAFT  : college + athletic testing only (usable on the 2026 class)
-       - POST-DRAFT : PRE-DRAFT + draft capital (-log pick)
+   FINAL labels (weight 1.0) + PROVISIONAL 2023 labels (weight 0.5, documented)
+   for production fits. Validation metrics use FINAL rows only.
+2. Trains regularized logistic models on hand-curated feature sets:
+       - PRE-DRAFT-NO-PFF : CFBD PPA + combine + context
+       - PRE-DRAFT        : PRE-DRAFT-NO-PFF + selected PFF charting
+       - POST-DRAFT       : PRE-DRAFT-NO-PFF + draft capital (-log pick)
+       - POST-DRAFT-PFF   : PRE-DRAFT + draft capital (-log pick), audit only
    plus two baselines:
        - PICK-ONLY  : logistic on draft capital alone (the market's own bet)
        - R1 heuristic: round-1 pick == hit
-3. Evaluation is leave-one-draft-class-out (grouped by draft_year), reporting
-   AUC / log-loss / Brier / calibration on the 84 final-label QBs.
+3. Headline evaluation is forward-by-draft-year, reporting AUC / log-loss /
+   Brier on final-label QBs whose draft year has enough prior training data.
+   Leave-one-class-out is retained as a secondary robustness check.
 4. Fits production models on all training rows and writes artifacts:
        model/artifacts/{pre_draft,post_draft,pick_only}.joblib
        model/artifacts/features_used.json
@@ -58,13 +60,40 @@ PPA_FEATS = [
 COMBINE_FEATS = ["combine_weight", "combine_forty", "combine_broad"]
 CONTEXT_FEATS = ["power5", "career_cfbd_seasons"]
 
-PRE_DRAFT_FEATS = PPA_FEATS + COMBINE_FEATS + CONTEXT_FEATS
-POST_DRAFT_FEATS = PRE_DRAFT_FEATS + ["neg_log_pick"]
+PRE_DRAFT_NO_PFF_FEATS = PPA_FEATS + COMBINE_FEATS + CONTEXT_FEATS
+PFF_FEATS = [
+    "final_concept_no_screen_grades_pass",
+    "final_concept_no_screen_accuracy_percent",
+    "final_concept_no_screen_btt_rate",
+    "final_concept_no_screen_twp_rate",
+    "final_concept_no_screen_pressure_to_sack_rate",
+    "final_pressure_pressure_grades_pass",
+    "final_pressure_no_pressure_grades_pass",
+    "final_pressure_grades_run",
+    "final_concept_dropbacks",
+]
+
+PRE_DRAFT_FEATS = PRE_DRAFT_NO_PFF_FEATS + PFF_FEATS
+POST_DRAFT_NO_PFF_FEATS = PRE_DRAFT_NO_PFF_FEATS + ["neg_log_pick"]
+POST_DRAFT_PFF_FEATS = PRE_DRAFT_FEATS + ["neg_log_pick"]
+POST_DRAFT_FEATS = POST_DRAFT_NO_PFF_FEATS
 PICK_ONLY_FEATS = ["neg_log_pick"]
 
-# combine columns are ~30% missing -> add explicit missingness indicators
+MODEL_SPECS = {
+    "pick_only": PICK_ONLY_FEATS,
+    "pre_draft_no_pff": PRE_DRAFT_NO_PFF_FEATS,
+    "pre_draft": PRE_DRAFT_FEATS,
+    "post_draft": POST_DRAFT_FEATS,
+    "post_draft_pff": POST_DRAFT_PFF_FEATS,
+}
 
-C_GRID = [0.05, 0.1, 0.25, 0.5, 1.0]
+FIXED_C = {
+    "pick_only": 1.0,
+    "pre_draft_no_pff": 0.25,
+    "pre_draft": 0.1,
+    "post_draft": 0.25,
+    "post_draft_pff": 0.25,
+}
 
 
 # --------------------------------------------------------------------------- #
@@ -123,7 +152,7 @@ def _Xy(df, feats):
     return X
 
 
-def loco_oof(train, feats, C, eval_status=("final",)):
+def loco_oof(train, feats, C, eval_status=("final",), train_status=("final",)):
     """Leave-one-draft-class-out OOF predictions.
 
     Test folds are restricted to `eval_status` classes (final => trustworthy
@@ -131,11 +160,12 @@ def loco_oof(train, feats, C, eval_status=("final",)):
     Returns (y_true, p_pred, weights_ignored) aligned to eval rows.
     """
     eval_mask = train["label_status"].isin(eval_status)
+    train_mask = train["label_status"].isin(train_status)
     eval_years = sorted(train.loc[eval_mask, "draft_year"].unique())
     oof = pd.Series(index=train.index, dtype=float)
     for yr in eval_years:
         te = train.index[(train["draft_year"] == yr) & eval_mask]
-        tr = train.index[train["draft_year"] != yr]
+        tr = train.index[(train["draft_year"] != yr) & train_mask]
         pipe = make_pipeline(feats, C)
         pipe.fit(_Xy(train.loc[tr], feats), train.loc[tr, "y"],
                  clf__sample_weight=train.loc[tr, "w"])
@@ -144,7 +174,34 @@ def loco_oof(train, feats, C, eval_status=("final",)):
     return ev["y"].values, oof.loc[ev.index].values
 
 
+def forward_oof(train, feats, C, eval_status=("final",), train_status=("final",)):
+    """Forward-chaining predictions by draft class.
+
+    For held-out year Y, fit only on rows with draft_year < Y. Years whose
+    prior training set has a single outcome class are skipped. This is a
+    stricter forecasting check than LOCO because it never trains on future
+    draft classes.
+    """
+    eval_mask = train["label_status"].isin(eval_status)
+    train_mask = train["label_status"].isin(train_status)
+    y_true, p_pred, years = [], [], []
+    for yr in sorted(train.loc[eval_mask, "draft_year"].unique()):
+        tr = train[(train["draft_year"] < yr) & train_mask]
+        te = train[(train["draft_year"] == yr) & eval_mask]
+        if te.empty or tr["y"].nunique() < 2:
+            continue
+        pipe = make_pipeline(feats, C)
+        pipe.fit(_Xy(tr, feats), tr["y"], clf__sample_weight=tr["w"])
+        p = pipe.predict_proba(_Xy(te, feats))[:, 1]
+        y_true.extend(te["y"].astype(int).tolist())
+        p_pred.extend(p.tolist())
+        years.extend([int(yr)] * len(te))
+    return np.array(y_true), np.array(p_pred), years
+
+
 def metrics(y, p):
+    if len(y) == 0 or len(set(y)) < 2:
+        return {"auc": None, "log_loss": None, "brier": None, "n": int(len(y)), "n_hit": int(np.sum(y))}
     return {
         "auc": round(float(roc_auc_score(y, p)), 4),
         "log_loss": round(float(log_loss(y, np.clip(p, 1e-6, 1 - 1e-6))), 4),
@@ -153,16 +210,6 @@ def metrics(y, p):
         "n_hit": int(y.sum()),
         "base_rate": round(float(y.mean()), 4),
     }
-
-
-def pick_best_C(train, feats):
-    best, best_auc = C_GRID[0], -1
-    for C in C_GRID:
-        y, p = loco_oof(train, feats, C)
-        a = roc_auc_score(y, p)
-        if a > best_auc:
-            best_auc, best = a, C
-    return best
 
 
 def calibration_table(y, p, bins=(0, 0.1, 0.2, 0.35, 0.6, 1.01)):
@@ -186,22 +233,26 @@ def main():
     results = {}
 
     # --- baselines & models ------------------------------------------------
-    specs = {
-        "pick_only": PICK_ONLY_FEATS,
-        "pre_draft": PRE_DRAFT_FEATS,
-        "post_draft": POST_DRAFT_FEATS,
-    }
     chosen_C = {}
-    for name, feats in specs.items():
-        C = pick_best_C(train, feats)
+    for name, feats in MODEL_SPECS.items():
+        C = FIXED_C[name]
         chosen_C[name] = C
-        y, p = loco_oof(train, feats, C)
-        results[name] = metrics(y, p)
-        results[name]["C"] = C
-        results[name]["features"] = feats
-        print(f"\n[{name}] C={C}  LOCO-CV: {metrics(y,p)}")
+        y_fwd, p_fwd, fwd_years = forward_oof(train, feats, C)
+        y_loco, p_loco = loco_oof(train, feats, C)
+        fwd_metrics = metrics(y_fwd, p_fwd)
+        loco_metrics = metrics(y_loco, p_loco)
+        results[name] = {
+            **fwd_metrics,
+            "validation": "forward_by_draft_year",
+            "forward_years": sorted(set(fwd_years)),
+            "loco": loco_metrics,
+            "C": C,
+            "features": feats,
+        }
+        print(f"\n[{name}] C={C}  FORWARD: {fwd_metrics}")
+        print(f"[{name}] C={C}  LOCO:    {loco_metrics}")
         if name == "post_draft":
-            print("  calibration:\n", calibration_table(y, p).to_string(index=False))
+            print("  forward calibration:\n", calibration_table(y_fwd, p_fwd).to_string(index=False))
 
     # round-1 heuristic baseline
     r1 = (fin["round"] == 1).astype(int).values
@@ -217,8 +268,11 @@ def main():
 
     # value of college stats beyond draft capital
     delta = results["post_draft"]["auc"] - results["pick_only"]["auc"]
+    pff_delta = results["pre_draft"]["auc"] - results["pre_draft_no_pff"]["auc"]
     print(f"\nAUC lift of (college+combine) over draft-capital-only: {delta:+.4f}")
+    print(f"AUC lift of PFF over no-PFF pre-draft model: {pff_delta:+.4f}")
     results["college_lift_over_pick"] = round(float(delta), 4)
+    results["pff_lift_over_no_pff"] = round(float(pff_delta), 4)
 
     # --- secondary ordinal model: expected success tier (0-4) --------------
     t_true, t_pred = loco_tier(train, PRE_DRAFT_FEATS)
@@ -233,7 +287,7 @@ def main():
 
     # --- fit production models on ALL training rows ------------------------
     prod = {}
-    for name, feats in specs.items():
+    for name, feats in MODEL_SPECS.items():
         pipe = make_pipeline(feats, chosen_C[name])
         pipe.fit(_Xy(train, feats), train["y"], clf__sample_weight=train["w"])
         joblib.dump(pipe, os.path.join(ART, f"{name}.joblib"))
@@ -246,12 +300,18 @@ def main():
 
     features_used = {
         "pre_draft": PRE_DRAFT_FEATS,
+        "pre_draft_no_pff": PRE_DRAFT_NO_PFF_FEATS,
         "post_draft": POST_DRAFT_FEATS,
+        "post_draft_pff": POST_DRAFT_PFF_FEATS,
         "pick_only": PICK_ONLY_FEATS,
         "chosen_C": chosen_C,
         "imputation": "median (no missing-indicators; power5=0 for FCS/missing)",
-        "notes": "PPA+combine+context; PFF excluded from deployable model due to "
-                 "2014-15-only coverage. Trained on final(1.0)+provisional(0.5).",
+        "validation": "headline metrics are forward-by-draft-year on final labels only; LOCO stored as secondary",
+        "notes": "pre_draft is PPA+combine+context+selected PFF concept/pressure features. "
+                 "pre_draft_no_pff preserves the old no-PFF baseline. post_draft intentionally "
+                 "uses the no-PFF feature set because PFF hurt forward validation once draft "
+                 "capital was known; post_draft_pff is retained for audit only. Production fits "
+                 "use final(1.0)+provisional(0.5); validation uses final only.",
     }
     with open(os.path.join(ART, "features_used.json"), "w") as fh:
         json.dump(features_used, fh, indent=2)
@@ -262,7 +322,7 @@ def main():
     coef_dump = {}
     for name in ("pre_draft", "post_draft"):
         pipe = prod[name]
-        feats = specs[name]
+        feats = MODEL_SPECS[name]
         coefs = pipe.named_steps["clf"].coef_[0]
         order = np.argsort(-np.abs(coefs))
         print(f"\n[{name}] standardized logistic coefficients (production fit):")
