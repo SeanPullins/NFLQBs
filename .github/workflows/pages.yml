@@ -35,7 +35,7 @@ jobs:
           cp assets/site.css assets/site.js _site/assets/
           cp analysis/findings.md _site/analysis/
           cp analysis/figures/*.png _site/analysis/figures/
-          cp docs/DATA_NEEDS.md _site/docs/
+          cp docs/*.md _site/docs/
           cp model/*.csv _site/model/
           cp model/artifacts/*.json _site/model/artifacts/
 
